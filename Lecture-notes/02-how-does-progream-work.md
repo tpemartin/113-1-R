@@ -58,7 +58,7 @@ If your data is in your hard drive, you need to import it to the RAM so that the
 
 For AI to assist you the best, try to provide as much information as possible regarding your computer programming environment. 
 
-> You are using RStudio to conduct R programming tasks in POSIT with preloaded tidyverse package. If the task is programming related, the programming style should follow tidyverse style as closely as possible, i.e. if certain task can be done in both base R and tidyverse, use tidyverse.
+> You are using RStudio to conduct R programming tasks in POSIT remote server with preloaded tidyverse package. If the task is programming related, the programming style should follow tidyverse style as closely as possible, i.e. if certain task can be done in both base R and tidyverse, use tidyverse.
 
 ## Exercise
 
