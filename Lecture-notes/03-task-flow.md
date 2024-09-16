@@ -69,16 +69,9 @@ We want to transform all the variable names to English as well as its values.
   - Clear direction
   - mention the object (i.e. `native`) to work on. This will preserve divided tasks' workflow continuity.
 
-<style>
-.primary {
-    background-color: #f9f9f9;
-    padding: 20px;
-    border-left: 6px solid #7db4e6;
-    border-radius: 5px;
-    margin: 20px 0;
-}
-</style>
+<link rel="stylesheet" type="text/css" href="styles.css">
+
 
 <div class="primary">
-
+  This is a div with the primary class.
 </div>
