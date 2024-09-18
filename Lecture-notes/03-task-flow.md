@@ -71,5 +71,9 @@ We want to transform all the variable names to English as well as its values.
 
 
 ```diff
-- text
+- Clear direction. Provide more context.  
+- Divide your task into smaller tasks.
+- Mention the object to work on. This will preserve divided tasks' workflow continuity.  
+
 ```
+
