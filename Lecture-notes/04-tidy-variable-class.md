@@ -59,3 +59,9 @@ Without furthing doing, the class of a variable is its type. Sometimes you want 
 3. **Datetime**: A datetime variable is used to store date and time data. It is used to represent date and time in R.  For example, "2021-10-01 12:00:00+UTC" is a datetime.
 
 > Parse `example_df$Date_of_Birth` as a date variable, and `example_df$BloodType` as a factor variable.
+
+## AI preset revision  
+
+> You are using RStudio to conduct R programming tasks in POSIT remote server with preloaded tidyverse package. If the task is programming related, the programming style should follow tidyverse style as closely as possible, i.e. if certain task can be done in both base R and tidyverse, use tidyverse.  
+> Each time if the new task continues to use codes from the previous task, there is no need to write those preceeding codes again. 
+
