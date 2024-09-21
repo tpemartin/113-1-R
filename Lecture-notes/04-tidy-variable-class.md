@@ -47,20 +47,15 @@ To check the class of a variable, we can use the `class()` function:
 class(exmple_df$Name)  
 ```  
 
+## Parsing 
 
-## Character variable 
+Without furthing doing, the class of a variable is its type. Sometimes you want the variable to be a certain class. You need to teach the computer how to interpret the information. This is called "parsing" (詮釋).
 
 
-
-Character variables can be divided into the following classes:  
+## Common classes for parsing
 
 1. **Factor**: A factor is a categorical variable. It is used to store data that can take on a limited number of different values. Factors are used to represent categorical data.
-2. **Character**: A character variable is a string of characters. It is used to store text data.  
-3. **Date**: A date variable is used to store date data. It is used to represent dates in R.  
-4. **Time**: A time variable is used to store time data. It is used to represent time in R.  
-5. **Datetime**: A datetime variable is used to store date and time data. It is used to represent date and time in R.  
-6. **Logical**: A logical variable is used to store logical data. It can take on the values TRUE or FALSE.  
+2. **Date**: A date variable is used to store date data. It is used to represent dates in R. For example, "2021-10-01" is a date.
+3. **Datetime**: A datetime variable is used to store date and time data. It is used to represent date and time in R.  For example, "2021-10-01 12:00:00+UTC" is a datetime.
 
-## Numeric variable
-
-Numeric variables can be divided into the following classes:  
+> Parse `example_df$Date_of_Birth` as a date variable, and `example_df$BloodType` as a factor variable.
