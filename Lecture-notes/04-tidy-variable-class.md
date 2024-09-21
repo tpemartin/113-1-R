@@ -65,3 +65,6 @@ Without furthing doing, the class of a variable is its type. Sometimes you want 
 > You are using RStudio to conduct R programming tasks in POSIT remote server with preloaded tidyverse package. If the task is programming related, the programming style should follow tidyverse style as closely as possible, i.e. if certain task can be done in both base R and tidyverse, use tidyverse.  
 > Each time if the new task continues to use codes from the previous task, there is no need to write those preceeding codes again. 
 
+## Exercise
+
+In [flightDestination Exercise](https://github.com/tpemartin/113-1-R/blob/main/Lecture-notes/03-task-flow.md#exercise), you have imported a dataset called `flightDestination`. Check which variables in the dataset need to be parsed. Parse them accordingly.
