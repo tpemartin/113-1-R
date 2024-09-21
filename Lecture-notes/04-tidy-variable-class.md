@@ -37,7 +37,7 @@ What a computer thinks of this information is however determined by its class.
 We can check types of variables in R using the `typeof()` function:   
 ```r  
 # Check the structure of the example data frame
-type(example_df$Name) 
+typeof(example_df$Name) 
 ```
 
   - `$` is used to access a column in a data frame.  
