@@ -136,6 +136,6 @@ We want to transform all the variable names to English as well as its values.
 
 > How to export `native` as a csv file named "native-112-en.csv" ?
 
-## Exercise
+# Exercise
 
 Download [total_people_by_country sheet](https://docs.google.com/spreadsheets/d/1-jX-3EK_yspYDgPIy5vwnRKHntw9-dQIpFVhLc5JcXc/edit?gid=806824860#gid=806824860) from Google Sheets. Import the data as a dataframe called `flightDestination`. Translate all variable names to English. Export the data as a csv file named "flightDestination-en.csv".
