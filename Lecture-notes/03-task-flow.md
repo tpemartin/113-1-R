@@ -30,6 +30,10 @@ Also when AI assists you for programming, he does not execute the code for you. 
 
 > Carefully craft your [preset prompt](https://classroom.google.com/c/NzExNTg4NDAwNDY3/m/NzE3ODI1NTI2Nzg1/details) (the first prompt you give to the AI assistant) to get the best results.
 
+If you prefer AI to respond you in Chinese, you can: 
+
+> Explanation should be in Taiwan Traditional Chinese.
+
 After that, for each prompt, there are some principles to follow when asking for help from an AI assistant:
 
   1. **Clear direction**: Provide a clear and concise description of the task you want to accomplish.
@@ -45,7 +49,6 @@ After that, for each prompt, there are some principles to follow when asking for
 Prepare a csv file for analysis in an English language class.
 
   - [Number of Aboriginal students and graduates in colleges and universities—by grade and school of 112th Academic Year](https://data.gov.tw/dataset/33514): currently in Chinese. This dataset contains information on the number of Aboriginal students and graduates in colleges and universities in Taiwan.
-
 
 
 ## Bad prompt
@@ -131,5 +134,5 @@ We want to transform all the variable names to English as well as its values.
 
 ### Good prompt
 
-> How to export `native` as a csv file named "native-112.csv" ?
+> How to export `native` as a csv file named "native-112-en.csv" ?
 
