@@ -1,33 +1,29 @@
-library(readr)  # Load readr package; it's included in tidyverse
+# 1. import dataset ----
+library(tidyverse)  # Load readr package; it's included in tidyverse
 
-data <- read_csv("data/112native_A1-1.csv")  # Make sure your CSV is in the working directory or provide the full path
+native <- read_csv("data/112native_A1-1.csv")  # Make sure your CSV is in the working directory or provide the full path
 
 
-library(tidyverse)
+# 2. rename variables ----
+# Renaming the columns of the 'native' dataframe to English with backticks for non-conventional names
+native <- native %>%
+  rename(
+    academic_year = `學年度`,
+    school_type = `學校類別`,
+    school_code = `學校代碼`,
+    school_name = `學校名稱`,
+    doctoral_students = `在學學生人數_博士班`,
+    master_students = `在學學生人數_碩士班`,
+    bachelor_students = `在學學生人數_學士班`,
+    diploma_students = `在學學生人數_二專`,
+    five_year_students = `在學學生人數_五專`,
+    last_year_doctoral_grads = `上學年度畢業生人數_博士`,
+    last_year_master_grads = `上學年度畢業生人數_碩士`,
+    last_year_bachelor_grads = `上學年度畢業生人數_學士`,
+    last_year_diploma_grads = `上學年度畢業生人數_二專`,
+    last_year_five_year_grads = `上學年度畢業生人數_五專`
+  )
 
-# Assuming you have already imported your data
-data <- read_csv("112native_A1-1.csv")
+# 3. export data to csv-----
 
-# Step 1: Define translations for the variable names
-translation <- c(
-  "學年度" = "Academic Year",
-  "學校類別" = "School Type",
-  "學校代碼" = "School Code",
-  "學校名稱" = "School Name",
-  "在學學生人數_博士班" = "Number of Students Enrolled - Doctoral",
-  "在學學生人數_碩士班" = "Number of Students Enrolled - Master's",
-  "在學學生人數_學士班" = "Number of Students Enrolled - Bachelor's",
-  "在學學生人數_二專" = "Number of Students Enrolled - Associate Degree",
-  "在學學生人數_五專" = "Number of Students Enrolled - Five-Year College",
-  "上學年度畢業生人數_博士" = "Number of Graduates Last Year - Doctoral",
-  "上學年度畢業生人數_碩士" = "Number of Graduates Last Year - Master's",
-  "上學年度畢業生人數_學士" = "Number of Graduates Last Year - Bachelor's",
-  "上學年度畢業生人數_二專" = "Number of Graduates Last Year - Associate Degree",
-  "上學年度畢業生人數_五專" = "Number of Graduates Last Year - Five-Year College"
-)
-
-# Step 2: Update column names in the data frame
-colnames(data) <- translation[colnames(data)]
-
-# Step 3: Check the updated variable names
-print(colnames(data))
+write_csv(native, "data/112native_A1-1-end.csv")  # Export the renamed dataframe to a new CSV file
