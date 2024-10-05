@@ -10,7 +10,7 @@ One way to divide the task is to create a flow chart.
 
 ```mermaid
 graph TD;
-  A[Import 112native_A1-1.csv] --> B[Rename variable names to traditional Chinese];
+  A[Import 112native_A1-1.csv] --> B[Rename variable names to English];
     B --> C[Export as 112native_A1-1-en.csv];
 ```
 
