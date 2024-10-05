@@ -107,3 +107,8 @@ A better prompt is:
 > $ Passed        <lgl> TRUE, TRUE
 > ```
 > Parse `example_df$Date_of_Birth` as a date variable, and `example_df$BloodType` as a factor variable.
+
+  - Different countries have different date formats. For example, in the United States, the date format is MM/DD/YYYY, while in Europe, the date format is DD/MM/YYYY. Therefore, it is important to specify the date format when parsing date variables.
+  
+
+> It is a good practice to provide a glimpse of the data to the AI when you mention that data the first time. 
