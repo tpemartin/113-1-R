@@ -22,6 +22,9 @@ Select a monthly or quarterly dataset, and parse the date variable.
   - value must show year, month, day, and hour, minute, second, etc. Sometimes it also includes time zone information, such as "2021-10-01 12:00:00+UTC".   
   - if the time zone information is not provided, you need to specify. 
 
+
+> You can use YYYY, MM, DD, hh, mm, ss, and timezone to specify the format of the datetime variable.
+
 ## Factor  
 
   - a factor is a categorical variable.
