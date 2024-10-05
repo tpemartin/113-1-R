@@ -1,4 +1,4 @@
-# Task Flow
+# 1. Task Flow
 
 There is a dataset called `112native_A1-1.csv`. I want to import it, change the variable names to traditional Chinese, and export it to `112native_A1-1-en.csv`.
 
@@ -58,3 +58,52 @@ Constantly check if your prompt design follows the AI prompt guidelines.
 
 
 <https://github.com/tpemartin/113-1-R/blob/d80d1403cbe15ba0bbe6960863f88583a4ed8573/R/week2.R#L1-L29>
+
+# 2. Tidy data
+
+## Tidy variable classes
+
+```r
+# Load the tidyverse package
+library(tidyverse)
+
+# Create an example data frame with 10 observations
+example_df <- tibble(
+  Name = c("Alice", "Bob", "Charlie", "Diana", "Ethan", 
+           "Fiona", "Greg", "Hannah", "Ian", "Jasmine"),  # Pure character variable
+  Date_of_Birth = c("1990-01-01", "1985-06-15", "1992-11-23", 
+                    "1988-04-05", "1995-02-28", "1991-12-10", 
+                    "1989-07-19", "1993-09-25", "1994-05-15", 
+                    "1990-03-30"),  # Character variable with date information
+  BloodType = c("A", "B", "O", "AB", "B",  
+                "A", "O", "AB", "B", "A"), # Different blood types for each individual
+  Score = c(85.5, 92.0, 78.0, 88.5, 95.0, 
+            82.0, 76.5, 90.0, 89.5, 84.0),  # Numerical variable
+  Passed = c(TRUE, TRUE, FALSE, TRUE, TRUE, 
+             FALSE, TRUE, TRUE, FALSE, TRUE)  # Logical variable
+)
+
+```
+
+Before we conduct data mining, we need to make sure the variable classes are correct. If not, we need to parse them.
+
+```mermaid
+graph TD;
+  A[Import data] --> B[glimpse the data];
+    B --> C[Parse the class of a variable];
+```
+
+> In the global environment `example_df` is a dataframe. Parse `example_df$Date_of_Birth` as a date variable, and `example_df$BloodType` as a factor variable.
+
+A better prompt is:
+> In the global environment `example_df` is a dataframe. A glimpose of the data shows: 
+> ```
+> Rows: 2
+> Columns: 5
+> $ Name          <chr> "Alice", "Bob"
+> $ Date_of_Birth <chr> "1990-01-01", "1985-06-15"
+> $ BloodType     <chr> "A", "B"
+> $ Score         <dbl> 85.5, 92.0
+> $ Passed        <lgl> TRUE, TRUE
+> ```
+> Parse `example_df$Date_of_Birth` as a date variable, and `example_df$BloodType` as a factor variable.
