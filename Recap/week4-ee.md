@@ -1,6 +1,6 @@
 # 1. Task Flow
 
-There is a dataset called `112native_A1-1.csv`. I want to import it, change the variable names to traditional Chinese, and export it to `112native_A1-1-en.csv`.
+There is a dataset called `112native_A1-1.csv`. I want to import it, change the variable names to English, and export it to `112native_A1-1-en.csv`.
 
 > Remember one AI prompt guideline is "Divide Task"
 
