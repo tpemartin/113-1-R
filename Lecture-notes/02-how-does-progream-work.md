@@ -64,3 +64,6 @@ For AI to assist you the best, try to provide as much information as possible re
 
 Try to download a `.csv` file from [Taiwan open data](https://data.gov.tw/) and import it to RStudio. Ask AI to help you.
 
+# POSIT-R-AI
+
+![](../img/POSIT-R-AI.png)
