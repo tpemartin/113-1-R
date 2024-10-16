@@ -22,6 +22,8 @@ tidy_survey <- survey %>%
   )
 ```
 
+> The code above is obtained through the following prompt:
+> https://github.com/tpemartin/113-1-R/blob/1d40e207fccb9f22f2c84a77ef08823bb9491897/chat/survey-rename.txt#L14-L23
 
 
 ## Factor  
