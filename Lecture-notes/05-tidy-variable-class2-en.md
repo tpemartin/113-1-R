@@ -30,8 +30,16 @@ tidy_survey <- survey %>%
 
   - a factor variable is a categorical variable.
   - available categories are called **levels**.  
+  
+> :computer: You can use `levels()` to check the levels of a **factor class** variable.
+> :computer: For a **character class** variable, you can use `unique()` to find out all possible values.
 
-> If you don't provide levels, R will automatically generate levels based on the data.  
+> :exclamation: If you don't provide levels, R will automatically generate levels based on the data.  
+
+### Exercise
+
+Which variables in `tidy_survey` are factor variables? How do you ask ChatGPT to parse them into factor?
+
   
 ## Ordered factor  
 
@@ -42,11 +50,30 @@ tidy_survey <- survey %>%
 
 > :exclamation: When parsing factor values always specify your level sequence, no matter it is ordered or not.
 
+### Exercise
+
+Which variables in `tidy_survey` are ordered factor variables? How do you ask ChatGPT to parse them into ordered factor?
+
 ## Factor levels
 
-  - Can be renamed.   
   - Can be reordered.  
+  - Can be renamed.   
   - Can be grouped.  
+
+### Exercise
+
+  - Reorder the levels of `year` to "Freshman (一年級）", "Sophomore （二年級）", "Junior  (三年級）", "Senior（四年級）", and "Year 5 and above".
+  - Rename the levels of `year` into "year 1", "year 2", "year 3", "year 4", and "year 5+".
+  - Regroup the levels of  `total_credits` into the following three levels:  
+    - "Less than 30", "30 to 90", and "More than 90".
+
+## Numeric Cut
+ 
+  - a numeric variable can be cut into groups, as a ordered factor variable.
+  
+### Exercise
+
+In `tidy_survey`, cut the `credits_taken` variable into three groups: "Less than 22" and "22 to 24", and "More than 24", and saved under a new variable named `credits_taken_group`.
 
 ## Date
 
