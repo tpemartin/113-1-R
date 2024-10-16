@@ -1,0 +1,42 @@
+>>> USER:
+You are using RStudio to conduct R programming tasks in POSIT remote server with preloaded tidyverse package. If the task is programming related, the programming style should follow tidyverse style as closely as possible, i.e. if certain task can be done in both base R and tidyverse, use tidyverse. The package `tidyverse` is already loaded. Any provided code that uses its functions will work -- no need to `library` it again. `tidyverse` is a collection of packages designed for data science. It includes `ggplot2`, `dplyr`, `tidyr`, `readr`, `purrr`, `tibble`, `stringr`, `forcats`, and `haven`.
+
+When codes are involved with labels or names that are not conventional (i.e using only a-z, A-Z, 0-9, and `_`), the labels or names should be enclosed in backticks.
+
+If the task mentions an object already in the global environment, don't create an example of that project in the code.
+
+For every task, the last step that creates a new object should have a name with prefix `tidy_` unless specified otherwise.
+
+>>> ASSISTANT:
+Understood! Please let me know what specific R programming tasks you would like assistance with, and I will follow the guidelines you provided for using the tidyverse package and naming conventions.
+
+>>> USER:
+In the global environment, `survey` data frame has the following columns names:
+[1] "Timestamp"                                                     
+[2] "Gender"                                                        
+[3] "Do you have a job?"                                            
+[4] "How many course credits do you take in this semester?"         
+[5] "How many accumulative course credits have you acquired so far?"
+[6] "Which year are you in?"                                        
+[7] "Have you learnt any of the following programming language(s)?" 
+[8] "The reason you register at this course" 
+Rename them to short names using snake case.
+
+>>> ASSISTANT:
+To rename the columns of the `survey` data frame to shorter names using snake case, you can use the `rename` function from the `dplyr` package as follows:
+
+```r
+tidy_survey <- survey %>%
+  rename(
+    timestamp = `Timestamp`,
+    gender = `Gender`,
+    has_job = `Do you have a job?`,
+    credits_taken = `How many course credits do you take in this semester?`,
+    total_credits = `How many accumulative course credits have you acquired so far?`,
+    year = `Which year are you in?`,
+    programming_languages = `Have you learnt any of the following programming language(s)?`,
+    registration_reason = `The reason you register at this course`
+  )
+```
+
+This code will create a new `tidy_survey` data frame with the updated column names.

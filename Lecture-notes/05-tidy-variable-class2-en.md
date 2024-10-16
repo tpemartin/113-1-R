@@ -1,5 +1,51 @@
 # Tidy Variable Classes
 
+## Example 
+
+ - <https://docs.google.com/spreadsheets/d/1R8KcVs3VxG9V5yoDOex7g8b03m3DgZww845zUu3pGfM/edit?usp=sharing>
+
+![](../img/2024-10-16-09-40-13.png)
+
+Import the data as `survey` data frame, then run the following code.
+
+```r
+tidy_survey <- survey %>%
+  rename(
+    timestamp = `Timestamp`,
+    gender = `Gender`,
+    has_job = `Do you have a job?`,
+    credits_taken = `How many course credits do you take in this semester?`,
+    total_credits = `How many accumulative course credits have you acquired so far?`,
+    year = `Which year are you in?`,
+    programming_languages = `Have you learnt any of the following programming language(s)?`,
+    registration_reason = `The reason you register at this course`
+  )
+```
+
+
+
+## Factor  
+
+  - a factor variable is a categorical variable.
+  - available categories are called **levels**.  
+
+> If you don't provide levels, R will automatically generate levels based on the data.  
+  
+## Ordered factor  
+
+  - an ordered factor is a categorical variable with a specific order.  
+  - available categories are called **levels**.  
+  
+> If you don't provide level sequence, R will automatically generate levels based on the data. (most of time it is wrong.)
+
+> :exclamation: When parsing factor values always specify your level sequence, no matter it is ordered or not.
+
+## Factor levels
+
+  - Can be renamed.   
+  - Can be reordered.  
+  - Can be grouped.  
+
 ## Date
 
   - value must show year, month and day.   
@@ -25,17 +71,6 @@ Select a monthly or quarterly dataset, and parse the date variable.
 
 > You can use YYYY, MM, DD, hh, mm, ss, and timezone to specify the format of the datetime variable.
 
-## Factor  
-
-  - a factor is a categorical variable.
-  - available categories are called **levels**.  If you don't provide levels, R will automatically generate levels based on the data.  
-  
-## Ordered factor  
-
-  - an ordered factor is a categorical variable with a specific order.  
-  - available categories are called **levels**.  If you don't provide level sequence, R will automatically generate levels based on the data. (most of time it is wrong.)
-
-> When parsing factor values always specify your level sequence, no matter it is ordered or not.
 
 ## Exercise
 
