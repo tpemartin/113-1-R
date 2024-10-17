@@ -21,31 +21,41 @@ $ `課程建議（包含想學什麼課題）` <chr> NA, NA, NA, NA, N…
 $ 一週工時                       <dbl> 40, 36, 35, 40, 5…
 ```
 
-<details>
-  - test
-</details>
+> :computer: For a **character class** variable, you can use `unique()` to find out all possible values.
+
+### Exercise
+
+使用`unique()`找出"年齡"變數（variable）的所有可能值。
 
 ## Factor  
 
   - a factor variable is a categorical variable.
-  - available categories are called **levels**.  
-  
-> :computer: You can use `levels()` to check the levels of a **factor class** variable.
-> :computer: For a **character class** variable, you can use `unique()` to find out all possible values.
-
-> :exclamation: If you don't provide levels, R will automatically generate levels based on the data.  
-
-### Exercise
-
-Which variables in `tidy_survey` are factor variables? How do you ask ChatGPT to parse them into factor?
-
   
 ## Ordered factor  
 
   - an ordered factor is a categorical variable with a specific order.  
-  - available categories are called **levels**.  
   
-> If you don't provide level sequence, R will automatically generate levels based on the data. (most of time it is wrong.)
+
+
+### Exercise  
+
+`survey`裡那些變數應該要是factor class? 那些變數應該是ordered factor class? 該如何要求ChatGPT得到 「將它們轉換成factor/ordered factor class的程式碼」?   
+  
+
+
+## Levels of Factor/Ordered Factor
+
+Available categories are called **levels**.  
+
+  - use `levels()` to check the levels of a **factor class** variable.
+  
+### Exercise   
+
+使用`levels()`查看所有factor/ordered factor變數的levels。
+
+
+
+> If you don't provide level sequence, R will automatically design levels based on the data. (most of time it is wrong.)
 
 > :exclamation: When parsing factor values always specify your level sequence, no matter it is ordered or not.
 
