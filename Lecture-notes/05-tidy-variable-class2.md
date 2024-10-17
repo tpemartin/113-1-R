@@ -5,25 +5,25 @@
  - <https://docs.google.com/spreadsheets/d/1nqjK0V_HHl1R5To8A2-G7p9YQAjfGgSwoawx2WEU4-8/edit?gid=0#gid=0>
 
 
-Import the data as `survey` data frame, then run the following code.
+<https://github.com/tpemartin/113-1-R/blob/83de67627537dfab152844b98996bf8c2ffaf07f/R/week6-ee-preparation.R#L2-L3>
 
-```r
-tidy_survey <- survey %>%
-  rename(
-    timestamp = `Timestamp`,
-    gender = `Gender`,
-    has_job = `Do you have a job?`,
-    credits_taken = `How many course credits do you take in this semester?`,
-    total_credits = `How many accumulative course credits have you acquired so far?`,
-    year = `Which year are you in?`,
-    programming_languages = `Have you learnt any of the following programming language(s)?`,
-    registration_reason = `The reason you register at this course`
-  )
+
+```
+Rows: 17
+Columns: 8
+$ Timestamp                      <chr> "10/5/2024 10:31:…
+$ 性別                           <chr> "男", "男", "男",…
+$ 工作狀態                       <chr> "全職工作者", "兼…
+$ 年齡                           <chr> "40+", "23-30", "…
+$ 接觸過的程式                   <chr> "R, Python, JavaS…
+$ 選這門課原因                   <chr> "興趣, 覺得對未來…
+$ `課程建議（包含想學什麼課題）` <chr> NA, NA, NA, NA, N…
+$ 一週工時                       <dbl> 40, 36, 35, 40, 5…
 ```
 
-> The code above is obtained through the following prompt:
-> https://github.com/tpemartin/113-1-R/blob/1d40e207fccb9f22f2c84a77ef08823bb9491897/chat/survey-rename.txt#L14-L23
+<summary>
 
+</summary>
 
 ## Factor  
 
