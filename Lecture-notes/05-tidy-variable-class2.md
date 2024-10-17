@@ -21,9 +21,9 @@ $ `課程建議（包含想學什麼課題）` <chr> NA, NA, NA, NA, N…
 $ 一週工時                       <dbl> 40, 36, 35, 40, 5…
 ```
 
-<summary>
-
-</summary>
+<details>
+  - test
+</details>
 
 ## Factor  
 
