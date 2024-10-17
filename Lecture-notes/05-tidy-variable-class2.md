@@ -54,7 +54,7 @@ Available categories are called **levels**.
   1. 使用`levels()`查看所有factor/ordered factor變數的levels。  
   2. `年齡`變數的levels是什麼？有包含問卷所有年齡的可能值嗎？
 
-<img src="../img/2024-10-17-11-44-05.png" width="50%"/>
+<img src="../img/2024-10-17-11-44-05.png" width="10%"/>
 
 ![](../img/2024-10-17-11-44-05.png)
 
