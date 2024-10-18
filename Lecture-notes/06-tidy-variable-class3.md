@@ -1,5 +1,10 @@
 # Tidy Variable Classes
 
+## Example 
+
+ - <https://docs.google.com/spreadsheets/d/1nqjK0V_HHl1R5To8A2-G7p9YQAjfGgSwoawx2WEU4-8/edit?gid=0#gid=0>
+
+
 ## Date
 
   - value must show year, month and day.   
@@ -25,17 +30,6 @@ Select a monthly or quarterly dataset, and parse the date variable.
 
 > You can use YYYY, MM, DD, hh, mm, ss, and timezone to specify the format of the datetime variable.
 
-## Factor  
-
-  - a factor is a categorical variable.
-  - available categories are called **levels**.  If you don't provide levels, R will automatically generate levels based on the data.  
-  
-## Ordered factor  
-
-  - an ordered factor is a categorical variable with a specific order.  
-  - available categories are called **levels**.  If you don't provide level sequence, R will automatically generate levels based on the data. (most of time it is wrong.)
-
-> When parsing factor values always specify your level sequence, no matter it is ordered or not.
 
 ## Exercise
 

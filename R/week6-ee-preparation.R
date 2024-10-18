@@ -31,3 +31,8 @@ survey <- survey |>
     工作狀態=factor(工作狀態,
                 levels=c("無工作", "兼職工作者", "全職工作者"))
   )
+
+survey <- survey |>
+  mutate(
+    一週工時cut = cut(一週工時, breaks = c(0, 6, 25, 30, 40, 100))
+  )
