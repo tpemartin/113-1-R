@@ -34,14 +34,11 @@ $ 一週工時                       <dbl> 40, 36, 35, 40, 5…
 ## Ordered factor  
 
   - an ordered factor is a categorical variable with a specific order.  
-  
 
 
 ### Exercise  
 
-`survey`裡那些變數應該要是factor class? 那些變數應該是ordered factor class? 該如何要求ChatGPT得到 「將它們轉換成factor/ordered factor class的程式碼」?   
-  
-
+`survey`裡哪些變數應該要是factor class? 那些變數應該是ordered factor class? 該如何要求ChatGPT得到 「將它們轉換成factor/ordered factor class的程式碼」?   
 
 ## Levels of Factor/Ordered Factor
 
@@ -52,34 +49,30 @@ Available categories are called **levels**.
 ### Exercise   
 
   1. 使用`levels()`查看所有factor/ordered factor變數的levels。  
-  2. `年齡`變數的levels是什麼？有包含問卷所有年齡的可能值嗎？
+  2. `年齡`變數的levels是什麼？有包含問卷所有年齡的可能值嗎（見下圖）？
+  3. 
 
-<img src="../img/2024-10-17-11-44-05.png" width="20%"/>
-
-![](../img/2024-10-17-11-44-05.png)
-
+<img src="../img/2024-10-18-13-59-51.png" width="20%"/>
 
 
 > If you don't provide level sequence, R will automatically design levels based on the data. (most of time it is wrong.)
 
 > :exclamation: When parsing factor values always specify your level sequence, no matter it is ordered or not.
 
-### Exercise
-
-Which variables in `tidy_survey` are ordered factor variables? How do you ask ChatGPT to parse them into ordered factor?
-
 ## Factor levels
 
-  - Can be reordered.  
-  - Can be renamed.   
-  - Can be grouped.  
+  - **更改呈現順序**： Can be reordered, like previous exercise 2. （:exclamation:重新Parse一次，指定level順序）  
+  - **更改類別名稱**：Can be renamed. (如"18歲以下"改成"0-17")  
+  - **合併類別成大類別**：Can be grouped. (如"無工作", "兼職工作者", "全職工作者"改成"無工作", "有工作"兩類) 
+
 
 ### Exercise
 
-  - Reorder the levels of `year` to "Freshman (一年級）", "Sophomore （二年級）", "Junior  (三年級）", "Senior（四年級）", and "Year 5 and above".
-  - Rename the levels of `year` into "year 1", "year 2", "year 3", "year 4", and "year 5+".
-  - Regroup the levels of  `total_credits` into the following three levels:  
-    - "Less than 30", "30 to 90", and "More than 90".
+  1. Parse `年齡`變數成為有"18歲以下", "18-22", "23-30", "31-40", "41+"四個levels的ordered factor。  
+  2. Parse `工作狀態`變數成為levels順序為"無工作", "兼職工作者", "全職工作者"的factor。
+  3. 將`年齡`變數的"18歲以下"改成"0-17"。  
+  4. 將`工作狀態`變數的"全職工作"和"兼職工作者"合併成"有工作"。
+
 
 ## Numeric Cut
  
@@ -87,7 +80,7 @@ Which variables in `tidy_survey` are ordered factor variables? How do you ask Ch
   
 ### Exercise
 
-In `tidy_survey`, cut the `credits_taken` variable into three groups: "Less than 22" and "22 to 24", and "More than 24", and saved under a new variable named `credits_taken_group`.
+將`survey`裡的`一週工時`變數用0, 6, 25, 30, 40, 100切成"0-6", "7-25", "26-30", "31-40", "40+"五個levels的ordered factor。
 
 ## Date
 
