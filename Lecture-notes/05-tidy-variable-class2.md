@@ -34,6 +34,12 @@ $ 一週工時                       <dbl> 40, 36, 35, 40, 5…
 
 </details>
 
+### mutate
+
+  - to modify data frame variables. 
+
+`mutate(data frame, ...)`： 針對data frame的變數進行轉換(), 其中 ... 是一連串的`變數= ...`的組合。
+
 ## Factor  
 
   - a factor variable is a categorical variable.
