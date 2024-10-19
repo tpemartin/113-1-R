@@ -79,16 +79,25 @@ Available categories are called **levels**.
 ## Factor levels
 
   - **更改呈現順序**： Can be reordered, like previous exercise 2. 
-  >  :exclamation: 重新Parse一次，指定level順序）  
-  
+  >  :exclamation: 重新Parse一次，但這次要設定`levels=`順序  
+
   - **更改類別名稱**：Can be renamed. (如"18歲以下"改成"0-17")  
   - **合併類別成大類別**：Can be grouped. (如"無工作", "兼職工作者", "全職工作者"改成"無工作", "有工作"兩類) 
+
+> :computer: :exclamation: 針對已經是factor/ordered factor的變數，透過`levels() <-`進行"改類別名稱"或"合併"（合併是多個類別名稱改成相同名稱）。
+
 
 
 ### Exercise
 
   1. Parse `年齡`變數成為有"18歲以下", "18-22", "23-30", "31-40", "41+"四個levels的ordered factor。  
   2. Parse `工作狀態`變數成為levels順序為"無工作", "兼職工作者", "全職工作者"的factor。
+
+<details>
+
+<https://github.com/tpemartin/113-1-R/blob/875cf2e49ac10c1c094e7e0b87f49159523a66fe/R/week6-ee-preparation.R#L23-L33>
+
+</details>
 
 ### Exercise 
 
