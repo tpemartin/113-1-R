@@ -84,7 +84,7 @@ Available categories are called **levels**.
   - **更改類別名稱**：Can be renamed. (如"18歲以下"改成"0-17")  
   - **合併類別成大類別**：Can be grouped. (如"無工作", "兼職工作者", "全職工作者"改成"無工作", "有工作"兩類) 
 
-> :computer: :exclamation: 針對已經是factor/ordered factor的變數，透過`levels() <-`進行"改類別名稱"或"合併"（合併是多個類別名稱改成相同名稱）。
+> :computer: :exclamation: 針對已經是factor/ordered factor的變數，透過`fct_recode`進行"改類別名稱"或"合併"（合併是多個類別名稱改成相同名稱）。
 
 
 

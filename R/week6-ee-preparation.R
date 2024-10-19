@@ -32,6 +32,15 @@ survey <- survey |>
                 levels=c("無工作", "兼職工作者", "全職工作者"))
   )
 
+
+survey$年齡 <- forcats::fct_recode(survey$年齡,
+                             "0-17" = "18歲以下")
+
+survey$工作狀態_粗分類 <- forcats::fct_recode(survey$工作狀態,
+                             "有工作" = "兼職工作者", 
+                             "有工作" = "全職工作者")
+
+
 survey <- survey |>
   mutate(
     一週工時cut = cut(一週工時, breaks = c(0, 6, 25, 30, 40, 100))
