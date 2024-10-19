@@ -78,7 +78,9 @@ Available categories are called **levels**.
 
 ## Factor levels
 
-  - **更改呈現順序**： Can be reordered, like previous exercise 2. （:exclamation:重新Parse一次，指定level順序）  
+  - **更改呈現順序**： Can be reordered, like previous exercise 2. 
+  >  :exclamation: 重新Parse一次，指定level順序）  
+  
   - **更改類別名稱**：Can be renamed. (如"18歲以下"改成"0-17")  
   - **合併類別成大類別**：Can be grouped. (如"無工作", "兼職工作者", "全職工作者"改成"無工作", "有工作"兩類) 
 
