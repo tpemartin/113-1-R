@@ -44,3 +44,23 @@ googlesheets4::write_sheet(result,
 ```
 
   - `result` is the result data frame you want to post back to Google Sheets.
+
+## Publish your Google Sheets
+
+### 1. 
+
+![](../img/2024-10-19-15-19-15.png)
+
+### 2. 
+
+![](../img/2024-10-19-15-19-35.png)
+
+### 3. 
+
+Make sure you have the right permission:
+
+![](../img/2024-10-19-15-20-20.png)
+
+### 4.
+
+![](../img/2024-10-19-15-20-38.png)
