@@ -1,5 +1,6 @@
 # Tidy Variable Classes
 
+
 ## Example 
 
  - <https://docs.google.com/spreadsheets/d/1nqjK0V_HHl1R5To8A2-G7p9YQAjfGgSwoawx2WEU4-8/edit?gid=0#gid=0>
@@ -46,6 +47,12 @@ $ 一週工時                       <dbl> 40, 36, 35, 40, 5…
 
 `survey`裡哪些變數應該要是factor class? 那些變數應該是ordered factor class? 該如何要求ChatGPT得到 「將它們轉換成factor/ordered factor class的程式碼」?   
 
+<details>
+
+<https://github.com/tpemartin/113-1-R/blob/875cf2e49ac10c1c094e7e0b87f49159523a66fe/R/week6-ee-preparation.R#L9-L14>
+
+</details>
+
 ## Levels of Factor/Ordered Factor
 
 Available categories are called **levels**.  
@@ -56,10 +63,14 @@ Available categories are called **levels**.
 
   1. 使用`levels()`查看所有factor/ordered factor變數的levels。  
   2. `年齡`變數的levels是什麼？有包含問卷所有年齡的可能值嗎（見下圖）？
-  3. 
 
 <img src="../img/2024-10-18-13-59-51.png" width="20%"/>
 
+<details>
+
+<https://github.com/tpemartin/113-1-R/blob/875cf2e49ac10c1c094e7e0b87f49159523a66fe/R/week6-ee-preparation.R#L17-L19>
+
+</details>
 
 > If you don't provide level sequence, R will automatically design levels based on the data. (most of time it is wrong.)
 
@@ -76,13 +87,16 @@ Available categories are called **levels**.
 
   1. Parse `年齡`變數成為有"18歲以下", "18-22", "23-30", "31-40", "41+"四個levels的ordered factor。  
   2. Parse `工作狀態`變數成為levels順序為"無工作", "兼職工作者", "全職工作者"的factor。
-  3. 將`年齡`變數的"18歲以下"改成"0-17"。  
-  4. 將`工作狀態`變數的"全職工作"和"兼職工作者"合併成"有工作"。
 
+### Exercise 
+
+  1. 將`年齡`變數的"18歲以下"改成"0-17"。  
+  2. 將`工作狀態`變數的"全職工作"和"兼職工作者"合併成"有工作"。
 
 ## Numeric Cut
  
-  - a numeric variable can be cut into groups, as a ordered factor variable.
+  - a numeric variable can be cut into groups, as a ordered factor variable.  
+  - 被切割的變數會變成ordered factor。
   
 ### Exercise
 
