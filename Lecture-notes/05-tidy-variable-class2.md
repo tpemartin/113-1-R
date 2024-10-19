@@ -28,7 +28,9 @@ $ 一週工時                       <dbl> 40, 36, 35, 40, 5…
 使用`unique()`找出"年齡"變數（variable）的所有可能值。
 
 <details>
-<https://github.com/tpemartin/113-1-R/blob/d4d10bc0a694f8d3eaaaaa012bdf47b026555daf/R/week6-ee-preparation.R#L5>
+
+<https://github.com/tpemartin/113-1-R/blob/d4d10bc0a694f8d3eaaaaa012bdf47b026555daf/R/week6-ee-preparation.R#L5>  
+
 </details>
 
 ## Factor  
