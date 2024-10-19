@@ -26,11 +26,19 @@ survey <- survey |>
                 levels = c("18歲以下", "18-22", "23-30", "31-40", "40+"),
                 ordered = TRUE))
 
+# 也可以寫成
+survey$年齡 <- factor(survey$年齡,
+                      levels = c("18歲以下", "18-22", "23-30", "31-40", "40+"),
+                      ordered = TRUE)
+
 survey <- survey |>
   mutate(
     工作狀態=factor(工作狀態,
                 levels=c("無工作", "兼職工作者", "全職工作者"))
   )
+# 也可以寫成
+survey$工作狀態 <- factor(survey$工作狀態,
+                levels=c("無工作", "兼職工作者", "全職工作者"))
 
 
 survey$年齡 <- forcats::fct_recode(survey$年齡,
