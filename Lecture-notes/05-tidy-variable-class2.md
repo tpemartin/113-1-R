@@ -95,7 +95,7 @@ Available categories are called **levels**.
 
 <details>
 
-<https://github.com/tpemartin/113-1-R/blob/875cf2e49ac10c1c094e7e0b87f49159523a66fe/R/week6-ee-preparation.R#L23-L33>
+<https://github.com/tpemartin/113-1-R/blob/82b3fc39a4f3fe0127ede2d0ab1fc39bd0809104/R/week6-ee-preparation.R#L23-L41>
 
 </details>
 
@@ -103,6 +103,12 @@ Available categories are called **levels**.
 
   1. 將`年齡`變數的"18歲以下"改成"0-17"。  
   2. 將`工作狀態`變數的"全職工作"和"兼職工作者"合併成"有工作"。
+
+<details>
+
+<https://github.com/tpemartin/113-1-R/blob/82b3fc39a4f3fe0127ede2d0ab1fc39bd0809104/R/week6-ee-preparation.R#L44-L49>
+
+</details>
 
 ## Numeric Cut
  
@@ -112,6 +118,12 @@ Available categories are called **levels**.
 ### Exercise
 
 將`survey`裡的`一週工時`變數用0, 6, 25, 30, 40, 100切成"0-6", "7-25", "26-30", "31-40", "40+"五個levels的ordered factor。
+
+<details>
+
+<https://github.com/tpemartin/113-1-R/blob/82b3fc39a4f3fe0127ede2d0ab1fc39bd0809104/R/week6-ee-preparation.R#L52-L55>
+
+</details>
 
 ## Exercise
 
