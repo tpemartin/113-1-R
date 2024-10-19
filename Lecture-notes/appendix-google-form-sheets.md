@@ -5,7 +5,9 @@ flowchart TD
     A[Create a Form] --> B[Link to Google Sheet]
     B --> C[Import to POSIT]
     C --> D[Analyze the Results]
+    D --write_sheet--> B
 ```
+
 
 ## Create a Form
 
