@@ -65,3 +65,17 @@ levels(tidy_survey1$has_job)
 levels(tidy_survey1$year_in_school)
 
 levels(tidy_survey1$accum_credits)
+
+# Exercise 4
+tidy_survey1 <- tidy_survey1 %>%
+  mutate(
+    year_in_school = factor(
+      year_in_school,
+      levels=c("Freshman (一年級）", "Sophomore （二年級）", "Junior  (三年級）", "Senior（四年級）", "Year 5 and above")
+    ),
+    accum_credits = factor(
+      accum_credits,
+      levels=c("0 (Freshman, 一年級新生）", "1-30", "31-60", "61-90", "91-120", "121-140"),
+      ordered = TRUE
+    )
+  )
