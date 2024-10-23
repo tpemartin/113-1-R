@@ -3,17 +3,18 @@
 ```mermaid
 flowchart TD
     A[Create a Form] --> B[Link to Google Sheet]
-    B --> C[Import to POSIT]
+    B --download/upload/import CSV or read_sheet--> C[Import to POSIT]
     C --> D[Analyze the Results]
-    D --write_sheet--> B
+    D --> E[Post result to Google Sheet]
+    E --write_sheet--> B
 ```
 
 
 ## Create a Form
 
-![](../img/2024-10-19-12-55-02.png)
-
-![](../img/2024-10-19-12-55-35.png)
+| <img src="../img/2024-10-19-12-55-02.png"> | <img src="../img/2024-10-19-12-55-35.png"> |
+|--------------------------------------------|--------------------------------------------|
+|step 1: click Forms icon|step 2: click Blank form|
 
 ***
 
