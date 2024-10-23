@@ -32,12 +32,6 @@ Find out all possible values of the "accum_credits" variable using `unique()`.
 
 </details>
 
-### mutate
-
-  - to modify data frame variables. 
-
-`mutate(data frame, ...)`： is a function to modify data frame variables, where ... is a series of `variable = ...` combinations.
-
 ## Factor  
 
   - a factor variable is a categorical variable.
@@ -58,6 +52,12 @@ In `tidy_survey1`, which variables should be factor class? Which variables shoul
 <https://github.com/tpemartin/113-1-R/blob/2418956c7e2e6b0e4e8e7f5a81d104c5d0663a78/R/week7-recap.R#L50-L60>
 
 </details>
+
+### mutate
+
+  - to modify data frame variables. 
+
+`mutate(data frame, ...)`： is a function to modify data frame variables, where ... is a series of `variable = ...` combinations.
 
 ## Levels of Factor/Ordered Factor
 
