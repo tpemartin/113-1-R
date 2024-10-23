@@ -15,8 +15,11 @@ tidy_survey1 <- survey %>%
     course_reason = `The reason you register at this course`
   )
 
-glimpse(tidy_survey)
-summary(tidy_survey)
+glimpse(tidy_survey1)
+
+tidy_survey1 |>
+  select(gender, has_job, year_in_school) |>
+  summary()
 
 # Convert specific variables to factors if needed
 tidy_survey2 <- tidy_survey1 %>%
@@ -28,7 +31,9 @@ tidy_survey2 <- tidy_survey1 %>%
 
 # Then check with glimpse
 glimpse(tidy_survey2)
-summary(tidy_survey2)
+tidy_survey2 |>
+  select(gender, has_job, year_in_school) |>
+  summary()
 
 tidy_survey <- tidy_survey %>%
   mutate(
