@@ -53,7 +53,9 @@ In `tidy_survey1`, which variables should be factor class? Which variables shoul
 
 <details>
 
-<https://github.com/tpemartin/113-1-R/blob/875cf2e49ac10c1c094e7e0b87f49159523a66fe/R/week6-ee-preparation.R#L9-L14>
+<summary>code</summar>
+
+<https://github.com/tpemartin/113-1-R/blob/2418956c7e2e6b0e4e8e7f5a81d104c5d0663a78/R/week7-recap.R#L50-L60>
 
 </details>
 
@@ -71,8 +73,9 @@ Available categories are called **levels**.
 <img src="../img/2024-10-23-09-41-52.png" width="20%"/>
 
 <details>
+<summary>code</summary>
 
-<https://github.com/tpemartin/113-1-R/blob/875cf2e49ac10c1c094e7e0b87f49159523a66fe/R/week6-ee-preparation.R#L17-L19>
+<https://github.com/tpemartin/113-1-R/blob/2418956c7e2e6b0e4e8e7f5a81d104c5d0663a78/R/week7-recap.R#L62-L67>
 
 </details>
 
@@ -92,6 +95,14 @@ Available categories are called **levels**.
 
   - Parse `accum_credits` into an ordered factor with levels' order as "0 (Freshman, 一年級新生）", "1-30", "31-60", "61-90", "91-120", "121-140".  
   - Parse `year_in_school` into an ordered factor with levels' order as "Freshman (一年級）", "Sophomore （二年級）", "Junior  (三年級）", "Senior（四年級）", and "Year 5 and above".  
+
+<details>
+
+<summary>code</summary>
+
+<https://github.com/tpemartin/113-1-R/blob/2418956c7e2e6b0e4e8e7f5a81d104c5d0663a78/R/week7-recap.R#L69-L81>
+
+</details>
 
 > :computer: In R, to stack values (also called vector) is put values inside `c()` function with `,` as separator.
 
