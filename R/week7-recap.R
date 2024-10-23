@@ -3,7 +3,7 @@ survey <- read_csv("data/113-1 learning R day time - Public - Sheet1.csv")
 
 glimpse(survey)
 
-tidy_survey <- survey %>%
+tidy_survey1 <- survey %>%
   rename(
     timestamp = `Timestamp`,
     gender = `Gender`,
@@ -16,9 +16,10 @@ tidy_survey <- survey %>%
   )
 
 glimpse(tidy_survey)
+summary(tidy_survey)
 
 # Convert specific variables to factors if needed
-tidy_survey <- tidy_survey %>%
+tidy_survey2 <- tidy_survey1 %>%
   mutate(
     gender = as.factor(gender),
     has_job = as.factor(has_job),
@@ -26,7 +27,8 @@ tidy_survey <- tidy_survey %>%
   )
 
 # Then check with glimpse
-glimpse(tidy_survey)
+glimpse(tidy_survey2)
+summary(tidy_survey2)
 
 tidy_survey <- tidy_survey %>%
   mutate(
