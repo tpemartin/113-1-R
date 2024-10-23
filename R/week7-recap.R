@@ -43,3 +43,25 @@ tidy_survey <- tidy_survey %>%
       ordered = TRUE
     )
   )
+
+# Exercise 1.  
+unique(tidy_survey1$accum_credits)
+
+# Exercise 2.
+tidy_survey1 <- tidy_survey1 %>%
+  mutate(
+    gender = factor(gender), 
+    has_job = factor(has_job), 
+    year_in_school = factor(year_in_school),
+    accum_credits = factor(
+      accum_credits,
+      ordered = TRUE
+    )
+  )
+
+# Exercise 3
+levels(tidy_survey1$gender)
+levels(tidy_survey1$has_job)
+levels(tidy_survey1$year_in_school)
+
+levels(tidy_survey1$accum_credits)

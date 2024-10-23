@@ -1,32 +1,29 @@
 # Tidy Variable Classes
 
-
 ## Example 
 
- - <https://docs.google.com/spreadsheets/d/1nqjK0V_HHl1R5To8A2-G7p9YQAjfGgSwoawx2WEU4-8/edit?gid=0#gid=0>
+ - <https://docs.google.com/spreadsheets/d/1R8KcVs3VxG9V5yoDOex7g8b03m3DgZww845zUu3pGfM/edit?usp=sharing>
 
-
-<https://github.com/tpemartin/113-1-R/blob/83de67627537dfab152844b98996bf8c2ffaf07f/R/week6-ee-preparation.R#L2-L3>
-
+<https://github.com/tpemartin/113-1-R/blob/50e305254d1383dfd4def165149ccf6b1588901b/R/week7-recap.R#L1-L18>
 
 ```
-Rows: 17
+Rows: 41
 Columns: 8
-$ Timestamp                      <chr> "10/5/2024 10:31:…
-$ 性別                           <chr> "男", "男", "男",…
-$ 工作狀態                       <chr> "全職工作者", "兼…
-$ 年齡                           <chr> "40+", "23-30", "…
-$ 接觸過的程式                   <chr> "R, Python, JavaS…
-$ 選這門課原因                   <chr> "興趣, 覺得對未來…
-$ `課程建議（包含想學什麼課題）` <chr> NA, NA, NA, NA, N…
-$ 一週工時                       <dbl> 40, 36, 35, 40, 5…
+$ timestamp             <chr> "10/16/2024 9:17:30", "10…
+$ gender                <chr> "Male", "Male", "Male", "…
+$ has_job               <chr> "Full-time job", "Part-ti…
+$ course_credits        <dbl> 3, 16, 19, 18, 21, 8, 20,…
+$ accum_credits         <chr> "31-60", "91-120", "0 (Fr…
+$ year_in_school        <chr> "Year 5 and above", "Juni…
+$ programming_languages <chr> "R, Python, JavaScript", …
+$ course_reason         <chr> "Interest", "Interest", "…
 ```
 
 > :computer: For a **character class** variable, you can use `unique()` to find out all possible values.
 
-### Exercise
+### Exercise 1
 
-使用`unique()`找出"年齡"變數（variable）的所有可能值。
+Find out all possible values of the "accum_credits" variable using `unique()`.
 
 <details>
 
@@ -38,7 +35,7 @@ $ 一週工時                       <dbl> 40, 36, 35, 40, 5…
 
   - to modify data frame variables. 
 
-`mutate(data frame, ...)`： 針對data frame的變數進行轉換(), 其中 ... 是一連串的`變數= ...`的組合。
+`mutate(data frame, ...)`： is a function to modify data frame variables, where ... is a series of `variable = ...` combinations.
 
 ## Factor  
 
@@ -49,9 +46,9 @@ $ 一週工時                       <dbl> 40, 36, 35, 40, 5…
   - an ordered factor is a categorical variable with a specific order.  
 
 
-### Exercise  
+### Exercise 2
 
-`survey`裡哪些變數應該要是factor class? 那些變數應該是ordered factor class? 該如何要求ChatGPT得到 「將它們轉換成factor/ordered factor class的程式碼」?   
+In `tidy_survey1`, which variables should be factor class? Which variables should be ordered factor class? How to ask ChatGPT to get the code to "convert them into factor/ordered factor class"?
 
 <details>
 
@@ -65,12 +62,12 @@ Available categories are called **levels**.
 
   - use `levels()` to check the levels of a **factor class** variable.
   
-### Exercise   
+### Exercise 3  
 
-  1. 使用`levels()`查看所有factor/ordered factor變數的levels。  
-  2. `年齡`變數的levels是什麼？有包含問卷所有年齡的可能值嗎（見下圖）？
+  1. Use `levels()` to check the levels of all factor/ordered factor variables in `tidy_survey1`.    
+  2. How many levels does `accum_credits` variable has? What are they? Are the levels ordered as the survey question?
 
-<img src="../img/2024-10-18-13-59-51.png" width="20%"/>
+<img src="../img/2024-10-23-09-41-52.png" width="20%"/>
 
 <details>
 
@@ -78,16 +75,29 @@ Available categories are called **levels**.
 
 </details>
 
-> If you don't provide level sequence, R will automatically design levels based on the data. (most of time it is wrong.)
+> If you don't provide level sequence, R will automatically design levels based on the data. (most of the time it is wrong.)
 
 > :exclamation: When parsing factor values always specify your level sequence, no matter it is ordered or not.
 
 ## Factor levels
 
-  - **更改呈現順序**： Can be reordered, like previous exercise 2. 
-  >  :exclamation: 重新Parse一次，但這次要設定`levels=`順序  
+### Sepecify levels' order
+
+  - **Can change their order**： Can be reordered.  
+  
+  >  :exclamation: To change order of levels is to parse the variable again, but this time set `levels=` order. 
+
+### Exercise 4
+
+  - Parse `accum_credits` into an ordered factor with levels' order as "0 (Freshman, 一年級新生）", "1-30", "31-60", "61-90", "91-120", "121-140".  
+  - Parse `year_in_school` into an ordered factor with levels' order as "Freshman (一年級）", "Sophomore （二年級）", "Junior  (三年級）", "Senior（四年級）", and "Year 5 and above".  
+
+<!-- 
+
+### Other manupulations
 
   - **更改類別名稱**：Can be renamed. (如"18歲以下"改成"0-17")  
+
   - **合併類別成大類別**：Can be grouped. (如"無工作", "兼職工作者", "全職工作者"改成"無工作", "有工作"兩類) 
 
 > :computer: :exclamation: 針對已經是factor/ordered factor的變數，透過`fct_recode`進行"改類別名稱"或"合併"（合併是多個類別名稱改成相同名稱）。
@@ -138,3 +148,5 @@ Available categories are called **levels**.
   - [臺北市政府警察局詐欺案件統計表](https://data.gov.tw/dataset/138892)
 
 將"單位"Parse成factor, 將"發生件數"cut成"低"，"中"，"高"三個levels的ordered factor。
+
+-->
