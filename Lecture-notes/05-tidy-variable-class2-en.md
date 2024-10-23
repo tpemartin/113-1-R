@@ -26,8 +26,9 @@ $ course_reason         <chr> "Interest", "Interest", "…
 Find out all possible values of the "accum_credits" variable using `unique()`.
 
 <details>
+<summary>code</summary> 
 
-<https://github.com/tpemartin/113-1-R/blob/d4d10bc0a694f8d3eaaaaa012bdf47b026555daf/R/week6-ee-preparation.R#L5>  
+<https://github.com/tpemartin/113-1-R/blob/2418956c7e2e6b0e4e8e7f5a81d104c5d0663a78/R/week7-recap.R#L47-L48>  
 
 </details>
 
