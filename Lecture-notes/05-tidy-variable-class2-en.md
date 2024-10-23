@@ -92,6 +92,8 @@ Available categories are called **levels**.
   - Parse `accum_credits` into an ordered factor with levels' order as "0 (Freshman, 一年級新生）", "1-30", "31-60", "61-90", "91-120", "121-140".  
   - Parse `year_in_school` into an ordered factor with levels' order as "Freshman (一年級）", "Sophomore （二年級）", "Junior  (三年級）", "Senior（四年級）", and "Year 5 and above".  
 
+> :computer: In R, to stack values (also called vector) is put values inside `c()` function with `,` as separator.
+
 <!-- 
 
 ### Other manupulations
