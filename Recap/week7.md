@@ -19,6 +19,7 @@ Import and glimpse
 
 <https://github.com/tpemartin/113-1-R/blob/0594d2a042d676917b3d80475fe3338d57bc9e37/R/week7-recap.R#L6C1-L18>
 
+
 ```
 Rows: 41
 Columns: 8
