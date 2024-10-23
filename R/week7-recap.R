@@ -1,6 +1,8 @@
 library(tidyverse)
 survey <- read_csv("data/113-1 learning R day time - Public - Sheet1.csv")
 
+glimpse(survey)
+
 tidy_survey <- survey %>%
   rename(
     timestamp = `Timestamp`,
