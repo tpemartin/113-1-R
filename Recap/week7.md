@@ -17,7 +17,7 @@ Import and glimpse
 
 ## Change variable names
 
-<https://github.com/tpemartin/113-1-R/blob/add646ba9b31da9b6f779108adb784d6c1199fe0/R/week7-recap.R#L6-L18>
+<https://github.com/tpemartin/113-1-R/blob/0594d2a042d676917b3d80475fe3338d57bc9e37/R/week7-recap.R#L6C1-L18>
 
 ```
 Rows: 41
