@@ -142,7 +142,6 @@ With factor/ordered factor variables, you can perform the following operations:
 
   - "0-6", "7-25", "26-30", "31-40", "40+"
 
-
   
 ### Exercise
 
@@ -155,6 +154,19 @@ With factor/ordered factor variables, you can perform the following operations:
 <https://github.com/tpemartin/113-1-R/blob/82b3fc39a4f3fe0127ede2d0ab1fc39bd0809104/R/week6-ee-preparation.R#L52-L55>
 
 </details>
+
+***
+
+<details>
+
+<summary>Ask AI</summary>
+
+data fram `survey`的'一週工時'欄位是數整型變數，請產生一個對應的ordered factor型變數"一週工時類別"，分成以下類別"0-2","3-36","37-40","40+"。
+
+</details>
+
+
+
 
 ## Exercise
 

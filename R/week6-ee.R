@@ -16,8 +16,8 @@ summary(flightDestination)
 
 # Class survey -----
 
-class_survey1 <- googlesheets4::read_sheet("https://docs.google.com/spreadsheets/d/1jb6D-Pi0Ol9tYMbK1MQiTR7v-Q4VRHPpeK7rx6VR9ng/edit?gid=699875337#gid=699875337",
-                                           sheet="Form Responses 1")
+survey <- googlesheets4::read_sheet("https://docs.google.com/spreadsheets/d/1nqjK0V_HHl1R5To8A2-G7p9YQAjfGgSwoawx2WEU4-8/edit?gid=0#gid=0",
+                                           sheet="Sheet1")
 
 
 # Factor/ordered factor parsing -----
