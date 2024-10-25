@@ -30,6 +30,8 @@
 
 ## glimpse
 
+<https://github.com/tpemartin/113-1-R/blob/5f14abb77fa9c26da6f45f560a91754af567f680/R/week6-ee.R#L78-L80>
 
+## 變數名稱太長
 
-變數名稱太長
+<https://github.com/tpemartin/113-1-R/blob/5f14abb77fa9c26da6f45f560a91754af567f680/R/week6-ee.R#L82-L94>
