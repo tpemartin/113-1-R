@@ -30,6 +30,8 @@ $ 一週工時                       <dbl> 40, 36, 35, 40, 5…
 
 <details>
 
+<summary>code</summary>
+
 <https://github.com/tpemartin/113-1-R/blob/d4d10bc0a694f8d3eaaaaa012bdf47b026555daf/R/week6-ee-preparation.R#L5>  
 
 </details>
@@ -55,6 +57,8 @@ $ 一週工時                       <dbl> 40, 36, 35, 40, 5…
 
 <details>
 
+<summary>code</summary>
+
 <https://github.com/tpemartin/113-1-R/blob/875cf2e49ac10c1c094e7e0b87f49159523a66fe/R/week6-ee-preparation.R#L9-L14>
 
 </details>
@@ -73,6 +77,8 @@ Available categories are called **levels**.
 <img src="../img/2024-10-18-13-59-51.png" width="20%"/>
 
 <details>
+
+<summary>code</summary>
 
 <https://github.com/tpemartin/113-1-R/blob/875cf2e49ac10c1c094e7e0b87f49159523a66fe/R/week6-ee-preparation.R#L17-L19>
 
@@ -94,6 +100,8 @@ Available categories are called **levels**.
   2. Parse `工作狀態`變數成為levels順序為"無工作", "兼職工作者", "全職工作者"的factor。
 
 <details>
+
+<summary>code</summary>
 
 <https://github.com/tpemartin/113-1-R/blob/82b3fc39a4f3fe0127ede2d0ab1fc39bd0809104/R/week6-ee-preparation.R#L23-L41>
 
@@ -118,6 +126,8 @@ With factor/ordered factor variables, you can perform the following operations:
 
 <details>
 
+<summary>code</summary>
+
 <https://github.com/tpemartin/113-1-R/blob/82b3fc39a4f3fe0127ede2d0ab1fc39bd0809104/R/week6-ee-preparation.R#L44-L49>
 
 </details>
@@ -139,6 +149,8 @@ With factor/ordered factor variables, you can perform the following operations:
 將`survey`裡的`一週工時`變數用0, 6, 25, 30, 40, 100切成"0-6", "7-25", "26-30", "31-40", "40+"五個levels的ordered factor。
 
 <details>
+
+<summary>code</summary>
 
 <https://github.com/tpemartin/113-1-R/blob/82b3fc39a4f3fe0127ede2d0ab1fc39bd0809104/R/week6-ee-preparation.R#L52-L55>
 
