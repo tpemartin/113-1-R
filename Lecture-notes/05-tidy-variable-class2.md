@@ -87,12 +87,6 @@ Available categories are called **levels**.
   - **更改呈現順序**： Can be reordered, like previous exercise 2. 
   >  :exclamation: 重新Parse一次，但這次要設定`levels=`順序  
 
-  - **更改類別名稱**：Can be renamed. (如"18歲以下"改成"0-17")  
-  - **合併類別成大類別**：Can be grouped. (如"無工作", "兼職工作者", "全職工作者"改成"無工作", "有工作"兩類) 
-
-> :computer: :exclamation: 針對已經是factor/ordered factor的變數，透過`fct_recode`進行"改類別名稱"或"合併"（合併是多個類別名稱改成相同名稱）。
-
-
 
 ### Exercise
 
@@ -104,6 +98,18 @@ Available categories are called **levels**.
 <https://github.com/tpemartin/113-1-R/blob/82b3fc39a4f3fe0127ede2d0ab1fc39bd0809104/R/week6-ee-preparation.R#L23-L41>
 
 </details>
+
+
+## Operations on Factor/Ordered Factor
+
+> :exclamation: The following operations are only available for factor/ordered factor variables. If your variables are still characters, parse them into factor/ordered factor class.
+
+With factor/ordered factor variables, you can perform the following operations:
+
+  - **更改類別名稱**：Can be renamed. (如"18歲以下"改成"0-17")  
+  - **合併類別成大類別**：Can be grouped. (如"無工作", "兼職工作者", "全職工作者"改成"無工作", "有工作"兩類) 
+
+> :computer: :exclamation: 針對已經是factor/ordered factor的變數，透過`fct_recode`進行"改類別名稱"或"合併"（合併是多個類別名稱改成相同名稱）。
 
 ### Exercise 
 
@@ -117,9 +123,16 @@ Available categories are called **levels**.
 </details>
 
 ## Numeric Cut
- 
-  - a numeric variable can be cut into groups, as a ordered factor variable.  
-  - 被切割的變數會變成ordered factor。
+
+對於數值形的變數（假設有一個一週工時數值變數），很多時候我們喜歡如下的描述：
+
+  - 有20%的學生一週工時在0-6小時，有30%的學生一週工時在7-25小時，有20%的學生一週工時在26-30小時，有20%的學生一週工時在31-40小時，有10%的學生一週工時在40小時以上。
+  
+這時候我們有必要對一週工時進行切割，讓它變成一個ordered factor，且有如下的levels:
+
+  - "0-6", "7-25", "26-30", "31-40", "40+"
+
+
   
 ### Exercise
 
