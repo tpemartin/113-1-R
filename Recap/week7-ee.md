@@ -16,3 +16,13 @@
     - `` `年齡` = factor(`年齡`, ordered = TRUE) `` "年齡"的值Parsed成ordered factor class，才存在"年齡"的欄位。其他的理解依此類推。
 
 
+## Factor parsing最好指定levels
+
+指定levels的好處是，可以確保factor/ordered factor的levels"順序"是你想要的。
+
+<https://github.com/tpemartin/113-1-R/blob/25b81d25500a7d9f1d2b1aebe98a7949277445f7/R/week6-ee.R#L39-L44>
+
+## 同學設計問卷
+
+### 引入
+
