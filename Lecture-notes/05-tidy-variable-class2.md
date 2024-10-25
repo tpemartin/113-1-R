@@ -172,7 +172,7 @@ shows:
 
 <summary>code</summary>
 
-<https://github.com/tpemartin/113-1-R/blob/b3a5b02c44806329856202acc9a21be6f518a4d1/R/week6-ee-preparation.R#L52-L55>
+<https://github.com/tpemartin/113-1-R/blob/afd112def80134a4d31dd594d5611b03f5049524/R/week6-ee-preparation.R#L52-L58>
 
 </details>
 
@@ -180,6 +180,13 @@ shows:
 
 將`break`最小值改成-1，這樣就可以包含0了。
 
+<details>
+
+<summary>code</summary>
+
+<https://github.com/tpemartin/113-1-R/blob/afd112def80134a4d31dd594d5611b03f5049524/R/week6-ee-preparation.R#L60-L66>
+
+</details>
 
 
 
