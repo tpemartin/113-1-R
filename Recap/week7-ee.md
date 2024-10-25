@@ -37,3 +37,7 @@
 > :exclamation: 問AI時告訴它目前的變數名稱是什麼，請它改成簡短的名稱（最好指定名稱格式是snake case還是camel case）。
 
 <https://github.com/tpemartin/113-1-R/blob/5f14abb77fa9c26da6f45f560a91754af567f680/R/week6-ee.R#L82-L94>
+
+## Exercise
+
+請同學對class_feedback, job, hobby進行相關變數的factor/ordered factor parsing。
