@@ -75,12 +75,12 @@ job <- googlesheets4::read_sheet("https://docs.google.com/spreadsheets/d/1jb6D-P
 hobby <- googlesheets4::read_sheet("https://docs.google.com/spreadsheets/d/1y4aJxP5-Rpco17gflA3Ho68pM0XubfENJyATGElfx0w/edit?gid=1678725407#gid=1678725407",
                                              sheet="表單回應 1")
 
-glimpse(student_survey1)
-glimpse(student_survey2)
-glimpse(student_survey3)
+glimpse(class_feedback)
+glimpse(job)
+glimpse(hobby)
 
 #### rename -----
-tidy_student_survey3 <- student_survey3 %>%
+tidy_hobby <- hobby %>%
   rename_with(~ c(
     "timestamp",
     "email",
