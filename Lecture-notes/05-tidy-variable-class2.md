@@ -142,10 +142,31 @@ With factor/ordered factor variables, you can perform the following operations:
 
   - "0-6", "7-25", "26-30", "31-40", "40+"
 
-  
+### Quartile (四分位數)
+
+Quartiles are ranges that divide a dataset into four equal parts. Each part contains 25% of the data.
+
+```r
+summary(survey$一週工時)
+```
+
+shows:  
+```
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+   0.00    1.50   35.50   25.94   40.00   70.00 
+ ``` 
+
+   - 25% of the data is less than 1.5 hours. (1st Qu. 第一分位數)  
+   - 50% of the data is less than 35.5 hours. (Median 中位數)  
+   - 75% of the data is less than 40 hours. (3rd Qu. 第三分位數)  
+   - 100% of the data is less than 70 hours.  
+
+
 ### Exercise
 
-將`survey`裡的`一週工時`變數用0, 6, 25, 30, 40, 100切成"0-6", "7-25", "26-30", "31-40", "40+"五個levels的ordered factor。
+將`survey`裡的`一週工時`變數用0, 6, 25, 30, 40, 100切成
+  0-6, 6-25, 25-30, 30-40, 40-100, 五個levels的ordered factor。
+
 
 <details>
 
@@ -154,6 +175,17 @@ With factor/ordered factor variables, you can perform the following operations:
 <https://github.com/tpemartin/113-1-R/blob/b3a5b02c44806329856202acc9a21be6f518a4d1/R/week6-ee-preparation.R#L52-L55>
 
 </details>
+
+> :exclamation: `cut()` 每段不包含左邊界，包含右邊界，所以0-6不會包含0, 所以原本有0的資料會成為NA。
+
+將`break`最小值改成-1，這樣就可以包含0了。
+
+
+
+
+"0-6", "7-25", "26-30", "31-40", "40+"五個levels的ordered factor。
+
+> :computer: :exclamation: 透過`cut()`將數值變數切割成ordered factor, 並且指定`labels=`為levels。
 
 ***
 
