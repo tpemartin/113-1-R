@@ -169,6 +169,7 @@ shows:
   0-6, 6-25, 25-30, 30-40, 40-100, 五個levels的ordered factor。
 
 
+
 <details>
 
 <summary>code</summary>
@@ -189,11 +190,19 @@ shows:
 
 </details>
 
+> :exclamation: 如果不想有漏cut的數值，可以將下/上界改成`-Inf`和`Inf`。
+
+> :exclamation: 透過cut()將數值變數切割成ordered factor, 並且指定labels使得factor的levels有意義。
 
 
-"0-6", "7-25", "26-30", "31-40", "40+"五個levels的ordered factor。
+<details>  
 
-> :computer: :exclamation: 透過`cut()`將數值變數切割成ordered factor, 並且指定`labels=`為levels。
+<summary>code</summary>
+
+<https://github.com/tpemartin/113-1-R/blob/7a5e7dcaa530ba6987ac520753248c3481cdbfff/R/week6-ee-preparation.R#L68-L75>
+
+</details>
+
 
 ***
 
