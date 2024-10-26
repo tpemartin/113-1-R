@@ -16,12 +16,52 @@
 Parse data frame `trafficAccidents` 的"發生日期"欄位成為date class, 它目前的格式為yyyymmdd，例如20160101。
 </details>
 
+### Non daily date data
+
+When the data is not daily, you need to specify the frequency of the date variable. For example, if the data is monthly, you need to specify the date format as "YYYY-MM". If the data is quarterly, you need to specify the date format as "YYYY-Qn". If the data is yearly, you need to specify the date format as "YYYY".
+
+#### Monthly: 商品類期貨每月平均成交金額
+
+  - <https://data.gov.tw/dataset/52801>
+ 
+  
+<details>
+
+<summary>AI prompt</summary>  
+Parse data frame `future` 的"資料年月"變數成為datet class，它目前的格式為"yyyymm", 例如"202409"為西元2024年9月。
+
+</details>
+
+#### Quarterly/Yearly
+
+Similar just clearly specify your date format in the variable. 
+
+
+### Taiwan Date
+
+  - 經濟成長率（季）.csv
+
+<details>
+
+<summary>AI prompt</summary>
+
+Parse data frame `growth` 的"統計期"變數成為date class，它目前的格式為Taiwan date的"TTT年第Q季", 例如"108年第1季"。
+
+</details>
+
 ## Datetime class
 
  - <https://docs.google.com/spreadsheets/d/1nqjK0V_HHl1R5To8A2-G7p9YQAjfGgSwoawx2WEU4-8/edit?gid=0#gid=0>
 
+<details>
 
-## Date
+<summary>AI prompt</summary>
+
+Parse data frame `survey` 的"Timestamp"變數成為datetime class，它目前的格式為"mm/dd/yyyy hh:mm:ss", 例如"12/01/2016 12:00:00"
+
+</details>
+
+### time zone
 
   - value must show year, month and day.   
   - different countries have different date formats. For example, in the United States, the date format is MM/DD/YYYY, while in Europe, the date format is DD/MM/YYYY. In Taiwan, it is 西元YYYY年MM月DD日. Therefore, it is important to specify the date format when parsing date variables. 
