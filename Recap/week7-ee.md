@@ -4,7 +4,7 @@
 
 除了先下載CSV再上傳POSIT, 再`read_csv`引入, 也可以直接從Google Sheets引入：
 
-<https://github.com/tpemartin/113-1-R/blob/4dca40748c5576bd0d3927e56062d2aed94ee65c/R/week6-ee.R#L19-L20>
+<https://github.com/tpemartin/113-1-R/blob/1f337160cb5b45d8c4babc355f6a5ce191efd23e/R/week6-ee.R#L19-L22>
 
 ## Parsing類別變數成為Factor/Ordered Factor
 
