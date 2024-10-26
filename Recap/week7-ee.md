@@ -26,7 +26,7 @@
 
 ### 引入
 
-<https://github.com/tpemartin/113-1-R/blob/7091c87925b70e0a4ff603ec1783426a50b80a78/R/week6-ee.R#L71-L75>
+<https://github.com/tpemartin/113-1-R/blob/7091c87925b70e0a4ff603ec1783426a50b80a78/R/week6-ee.R#L71-L76>
 
 ## glimpse
 
