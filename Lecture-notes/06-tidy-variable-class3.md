@@ -10,10 +10,20 @@
 
   - <https://data.gov.tw/dataset/167905>
 
+<https://github.com/tpemartin/113-1-R/blob/a0ecb2a662b153a57fc5f9f6040591487aadaa68/R/week7-ee-preparation.R#L24-L27>
+
 <details>
 <summary>AI prompt</summary>
 
 Parse data frame `trafficAccidents` 的"發生日期"欄位成為date class, 它目前的格式為yyyymmdd，例如20160101。
+</details>
+
+<details>
+
+<summary>code </summary>
+
+<https://github.com/tpemartin/113-1-R/blob/a0ecb2a662b153a57fc5f9f6040591487aadaa68/R/week7-ee-preparation.R#L29-L32>
+
 </details>
 
 ### Non daily date data
