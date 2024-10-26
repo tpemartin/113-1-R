@@ -55,7 +55,9 @@ Similar just clearly specify your date format in the variable.
 
 <summary>AI prompt</summary>
 
-Parse data frame `growth` 的"統計期"變數成為date class，它目前的格式為Taiwan date的"TTT年第Q季", 例如"108年第1季"。
+Parse data frame `growth` 裡的"統計期"變數成為date class, 它目前為台灣的日期且格式寫法為"ttt年第q季":
+  1. 先將ttt轉成yyyy
+  2. 形成yyyy-q格式 再去parse成date class
 
 </details>
 
