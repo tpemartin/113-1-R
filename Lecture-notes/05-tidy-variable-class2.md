@@ -90,7 +90,8 @@ Available categories are called **levels**.
 
 ## Factor levels
 
-  - **更改呈現順序**： Can be reordered, like previous exercise 2. 
+  - **更改呈現順序** 
+
   >  :exclamation: 重新Parse一次，但這次要設定`levels=`順序  
 
 
@@ -200,7 +201,7 @@ shows:
 
 <summary>Ask AI</summary>
 
-data fram `survey`的'一週工時'欄位是數整型變數，請產生一個對應的ordered factor型變數"一週工時類別"，分成以下類別"0-2","3-36","37-40","40+"。
+data frame `survey`的'一週工時'欄位是integer型變數，請產生一個對應的ordered factor型變數"一週工時類別"，分成以下類別"0-2","3-36","37-40","40+"。
 
 </details>
 

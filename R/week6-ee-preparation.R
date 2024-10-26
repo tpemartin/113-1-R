@@ -51,25 +51,28 @@ survey$工作狀態_粗分類 <- forcats::fct_recode(survey$工作狀態,
 
 survey <- survey |>
   mutate(
-    一週工時類別 = cut(
-      一週工時, 
+    `一週工時類別` = cut(
+      `一週工時`, 
       breaks = c(0, 6, 25, 30, 40, 100)
     )
   )
 
 survey <- survey |>
   mutate(
-    一週工時類別 = cut(
-      一週工時, 
+    `一週工時類別` = cut(
+      `一週工時`, 
       breaks = c(-1, 6, 25, 30, 40, 100)
     )
   )
 
 survey <- survey |>
   mutate(
-    一週工時類別2 = cut(
-      一週工時, 
-      breaks = c(-1, 6, 25, 30, 40, 100),
+    `一週工時類別2` = cut(
+      `一週工時`, 
+      breaks = c(-Inf, 6, 25, 30, 40, Inf),
       labels = c("0-6", "7-25", "26-30", "31-40", "40+")
     )
   )
+
+
+
