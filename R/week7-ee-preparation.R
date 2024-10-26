@@ -20,4 +20,9 @@ survey <- survey %>%
     `一週工時` > 40 ~ "40+"
   ), levels = c("0-2", "3-36", "37-40", "40+")))
 
+# date class----
+# 
+trafficAccidents <- read_csv("data/112年傷亡道路交通事故資料/112年度A1交通事故資料.csv")
+
+glimpse(trafficAccidents)
 

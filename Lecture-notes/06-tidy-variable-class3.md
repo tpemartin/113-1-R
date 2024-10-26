@@ -1,6 +1,22 @@
-# Tidy Variable Classes
+# Tidy Variable Classes: Date/DateTime
 
-## Example 
+  - Date class format
+  - Datetime class format
+  - Taiwan date format
+
+## Date class
+
+### Example: 112年傷亡道路交通事故資料
+
+  - <https://data.gov.tw/dataset/167905>
+
+<details>
+<summary>AI prompt</summary>
+
+Parse data frame `trafficAccidents` 的"發生日期"欄位成為date class, 它目前的格式為yyyymmdd，例如20160101。
+</details>
+
+## Datetime class
 
  - <https://docs.google.com/spreadsheets/d/1nqjK0V_HHl1R5To8A2-G7p9YQAjfGgSwoawx2WEU4-8/edit?gid=0#gid=0>
 
