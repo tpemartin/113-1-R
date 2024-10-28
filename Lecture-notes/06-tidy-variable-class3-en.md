@@ -32,9 +32,6 @@ The task is to parse the "accident_date" column of the `trafficAccidents` data f
 Parse data frame `trafficAccidents` 的"發生日期"欄位（目前為數值格式）成為date class, 它目前的格式為yyyymmdd，例如20160101則代表"2016-01-01"。
 </details>
 
-<details>
-
-
 
 ### 2. Non daily date data
 
