@@ -1,7 +1,6 @@
 # Tidy Variable Classes: Date/DateTime
 
   - Date class format
-  - Datetime class format
   - Taiwan date format
 
 ## Date/DateTime
