@@ -9,7 +9,10 @@
 :exclamation: :exclamation: :exclamation:
   1. **Source (源頭) variable** should be in **character** class. (if not convert it to character class through  `as.character()`  )
   2. Must specify **writing format**, using (**Y, M, Q, D, h, m, s**) to represent the year, month, quarter (季), day, hour, minute, and second digit.
-  3. For date**time** parsing, must specify the **time zone** (時區) information.
+
+## AI preset
+
+> When parse date or date time, always use `lubridate` package's parsing function rather than using `as.Date`. To parse monthly data, use `ym` function. To parse quarterly data, use `yq` function. If the date is in Taiwan date format, remember to add 1911 to the year before parsing.
 
 ## Date class
 
@@ -19,7 +22,7 @@
 
   - <https://data.gov.tw/dataset/167905>
 
-<https://github.com/tpemartin/113-1-R/blob/a0ecb2a662b153a57fc5f9f6040591487aadaa68/R/week7-ee-preparation.R#L24-L27>
+<https://github.com/tpemartin/113-1-R/blob/9fc3f5460400194af22414d899725ba7656fafbd/R/week7-preparation.R#L14-L17>
 
 <details>
 <summary>AI prompt</summary>
@@ -31,11 +34,7 @@ Parse data frame `trafficAccidents` 的"發生日期"欄位（目前為數值格
 
 <details>
 
-<summary>code </summary>
 
-<https://github.com/tpemartin/113-1-R/blob/a0ecb2a662b153a57fc5f9f6040591487aadaa68/R/week7-ee-preparation.R#L29-L32>
-
-</details>
 
 ### 2. Non daily date data
 
@@ -45,6 +44,7 @@ When the data is not daily, you need to specify the frequency of the date variab
 
   - <https://data.gov.tw/dataset/52801>
  
+ <https://github.com/tpemartin/113-1-R/blob/9fc3f5460400194af22414d899725ba7656fafbd/R/week7-preparation.R#L36-L39>
   
 <details>
 
@@ -59,7 +59,7 @@ Parse data frame `future` 的"資料年月"變數（目前為數值變數）成�
 
   - growth_us.csv
 
-Similar just clearly specify your date format in the variable. 
+<https://github.com/tpemartin/113-1-R/blob/9fc3f5460400194af22414d899725ba7656fafbd/R/week7-preparation.R#L58-L61>
 
 <summary>AI prompt</summary>  
 
@@ -71,7 +71,9 @@ Parse data frame `growth_use` 的"DATE"變數成為date class，它目前的格�
 
 ### 3. Taiwan Date
 
-  - 經濟成長率（季）.csv
+  - growth_tw.csv
+
+<https://github.com/tpemartin/113-1-R/blob/9fc3f5460400194af22414d899725ba7656fafbd/R/week7-preparation.R#L86-L88>
 
 <details>
 
@@ -81,48 +83,3 @@ Parse `PERIOD` variable of `growth_tw` data frame into date class. The current f
 
 Parse data frame `growth_tw` 裡的"統計期"變數成為date class, 它目前為台灣的日期且格式寫法為"ttt年第q季"，例如"108年第1季"即為西元2019年的第1季。
 </details>
-
-## Datetime class
-
- - <https://docs.google.com/spreadsheets/d/1nqjK0V_HHl1R5To8A2-G7p9YQAjfGgSwoawx2WEU4-8/edit?gid=0#gid=0>
-
-<details>
-
-<summary>AI prompt</summary>
-
-Parse data frame `survey` 的"Timestamp"變數成為datetime class，它目前的格式為"mm/dd/yyyy hh:mm:ss", 例如"12/01/2016 12:00:00"
-
-</details>
-
-### time zone
-
-  - value must show year, month and day.   
-  - different countries have different date formats. For example, in the United States, the date format is MM/DD/YYYY, while in Europe, the date format is DD/MM/YYYY. In Taiwan, it is 西元YYYY年MM月DD日. Therefore, it is important to specify the date format when parsing date variables. 
-
-> Before parsing,  
-> If 民國年, you need to add 1911 to each year.
-> When asking AI to parse date, always provide the date frequency annually, quarterly, monthly or daily.
-
-> always provide the glimpse result of your data.
-
-### Taiwan Macro database
-
-  - <https://nstatdb.dgbas.gov.tw/dgbasall/webMain.aspx?k=dgmain>
-
-Select a monthly or quarterly dataset, and parse the date variable.
-
-## Datetime 
-
-  - value must show year, month, day, and hour, minute, second, etc. Sometimes it also includes time zone information, such as "2021-10-01 12:00:00+UTC".   
-  - if the time zone information is not provided, you need to specify. 
-
-
-> You can use YYYY, MM, DD, hh, mm, ss, and timezone to specify the format of the datetime variable.
-
-
-## Exercise
-
-  - fill out the form <https://docs.google.com/forms/d/e/1FAIpQLSc0uF9KFXBRNeRukdPq-T-jQiCUDBAho4-UoyUNsNfLBBrMLw/viewform>  
-  - Download the result <https://docs.google.com/spreadsheets/d/1nqjK0V_HHl1R5To8A2-G7p9YQAjfGgSwoawx2WEU4-8/edit?gid=0#gid=0>  
-  
-Import the data and parse it.
