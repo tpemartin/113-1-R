@@ -58,6 +58,7 @@ Parse data frame `future` 的"資料年月"變數（目前為數值變數）成�
 
 <https://github.com/tpemartin/113-1-R/blob/9fc3f5460400194af22414d899725ba7656fafbd/R/week7-preparation.R#L58-L61>
 
+<details>  
 <summary>AI prompt</summary>  
 
 The task is to parse the "DATE" variable of the `growth_us` data frame into date class. The current format is "YYYY-QQ", meaning that "2024-Q1" represents the quarter 1 of 2024.
