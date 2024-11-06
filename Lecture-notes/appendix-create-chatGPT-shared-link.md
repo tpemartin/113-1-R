@@ -10,5 +10,6 @@ In a ChatGPT conversation,
 
 
 > :exclamation: Any conversation after a shared link is created will not be included in the shared link. You need to do the above steps again to **update** the shared link's content. The only difference is that the button to click at step 3 will be called "Update link" instead of "Copy link".
+> 
 > <img src="../img/2024-11-06-10-57-09.png" width="60%">
 > 
