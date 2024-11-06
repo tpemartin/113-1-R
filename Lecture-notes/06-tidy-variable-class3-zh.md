@@ -27,8 +27,7 @@
 <details>
 <summary>AI prompt</summary>
 
-The task is to parse the "accident_date" column of the `trafficAccidents` data frame, which is currently in numeric class, into date class. The current format is `yyyymmdd`, meaning that `20160101` represents "2016-01-01".
-
+Parse data frame `trafficAccidents` 的"發生日期"欄位（目前為數值格式）成為date class, 它目前的格式為yyyymmdd，例如20160101則代表"2016-01-01"。
 </details>
 
 
@@ -47,8 +46,8 @@ When the data is not daily, you need to specify the frequency of the date variab
 
 <summary>AI prompt</summary>  
 
-The task is to parse the "YEARMONTH" variable of the `future` data frame, which is currently in numeric class, into date class. The current format is `yyyymm`, meaning that `202409` represents September of the year 2024.
 
+Parse data frame `future` 的"資料年月"變數（目前為數值變數）成為datet class，它目前的格式為yyyymm, 例如202409即為西元2024年9月。
 </details>
 
 #### Quarterly/Yearly: US GDP Growth Rate (Quarterly)
@@ -60,14 +59,11 @@ The task is to parse the "YEARMONTH" variable of the `future` data frame, which 
 <details>  
 <summary>AI prompt</summary>  
 
-The task is to parse the "DATE" variable of the `growth_us` data frame into date class. The current format is "YYYY-QQ", meaning that "2024-Q1" represents the quarter 1 of 2024.
-
+Parse data frame `growth_use` 的"DATE"變數成為date class，它目前的格式為"YYYY-QQ", 例如"2024-Q1"即為"西元2024年的第1季"。
 </details>
 
 
 ### 3. Taiwan Date
-
-> :exclamation: Taiwan year must plus 1911 to convert to the western year before parsing.
 
   - growth_tw.csv
 
@@ -77,6 +73,6 @@ The task is to parse the "DATE" variable of the `growth_us` data frame into date
 
 <summary>AI prompt</summary>
 
-Parse `PERIOD` variable of `growth_tw` data frame into date class. The current format is Taiwan date and the format is "ttt年第Q季", meaning "108年第1季" represents the first quarter of Taiwan year 108 (which is 2019).
 
+Parse data frame `growth_tw` 裡的"統計期"變數成為date class, 它目前為台灣的日期且格式寫法為"ttt年第q季"，例如"108年第1季"即為西元2019年的第1季。
 </details>
