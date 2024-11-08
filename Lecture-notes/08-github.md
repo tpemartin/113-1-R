@@ -31,20 +31,30 @@ Benefits of using Github for POSIT project:
 
 We use fork to create a repository here.
 
-![](../img/fork.jpg), then at the next page, click ![](../img/create-fork.jpg)
+On the following page:
+
+  - <https://github.com/tpemartin/113-1-R-final-project>
+
+Click <img src="../img/fork.jpg" width = "80px">, then at the next page, click <img src="../img/create-fork.jpg" width = "80px">
 
 ### 2. Obtain the link of the repository
 
 ![](../img/2024-11-08-17-05-47.png)
 
   - Make sure the repo title indicate the repo is forked.  
-  - Click Code button, then copy the url link 
-  
-![](../img/2024-11-08-17-09-55.png)
+  - Click Code button.
+
+*** 
+
+ <img src="../img/2024-11-08-17-09-55.png" width = "250px"> 
+
+
+  - Then copy the url link 
 
 ### 3. Start a new project in POSIT with the link
 
-![](../img/2024-11-08-17-11-21.png)
+
+<img src="../img/2024-11-08-17-11-21.png" width = "250px"> 
 
 ### 4. Setup github in POSIT
 
@@ -73,8 +83,9 @@ There are basically two steps:
 ### 1. commit  
 
 At the Git tab in RStudio, you can see the changes you made in your project. Check those changes you want to record and click "commit". 
-![](../img/![](../img/2024-11-08-18-16-41.png).png)
+![](../img/2024-11-08-18-16-41.png)
 
+*** 
 Finalize the commit by writing some commit message and hit "commit".
 ![](../img/2024-11-08-18-19-10.png)
 
