@@ -60,7 +60,7 @@ Click <img src="../img/fork.jpg" width = "80px">, then at the next page, click <
 
 Open **rstudio-git-configuration.R** file. 
 
-Install required packages by click install.
+Install required packages by click "install".
 
 <img src="../img/2024-11-08-17-14-23.png" width = "550px">
 
@@ -72,7 +72,7 @@ Click <img src="../img/2024-11-08-17-16-24.png" width = "80px"> to setup github.
 > This step is not for github setup. It is for final project needs. 
 
 Click open **.Rprofile** file.
-Install required packages by click install.
+Install required packages by click "install".
 <img src="../img/2024-11-08-17-19-50.png" width = "550px">
 ## How to use Git 
 
