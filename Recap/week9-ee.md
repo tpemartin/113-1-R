@@ -16,6 +16,8 @@
 
 </details>
 
+***
+
 <https://github.com/tpemartin/113-1-R/blob/e5173bddc57d144ec470ecef08afb245cbd2942d/R/week7-ee-inclass.R#L100-L102>
 
 `glimpse(future$資料年月)` 顯示如下：
