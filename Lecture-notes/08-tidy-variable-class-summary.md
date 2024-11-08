@@ -17,6 +17,13 @@ $ Factor <chr> "cat", "dog", "bird"
 $ OrderFactor <chr> "less than 10", "more than 10", "less than 10"
 ```
 
+<details>
+<summary>Code to generate df</summary>
+
+<https://github.com/tpemartin/113-1-R/blob/bdf6484e4bb1c84a5e602b3f54e578fbc11a04ad/R/week9-ee-preparation.R#L95-L115>
+
+</details>
+
 Convert variables to the correct class:
 
 ```r
