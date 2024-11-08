@@ -8,7 +8,7 @@ library(lubridate)
 # parse date time
 survey_csv <- survey_csv %>%
   mutate(
-    `Timestamp` = mdy_hms(`Timestamp`)
+    `Timestamp` = mdy_hms(`Timestamp`, tz="Asia/Taipei")
   )
 
 glimpse(survey_csv)
@@ -39,7 +39,7 @@ trafficAccidents <- trafficAccidents %>%
     `發生時間` = paste0(substr(`發生時間`, 1, 2), ":", 
                     substr(`發生時間`, 3, 4), ":", 
                     substr(`發生時間`, 5, 6)),
-    `日期時間` = ymd(`發生日期`) + hms(`發生時間`)
+    `日期時間` = ymd(`發生日期`, tz="Asia/Taipei") + hms(`發生時間`)
   )
 
 
