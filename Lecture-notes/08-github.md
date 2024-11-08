@@ -15,7 +15,7 @@
 
 Storage for your project files. 
 
-## Create a POSIT project from Github
+## Use Github in POSIT
 
 Benefits of using Github for POSIT project: 
 
@@ -27,13 +27,13 @@ Benefits of using Github for POSIT project:
   2. Start a new project in POSIT with the link.  
   3. Run 
 
-### Create a repository
+### 1. Create a repository
 
 We use fork to create a repository here.
 
 ![](../img/fork.jpg), then at the next page, click ![](../img/create-fork.jpg)
 
-### Obtain the link of the repository
+### 2. Obtain the link of the repository
 
 ![](../img/2024-11-08-17-05-47.png)
 
