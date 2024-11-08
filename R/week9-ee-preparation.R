@@ -1,5 +1,5 @@
 
-survey_csv <- read_csv("data/113-1 learning R (Responses) - public - Sheet1.csv")
+survey_csv <- read_csv("https://raw.githubusercontent.com/tpemartin/113-1-R/refs/heads/main/Lecture-notes/ee-survey.csv")
 
 glimpse(survey_csv)
 
