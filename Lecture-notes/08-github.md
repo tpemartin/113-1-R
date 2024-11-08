@@ -84,7 +84,7 @@ There are basically two steps:
 
 At the Git tab in RStudio, you can see the changes you made in your project. Check those changes you want to record and click "commit". 
 
-<img src="../img/2024-11-08-18-16-41.png" width = "280px">
+<img src="../img/check-commits.png" width = "280px">
 
 *** 
 
