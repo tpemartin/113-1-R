@@ -42,21 +42,23 @@ We use fork to create a repository here.
   
 ![](../img/2024-11-08-17-09-55.png)
 
-### Start a new project in POSIT with the link
+### 3. Start a new project in POSIT with the link
 
 ![](../img/2024-11-08-17-11-21.png)
 
-### Setup github in POSIT
+### 4. Setup github in POSIT
 
 Open **rstudio-git-configuration.R** file. 
 
 Install required packages by click install.
 ![](../img/2024-11-08-17-14-23.png)
 
-Click ![](../img/2024-11-08-17-16-24.png) to setup github.
+Click <img src="../img/2024-11-08-17-16-24.png" width = "20%"> to setup github.
 
 
 ### Setup tidyverse in POSIT
+
+> This step is not for github setup. It is for final project needs. 
 
 Click open **.Rprofile** file.
 Install required packages by click install.
@@ -80,4 +82,4 @@ Finalize the commit by writing some commit message and hit "commit".
 
 At the Git tab in RStudio, click "push" to store the committed changes in Github.
 
-:exclamation: If push fails, you need to go over [the github setup](#setup-github-in-posit) through running **rstudio-git-configuration.R** file again.
+:exclamation: If push fails, you need to go over [4. Setup github in POSIT](#4-setup-github-in-posit) again.
