@@ -9,6 +9,13 @@
  num [1:4495] 20230101 20230101 20230101 20230101 20230101 ...
 `trafficAccidents$發生日期` 為yyyymmdd格式記錄的日期，將其轉換為date class.
 
+<details>
+<summary>Parsing程式</summary>
+
+<https://github.com/tpemartin/113-1-R/blob/e5173bddc57d144ec470ecef08afb245cbd2942d/R/week7-ee-inclass.R#L93-L94>
+
+</details>
+
 <https://github.com/tpemartin/113-1-R/blob/e5173bddc57d144ec470ecef08afb245cbd2942d/R/week7-ee-inclass.R#L100-L102>
 
 `glimpse(future$資料年月)` 顯示如下：
