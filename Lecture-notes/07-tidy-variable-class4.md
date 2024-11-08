@@ -29,6 +29,7 @@ Parse a date time string "2021-10-01 12:00:00" into datetime class. It is curren
 
 ## hms string format
 
+:exclamation: :exclamation: :exclamation:
 When parsing time, the time string format must be "hh:mm:ss". For example, "14:08:00". If the time string format is not "hh:mm:ss", you need to convert it to "hh:mm:ss" before parsing.
 
 We use AI preset to ensure that the string format is "hh:mm:ss" before parsing.
