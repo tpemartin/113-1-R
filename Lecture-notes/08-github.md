@@ -39,7 +39,7 @@ Click <img src="../img/fork.jpg" width = "80px">, then at the next page, click <
 
 ### 2. Obtain the link of the repository
 
-<img src="../img/2024-11-08-17-05-47.png" width = "450px">
+<img src="../img/2024-11-08-17-05-47.png" width = "550px">
 
   - Make sure the repo title indicate the repo is forked.  
   - Click Code button.
