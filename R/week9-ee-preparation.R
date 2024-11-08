@@ -1,17 +1,17 @@
 
-survey_csv <- read_csv("https://raw.githubusercontent.com/tpemartin/113-1-R/refs/heads/main/Lecture-notes/ee-survey.csv")
+survey <- read_csv("https://raw.githubusercontent.com/tpemartin/113-1-R/refs/heads/main/Lecture-notes/ee-survey.csv")
 
-glimpse(survey_csv)
+glimpse(survey)
 
 library(lubridate)
 
 # parse date time
-survey_csv <- survey_csv %>%
+survey <- survey %>%
   mutate(
     `Timestamp` = mdy_hms(`Timestamp`, tz="Asia/Taipei")
   )
 
-glimpse(survey_csv)
+glimpse(survey)
 
 # time zone
 tz(survey$Timestamp)
@@ -19,7 +19,7 @@ tz(survey$Timestamp)
 # change time zone
 tz(survey$Timestamp) <- "Asia/Taipei"
 
-glimpse(survey_csv)
+glimpse(survey)
 
 # hms format 
 trafficAccidents <- read_csv("trafficAccidents.csv")
