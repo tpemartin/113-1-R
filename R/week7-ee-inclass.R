@@ -113,14 +113,15 @@ growth <- read_csv("growth_tw.csv")
 glimpse(growth$統計期)
 
 growth <- growth %>%
-  mutate(`統計期` = str_replace(`統計期`, "^(\\d+)年第([0-9])季$", "\\1-\\2") %>% 
-           str_replace("年", "") %>%
-           str_replace("季", "") %>%
-           str_extract("(\\d+)-(\\d+)") %>%
-           { sprintf("%d-q%s", as.numeric(str_extract(., "\\d+")) + 1911, str_extract(., "-(\\d+)$")) } %>%
-           yq())
+  mutate(
+    西元年 = as.numeric(str_extract(統計期, "\\d+")) + 1911,
+    季別 = str_extract(統計期, "第\\d季") %>% str_extract("\\d"),
+    統計期 = yq(paste0(西元年, "Q", 季別))
+  )
+
 
 glimpse(growth$統計期)
+
 
 
 ## ttt年m月----
@@ -129,11 +130,11 @@ CPI <- read_csv("CPI.csv", skip = 2)
 glimpse(CPI$統計期)
 
 CPI <- CPI %>%
-  mutate(`統計期` = str_replace(`統計期`, "^(\\d+)年(\\d+)月$", "\\1-\\2") %>% 
-           str_replace("年", "") %>%
-           str_replace("月", "") %>%
-           { sprintf("%d-%s", as.numeric(str_extract(., "\\d+")) + 1911, str_extract(., "-(\\d+)$")) } %>%
-           ym())
+  mutate(
+    西元年 = as.numeric(str_extract(統計期, "\\d+")) + 1911,
+    月份 = str_extract(統計期, "\\d+月") %>% str_remove("月"),
+    統計期 = ym(paste0(西元年, 月份))
+  )
 
 glimpse(CPI$統計期)
 
@@ -143,11 +144,11 @@ exchangeRate <- read_csv("exchangeRate.csv", skip = 2)
 glimpse(exchangeRate$統計期)
 
 exchangeRate <- exchangeRate %>%
-  mutate(`統計期` = str_replace(`統計期`, "^(\\d+)年$", "\\1") %>% 
-           as.numeric() %>%
-           { . + 1911 } %>%
-           paste0("-01-01") %>%  # Append "-01-01" to make it a full date (first day of the year)
-           ymd())
+  mutate(
+    西元年 = as.numeric(str_extract(統計期, "\\d+")) + 1911,
+    統計期 = ymd(paste0(西元年, "-01-01"))
+  )
+
 
 glimpse(exchangeRate$統計期)
 
