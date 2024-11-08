@@ -21,6 +21,38 @@ tz(survey$Timestamp) <- "Asia/Taipei"
 
 glimpse(survey)
 
+library(dplyr)
+
+# Create a sample data frame
+example_data <- data.frame(
+  date_time_string = c("2023-01-01 140800", "2023-01-02 153000", "2023-01-03 101500")
+)
+
+# Display the example data frame
+print(example_data)
+
+library(dplyr)
+library(lubridate)
+
+library(dplyr)
+library(lubridate)
+
+example_data <- example_data %>%
+  mutate(
+    date_time_string = ymd_hms(paste0(substr(date_time_string, 1, 10), " ", 
+                                      substr(date_time_string, 12, 13), ":", 
+                                      substr(date_time_string, 14, 15), ":", 
+                                      substr(date_time_string, 16, 17))),
+    tz = "Asia/Taipei"
+  )
+
+# Display the modified data frame
+print(example_data)
+
+
+# Display the modified data frame
+print(example_data)
+
 # hms format 
 trafficAccidents <- read_csv("trafficAccidents.csv")
 glimpse(trafficAccidents[1:6]) 
