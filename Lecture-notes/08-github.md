@@ -83,11 +83,15 @@ There are basically two steps:
 ### 1. commit  
 
 At the Git tab in RStudio, you can see the changes you made in your project. Check those changes you want to record and click "commit". 
-![](../img/2024-11-08-18-16-41.png)
+
+<img src="../img/2024-11-08-18-16-41.png" width = "280px">
 
 *** 
+
 Finalize the commit by writing some commit message and hit "commit".
-![](../img/2024-11-08-18-19-10.png)
+
+
+<img src="../img/2024-11-08-18-19-10.png" width = "280px">
 
 ### 2. push
 
