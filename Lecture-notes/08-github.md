@@ -98,3 +98,8 @@ Finalize the commit by writing some commit message and hit "commit".
 At the Git tab in RStudio, click "push" to store the committed changes in Github.
 
 :exclamation: If push fails, you need to go over [4. Setup github in POSIT](#4-setup-github-in-posit) again.
+
+
+## Exercise
+
+Add some .R files to the repository and push them to Github.
