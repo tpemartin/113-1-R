@@ -1,0 +1,32 @@
+`trafficAccidents` data frame 有以下欄位：
+$ 發生日期      <dbl> 20230101, 20230101
+$ 發生時間      <chr> "140800", "140800"
+
+產生一個新的欄位"日期時間"，它是由"發生日期"和"發生時間"組成的台灣時區date time class，其中：
+
+  - 發生日期: 目前為numberic class, 以yyyymmdd格式表示的日期，如20230101代表"2023-01-01"日 
+  - 發生時間: 目前為character class且以hhmmss寫法表示的時間， 如"140800"代表"14:08:00"
+
+
+將trafficAccidents$日期時間 的時區設定為台灣時區
+
+`survey$Timestamp`目前為character class, 以"mm/dd/yyyy hh:mm:ss"寫法表示的日期時間，如"01/01/2023 14:08:00"代表"2023-01-01 14:08:00", 時區為台灣時區。將它parse成datetime class。
+
+`example_data$date_time_string`目前為character class, 以"yyyy-mm-dd hhmmss"寫法表示的日期時間，如"20230101 140800"代表"2023-01-01 14:08:00"的台灣時區日期時間。將它parse成datetime class。
+
+[1] "2023-01-01 140800" "2023-01-02 153000" "2023-01-03 101500"
+
+glimpse(df) shows
+Rows: 2
+Columns: 9
+$ Chr         <chr> "1", "2"
+$ Num         <int> 1, 2
+$ Lgl         <lgl> TRUE, FALSE
+$ Date1       <date> 2021-10-01, 2021-10-02
+$ Date2       <date> 2021-01-01, 2021-01-02
+$ DateTime1   <dttm> 2021-10-01 12:00:00, 2021-10-02 12:00:00
+$ DateTime2   <dttm> 2021-01-01 12:00:00, 2021-01-02 12:00:00
+$ Factor      <fct> cat, dog
+$ OrderFactor <ord> less than 10, more than 10
+
+save it as csv with datetime variables in ISO format with timezone as Asia/Taipei.

@@ -89,6 +89,7 @@ tz(trafficAccidents$日期時間)
 glimpse(trafficAccidents$日期時間)
 
 
+# generate df----
 library(tibble)
 library(lubridate)
 
@@ -113,3 +114,36 @@ df <- tibble(
 )
 
 glimpse(df)
+
+# parse df
+df <- df |>
+  mutate(
+    Date1 = ymd(Date1),
+    Date2 = mdy(Date2),
+    DateTime1 = ymd_hms(DateTime1, tz="Asia/Taipei"),  
+    DateTime2 = mdy_hms(DateTime2, tz="Asia/Taipei"),  
+    Factor = factor(Factor, levels = c("cat", "dog", "bird")),
+    OrderFactor = factor(OrderFactor, levels = c("less than 10", "more than 10"), ordered=TRUE)
+  )
+glimpse(df)
+
+# save df as csv----
+library(dplyr)
+library(readr)
+library(lubridate)
+
+# Convert DateTime columns to ISO format with timezone information set to Asia/Taipei
+df2 <- df %>%
+  mutate(
+    DateTime1 = with_tz(DateTime1, tzone = "Asia/Taipei"),
+    DateTime2 = with_tz(DateTime2, tzone = "Asia/Taipei"),
+    
+    DateTime1 = format(DateTime1, "%Y-%m-%dT%H:%M:%S%z"),
+    DateTime2 = format(DateTime2, "%Y-%m-%dT%H:%M:%S%z")
+  )
+
+glimpse(df2)
+# Save the modified data frame as a CSV file
+write_csv(df2, "df_with_timezone.csv")
+
+

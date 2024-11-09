@@ -32,7 +32,7 @@ df <- df |>
   mutate(
     Date1 = ymd(Date1),
     Date2 = mdy(Date2),
-    DateTime1 = ymd_hms(DateTime, tz="Asia/Taipei"),  
+    DateTime1 = ymd_hms(DateTime1, tz="Asia/Taipei"),  
     DateTime2 = mdy_hms(DateTime2, tz="Asia/Taipei"),  
     Factor = factor(Factor, levels = c("cat", "dog", "bird")),
     OrderFactor = factor(OrderFactor, levels = c("less than 10", "more than 10"), ordered=TRUE)
@@ -48,4 +48,15 @@ After tidying up the variable classes, it is a good practice to save the data fr
 ```r
 saveRDS(df, "df.rds")
 ```
+
+## Share data
+
+RDS file is for R users. You can share that file with others who use R. 
+
+If you want to share the data with non-R users, you can save the data frame as a CSV file.
+
+For datetime variables, it is better to save them as character variables in ISO 8601 format with timezone information. 
+
+
+
 
