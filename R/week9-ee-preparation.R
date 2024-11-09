@@ -146,4 +146,13 @@ glimpse(df2)
 # Save the modified data frame as a CSV file
 write_csv(df2, "df_with_timezone.csv")
 
+# open data ----
+library(tidyverse)
+socialSecurity <- read_csv("export1731113783.csv")
+
+socialSecurity |>
+  filter(
+    更新頻率 == "每月"
+  ) -> monthlySocialSecurity
+
 

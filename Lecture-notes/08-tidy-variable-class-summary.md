@@ -49,13 +49,27 @@ After tidying up the variable classes, it is a good practice to save the data fr
 saveRDS(df, "df.rds")
 ```
 
+Next time you can load the data frame with:
+
+```r
+df <- readRDS("df.rds")
+```
+
+the data frame will be loaded with the correct variable classes.
+
 ## Share data
 
 RDS file is for R users. You can share that file with others who use R. 
 
 If you want to share the data with non-R users, you can save the data frame as a CSV file.
 
-For datetime variables, it is better to save them as character variables in ISO 8601 format with timezone information. 
+*** 
+
+:exclamation: :exclamation: :exclamation:  
+  - For datetime variables, it is better to save them as character variables in ISO 8601 format with timezone information. 
+  - If you want to share the data internationally, it is better to save the datetime variables in UTC timezone.  
+
+***
 
 :robot: AI prompt:
 <https://github.com/tpemartin/113-1-R/blob/2bcf4ae5298ac67407290755cffe99ba04d4bf0a/chat/week9-ee-preparation.txt#L19-L32>
