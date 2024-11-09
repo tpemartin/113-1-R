@@ -75,3 +75,6 @@ If you want to share the data with non-R users, you can save the data frame as a
 <https://github.com/tpemartin/113-1-R/blob/2bcf4ae5298ac67407290755cffe99ba04d4bf0a/chat/week9-ee-preparation.txt#L19-L32>
 
 
+## Exercise
+
+Use the parsed survey data to create an RDS file and a CSV file. 
