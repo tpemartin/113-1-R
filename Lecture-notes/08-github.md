@@ -25,7 +25,7 @@ Benefits of using Github for POSIT project:
 
   1. Get the link of the repository.  
   2. Start a new project in POSIT with the link.  
-  3. Run 
+  3. Run rstudio-git-configuration.R
 
 ### 1. Create a repository
 
