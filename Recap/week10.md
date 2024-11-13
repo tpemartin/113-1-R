@@ -52,7 +52,7 @@
 ***
 
 
-<https://github.com/tpemartin/113-1-R/blob/d40e93e13ab28b2ffa37bec234bb8585ce6fc45d/R/week7-in-class.R#L45-L48>
+<https://github.com/tpemartin/113-1-R/blob/b14d0f0c4920d6cd54262995276af81d4b4494ff/R/week7-in-class.R#L45-L48>
 
 
 `glimpse(CPI$PERIOD)` shows: 
@@ -83,4 +83,4 @@
 
 ## Complete ChatGPT Chat
 
-  - <https://chatgpt.com/share/672d68d6-e43c-8006-bb64-21f215a80ec6>
+  - <https://github.com/tpemartin/113-1-R/blob/main/chat/date-example.txt>
