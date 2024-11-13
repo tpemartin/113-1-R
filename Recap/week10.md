@@ -1,7 +1,5 @@
 # Recap
 
-# Recap
-
 將不同日期的資料轉換為date class（以yyyy-mm-dd格式顯示）。
 
 
