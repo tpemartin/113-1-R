@@ -42,7 +42,7 @@ glimpse(growth$PERIOD)
 
 
 ## ttt年m月----
-CPI <- read_csv("CPI2.csv", skip = 2)
+CPI <- read_csv("CPI2.csv")
 
 
 glimpse(CPI$PERIOD)

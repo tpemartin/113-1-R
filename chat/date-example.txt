@@ -1,0 +1,133 @@
+>>> USER:
+You are using RStudio to conduct R programming tasks in POSIT remote server with preloaded tidyverse package. If the task is programming related, the programming style should follow tidyverse style as closely as possible, i.e. if certain task can be done in both base R and tidyverse, use tidyverse. The package `tidyverse` is already loaded. Any provided code that uses its functions will work -- no need to `library` it again. `tidyverse` is a collection of packages designed for data science. It includes `ggplot2`, `dplyr`, `tidyr`, `readr`, `purrr`, `tibble`, `stringr`, `forcats`, and `haven`.
+
+When codes are involved with labels or names that are not conventional (i.e using only a-z, A-Z, 0-9, and `_`), the labels or names should be enclosed in backticks.
+
+If the task mentions an object but does not give the content of the object, assume that the object is already in the global environment, and don't create an example of that object in the code.
+
+If I ask you to rename a data frame's variables but provide no current variable names, ask me what are they. Then rename them to concise names in snake case.
+
+If I ask you to parse a variable into a factor or ordered factor without mentioning its levels, ask me "what are the levels of the factor? or ignore this question", and also give me the command of using `unique()` to find the levels. If I provide the levels, then parse the variable into a factor with the specified levels. 
+
+When parse date or date time, always use `lubridate` package's parsing function rather than using `as.Date`. To parse monthly data, use `ym` function. To parse quarterly data, use `yq` function. If the date is Taiwan date, be aware the year is not a western year unless you take out `yyyy` part and add 1911 to it. If time zone of a date time string is given, use `tz` argument in date parsing function to set the time zone -- not using `with_tz`. For time, use `hms` to parse. But if the value before parsing is not in "hh:mm:ss" format, change it to that format before parsing.
+
+Code answer rules. 1. When a package has been imported through `library()` before, it should not be `library()` again in the following codes. That is `library()` for a package should only appear once in your code answers. 
+
+When my task requires more details to be clear, ask me for more details. If the task is too broad, help me narrow it down by listing directions that I can pursue.
+
+>>> ASSISTANT:
+Got it! I'm ready to assist you with your R programming tasks in RStudio, following the tidyverse style and the guidelines you've provided. If you have a specific task or question in mind, feel free to ask!
+
+>>> USER:
+`glimpse(trafficAccidents$accident_date)` shows： 
+ num [1:4495] 20230101 20230101 20230101 20230101 20230101 ...
+`trafficAccidents$accident_date` which is in yyyymmdd format, convert it to date class.
+
+>>> ASSISTANT:
+To convert the `accident_date` variable in the `trafficAccidents` data frame from the `yyyymmdd` format to a date class, you can use the `lubridate` package and the `ymd()` function. Here’s the code to accomplish that:
+
+```r
+library(lubridate)
+
+trafficAccidents <- trafficAccidents %>%
+  mutate(accident_date = ymd(as.character(accident_date)))
+```
+
+This code converts the `accident_date` to a character string first (to ensure it's in the proper format) and then parses it into a date class using `ymd()`.
+
+>>> USER:
+`glimpse(future$YEARMONTH)` 顯示如下：
+ num [1:243] 202409 202408 202407 202406 202405 ...
+`future$YEARMONTH` which is in yyyymm format, convert it to date class.
+
+>>> ASSISTANT:
+To convert the `YEARMONTH` variable in the `future` data frame from the `yyyymm` format to a date class, you can use the `lubridate` package and the `ym()` function. Here’s the code to do that:
+
+```r
+library(lubridate)
+
+future <- future %>%
+  mutate(YEARMONTH = ym(as.character(YEARMONTH)))
+```
+
+This code converts the `YEARMONTH` to a character string and then parses it into a date class using `ym()`.
+
+>>> USER:
+`glimpse(growth$PERIOD)` 顯示如下：
+ chr [1:24] "108年第1季" "108年第2季" "108年第3季" "108年第4季" "109年第1季" "109年第2季" "109年第3季" "109年第4季" ...
+`growth$PERIOD` is quarterly **Taiwan** date in "yyy年第q季" format, convert it to date class.
+
+>>> ASSISTANT:
+To convert the `PERIOD` variable in the `growth` data frame from the Taiwanese quarterly format "yyy年第q季" to a date class, you'll first need to extract the year and the quarter, convert them appropriately, and then use the `yq()` function from the `lubridate` package. Since the year is in the Taiwanese format, you'll add 1911 to the year portion. Here's how you can do that:
+
+```r
+library(dplyr)
+library(lubridate)
+
+growth <- growth %>%
+  mutate(
+    year = as.numeric(sub("^(\\d+)年.*$", "\\1", PERIOD)) + 1911,
+    quarter = as.numeric(sub(".*第(\\d)季$", "\\1", PERIOD)),
+    PERIOD = yq(sprintf("%d-Q%d", year, quarter))
+  ) %>%
+  select(-year, -quarter)  # Remove the temporary columns if desired
+```
+
+In this code:
+- We extract the year and quarter from the `PERIOD` string using regular expressions.
+- Convert the year to Western format by adding 1911.
+- Construct a format suitable for `yq()` and parse it into date class.
+- Optionally, we remove the temporary `year` and `quarter` columns afterward.
+
+>>> USER:
+`glimpse(CPI$PERIOD)` shows: 
+ chr [1:71] "108年1月" "108年2月" "108年3月" "108年4月" "108年5月" "108年6月" "108年7月" "108年8月" "108年9月" ...
+`CPI$PERIOD` is monthly **Taiwan** date in "yyy年m月" format, convert it to date class.
+
+>>> ASSISTANT:
+To convert the `PERIOD` variable in the `CPI` data frame from the Taiwanese monthly format "yyy年m月" to a date class, you'll need to extract the year and the month, adjust the year by adding 1911, and then use the `ym()` function from the `lubridate` package. Here's the code to perform this conversion:
+
+```r
+library(dplyr)
+library(lubridate)
+
+CPI <- CPI %>%
+  mutate(
+    year = as.numeric(sub("^(\\d+)年.*$", "\\1", PERIOD)) + 1911,
+    month = as.numeric(sub(".*年(\\d+)月$", "\\1", PERIOD)),
+    PERIOD = ym(sprintf("%d-%02d", year, month))
+  ) %>%
+  select(-year, -month)  # Remove the temporary columns if desired
+```
+
+In this code:
+- We extract the year and the month from the `PERIOD` string using regular expressions.
+- Convert the year to Western format by adding 1911.
+- Construct a format suitable for `ym()` and parse it into date class.
+- Optionally, we remove the temporary `year` and `month` columns afterward.
+
+>>> USER:
+`glimpse(exchangeRate$PERIOD)` shows: 
+ chr [1:74] "41年" "42年" "43年" "44年" "45年" "46年" "47年" "48年" "49年" "50年" "51年" "52年" "53年" "54年" "55年" ...
+`exchangeRate$PERIOD` is yearly Taiwan date in "yyy年" format, convert it to date class.
+
+>>> ASSISTANT:
+To convert the `PERIOD` variable in the `exchangeRate` data frame from the Taiwanese yearly format "yyy年" to a date class, you'll need to extract the year, adjust the year by adding 1911, and then use the `ymd()` function to convert it to a date format. Since we are dealing with yearly data, we can assign a default day and month (such as the first day of the year). Here’s how to do it:
+
+```r
+library(dplyr)
+library(lubridate)
+
+exchangeRate <- exchangeRate %>%
+  mutate(
+    year = as.numeric(sub("^(\\d+)年$", "\\1", PERIOD)) + 1911,
+    PERIOD = ymd(sprintf("%d-01-01", year))  # Convert to date (first day of the year)
+  ) %>%
+  select(-year)  # Remove the temporary column if desired
+```
+
+In this code:
+- We extract the year from the `PERIOD` string using a regular expression.
+- Convert the year to the Western format by adding 1911.
+- Construct a date string with January 1st of the given year and parse it into date class using `ymd()`.
+- Optionally, we remove the temporary `year` column afterward.
