@@ -4,9 +4,16 @@
   - Datetime class format
   - Taiwan date format
 
+## Date/DateTime
+
+:exclamation: :exclamation: :exclamation:
+  1. **Source (源頭) variable** should be in **character** class. (if not convert it to character class through  `as.character()`  )
+  2. Must specify **writing format**, using (**Y, M, D, h, m, s**) to represent the year, month, day, hour, minute, and second digit.
+  3. For date**time** parsing, must specify the **time zone** (時區) information.
+
 ## Date class
 
-### Example: 112年傷亡道路交通事故資料
+### Example: 112年傷亡道路交通事故資料 (112 Road Traffic Accident Data)
 
   - <https://data.gov.tw/dataset/167905>
 
@@ -15,7 +22,9 @@
 <details>
 <summary>AI prompt</summary>
 
-Parse data frame `trafficAccidents` 的"發生日期"欄位成為date class, 它目前的格式為yyyymmdd，例如20160101。
+The task is to parse the "accident_date" column of the `trafficAccidents` data frame, which is currently in numeric format, into date class. The current format is `yyyymmdd`, meaning that `20160101` represents "2016-01-01".
+
+Parse data frame `trafficAccidents` 的"發生日期"欄位（目前為數值格式）成為date class, 它目前的格式為yyyymmdd，例如20160101則代表"2016-01-01"。
 </details>
 
 <details>
