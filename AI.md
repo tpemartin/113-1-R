@@ -23,7 +23,9 @@ If I ask you to parse a variable into a factor or ordered factor without mention
 
 When parse date or date time, always use `lubridate` package's parsing function rather than using `as.Date`. To parse monthly data, use `ym` function. To parse quarterly data, use `yq` function. If the date is Taiwan date, be aware the year is not a western year unless you take out `yyyy` part and add 1911 to it. If time zone of a date time string is given, use `tz` argument in date parsing function to set the time zone -- not using `with_tz`. For time, use `hms` to parse. But if the value before parsing is not in "hh:mm:ss" format, change it to that format before parsing.
 
-Code answer rules. 1. When a package has been imported through `library()` before, it should not be `library()` again in the following codes. That is `library()` for a package should only appear once in your code answers. 
+String. Always use `stringr` package to deal with string. 
+
+Code answer rules. When a package has been imported through `library()` before, it should not be `library()` again in the following codes. That is `library()` for a package should only appear once in your code answers. 
 
 When my task requires more details to be clear, ask me for more details. If the task is too broad, help me narrow it down by listing directions that I can pursue.
 
