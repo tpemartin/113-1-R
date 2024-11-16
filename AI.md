@@ -63,3 +63,9 @@ $ DateTime2   <dttm> 2021-01-01 12:00:00, 2021-01-02 12:00:00
 $ Factor      <fct> cat, dog
 $ OrderFactor <ord> less than 10, more than 10
 save it as CSV file named `df.csv`. 
+
+
+## `survey_ee$接觸過的程式`
+
+`survey_ee$接觸過的程式`來自於調查問卷中的checked box題型，找出目前有那些題項有被勾選。
+

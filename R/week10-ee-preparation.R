@@ -211,3 +211,14 @@ survey_ee |>
   filter(性別 == "男", 年齡 == "18-22")
 
 
+## checked box
+library(stringr)
+
+# 提取並找出被勾選的題項
+checked_items <- survey_ee %>%
+  pull(`接觸過的程式`) %>%
+  str_split(", ") %>%
+  unlist() %>%
+  unique()
+
+checked_items
