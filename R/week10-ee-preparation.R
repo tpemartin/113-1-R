@@ -46,8 +46,11 @@ write_csv(df, "df.csv")
 df2 <- read_csv("df.csv") 
 glimpse(df2)
 
+glimpse(df$DateTime1)
+tz(df$DateTime1)
+
+glimpse(df2$DateTime1)
 tz(df2$DateTime1)
-tz(df2$DateTime2)
 
 
 # 多類字串處理
