@@ -122,7 +122,8 @@ survey_ee <- survey_ee |>
     ),
     年齡 = factor(
       年齡,
-      levels = c("18-22", "23-30", "31-40", "40+")
+      levels = c("18-22", "23-30", "31-40", "40+"),
+      ordered = TRUE
     ),
     性別 = factor(
       性別,
@@ -146,12 +147,67 @@ student_survey3 <- read_sheet("https://docs.google.com/spreadsheets/d/1y4aJxP5-R
   sheet = "表單回應 1"
 )
 
-# 一模一樣的相等 ----
+# 等值，與不等值 ----
+glimpse(survey_ee)
 
 # `==`
+# <dbl> <int> ----
+survey_ee$一週工時 == 40
+survey_ee$一週工時 != 40
+survey_ee$一週工時 > 40
+survey_ee$一週工時 >= 40
+
+survey_ee |>
+  filter(一週工時 > 40)
+
+## <fct>
+survey_ee$性別 == "男"
+
+survey_ee |>
+  filter(性別 == "男")
+
+survey_ee |>
+  filter(性別 != "男")
+
+## <ord>
+survey_ee$年齡 == "18-22"
+survey_ee$年齡 > "18-22"
+
+survey_ee |>
+  filter(年齡 == "18-22")
+
+survey_ee |>
+  filter(年齡 != "18-22")
+
+# <dttm> ----
+# 不會去管時區，只會比較時間, 當做比同時區 ----
+survey_ee$Timestamp == "2024-10-05 10:31:41"  
+survey_ee$Timestamp >= "2024-10-05 10:31:41"
+
+survey_ee |>
+  filter(Timestamp == "2024-10-05 10:31:41")
+
+survey_ee |>
+  filter(Timestamp >= "2024-10-05 10:31:41")
+
+# 如果要跟不同時區比較，使用ymd_hms ----
+survey_ee$Timestamp == ymd_hms("2024-10-05 10:31:41", tz="UTC")
+survey_ee$Timestamp != ymd_hms("2024-10-05 10:31:41", tz="UTC")
+
+survey_ee |>
+  filter(Timestamp == ymd_hms("2024-10-05 10:31:41", tz="UTC"))
+survey_ee |>
+  filter(Timestamp < ymd_hms("2024-10-05 10:31:41", tz="UTC"))
+
+# <chr> ----
+survey_ee$接觸過的程式 == "Python"
+
+survey_ee |>
+  filter(接觸過的程式 == "Python")
+
+# dplyr::filter() ----  
+## 多個條件 ----
+survey_ee |>
+  filter(性別 == "男", 年齡 == "18-22")
 
 
-
-
-
-glimpse(survey$選這門課原因)

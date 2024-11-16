@@ -1,4 +1,4 @@
-# Data exploration: summary
+# Data exploration: summary and comparison
 
 <https://github.com/tpemartin/113-1-R/blob/84376fb8032ce3f57111b8078361c824bc98da18/R/week10-ee-preparation.R#L29-L69>
 
@@ -17,4 +17,4 @@ $ `Which year are you in?`                                         <ord> Year 5 
 $ `Have you learnt any of the following programming language(s)?`  <chr> "R, Python, JavaScript", "None"
 $ `The reason you register at this course`                         <chr> "Interest", "Interest"
 
-Any following task regarding `survey` will be based on the above data frame structure.
+Any following task regarding `survey` will be based on the above dataframe structure.
