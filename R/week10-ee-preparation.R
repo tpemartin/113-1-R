@@ -1,27 +1,63 @@
-library(tidyverse)
-growth <- read_csv("growth_tw.csv")
+# recap
 
-CPI <- read_csv("CPI2.csv")
+library(tibble) 
+ library(lubridate) 
+  
+ df <- tibble( 
+   Chr = as.character(1:10), 
+   Num = c(1:5, 6:10), 
+   Lgl = c(TRUE, FALSE, TRUE, TRUE, FALSE, TRUE, FALSE, TRUE, FALSE, TRUE), 
+   Date1 = as.character(seq.Date(from = as.Date("2021-10-01"),  
+                                 by = "day",  
+                                 length.out = 10)), 
+   Date2 = format(seq.Date(from = as.Date("2021-01-01"),  
+                           by = "day",  
+                           length.out = 10), "%b %d, %Y"), 
+   DateTime1 = as.character(seq.POSIXt(from = as.POSIXct("2021-10-01 12:00:00"),  
+                                       by = "day",  
+                                       length.out = 10)), 
+   DateTime2 = format(seq.POSIXt(from = as.POSIXct("2021-01-01 12:00:00"),  
+                                 by = "day",  
+                                 length.out = 10), "%b %d, %Y %H:%M:%S"), 
+   Factor = rep(c("cat", "dog", "bird"), length.out = 10), 
+   OrderFactor = rep(c("less than 10", "more than 10"), length.out = 10) 
+ ) 
+  
+ glimpse(df) 
 
-glimpse(CPI$統計期)
-library(dplyr)
-library(stringr)
-library(lubridate)
+# parse df 
+ df <- df |> 
+   mutate( 
+     Date1 = ymd(Date1), 
+     Date2 = mdy(Date2), 
+     DateTime1 = ymd_hms(DateTime1, tz="Asia/Taipei"),   
+     DateTime2 = mdy_hms(DateTime2, tz="Asia/Taipei"),   
+     Factor = factor(Factor, levels = c("cat", "dog", "bird")), 
+     OrderFactor = factor(OrderFactor, levels = c("less than 10", "more than 10"), ordered=TRUE) 
+   ) 
+glimpse(df[1:2,]) 
 
-library(lubridate)
-library(dplyr)
-library(lubridate)
 
-# 將民國日期字串轉換為 Date 類型
-CPI <- CPI %>%
-  mutate(
-    western_date = 統計期 %>%
-      str_extract_all("\\d+") %>% # 提取數字
-      map_chr(~ paste(as.integer(.x[1]) + 1911, .x[2], sep = "-")) %>%
-      ym()
-  )
 
-glimpse(CPI)
+# save df as csv---- 
+
+# Convert the datetime columns to ISO 8601 format
+df <- df %>%
+  mutate(across(where(is.POSIXt), ~ format(.x, tz = attr(.x, "tzone"), usetz = TRUE)))
+
+# Save the data frame as a CSV file
+write_csv(df, "df.csv")
+
+df2 <- read_csv("df.csv") 
+ glimpse(df2)
+
+tz(df2$DateTime1) 
+tz(df2$DateTime2)
+
+glimpse(df2$DateTime1)
+tz(df2$DateTime1) <- "Asia/Taipei"
+glimpse(df2$DateTime1)
+tz(df2$DateTime1)
 
 # 多類字串處理
 library(tidyverse)

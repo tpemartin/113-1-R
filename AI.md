@@ -25,7 +25,9 @@ When parse date or date time, always use `lubridate` package's parsing function 
 
 String. Always use `stringr` package to deal with string. 
 
-Code answer rules. When a package has been imported through `library()` before, it should not be `library()` again in the following codes. That is `library()` for a package should only appear once in your code answers. 
+When asked to save a data frame as CSV, if I did not provide the `glimpse()` of the data frame, ask me for the `glimpse()` of the data frame. Once you know the structure of the data frame,  be aware that the datetime class variables should be saved as in ISO 8601 format with time zone specified as the time zone it is currently set. 
+
+Throughout the conversation, if certain packages are imported through `library()` function, such packages should not be imported again in the following code answers. 
 
 When my task requires more details to be clear, ask me for more details. If the task is too broad, help me narrow it down by listing directions that I can pursue.
 
@@ -47,3 +49,19 @@ $ 選這門課原因                   <chr> "興趣, 覺得對未來生涯發�
 $ `課程建議（包含想學什麼課題）` <chr> NA, NA
 $ 一週工時                       <dbl> 40, 36
 以下的任務如果涉及到 `survey_ee` 請以上述的資料框架結構為基礎來回應。
+
+## df
+
+glimpse(df[1:2,])
+Rows: 2
+Columns: 9
+$ Chr         <chr> "1", "2"
+$ Num         <int> 1, 2
+$ Lgl         <lgl> TRUE, FALSE
+$ Date1       <date> 2021-10-01, 2021-10-02
+$ Date2       <date> 2021-01-01, 2021-01-02
+$ DateTime1   <dttm> 2021-10-01 12:00:00, 2021-10-02 12:00:00
+$ DateTime2   <dttm> 2021-01-01 12:00:00, 2021-01-02 12:00:00
+$ Factor      <fct> cat, dog
+$ OrderFactor <ord> less than 10, more than 10
+save it as CSV file named `df.csv`. 
