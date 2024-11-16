@@ -41,6 +41,21 @@ glimpse(df[1:2,])
 
 # save df as csv---- 
 
+
+
+df2 <- df %>%
+  mutate(DateTime1 = with_tz(DateTime1, tzone = "Asia/Taipei"),
+         DateTime2 = with_tz(DateTime2, tzone = "Asia/Taipei"))
+
+
+glimpse(df2)
+
+write_csv(df, "df_iso.csv", na = "",
+          col_names = TRUE)
+
+
+
+
 # Convert the datetime columns to ISO 8601 format
 df <- df %>%
   mutate(across(where(is.POSIXt), ~ format(.x, tz = attr(.x, "tzone"), usetz = TRUE)))

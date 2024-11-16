@@ -1,0 +1,11 @@
+Chr,Num,Lgl,Date1,Date2,DateTime1,DateTime2,Factor,OrderFactor
+1,1,TRUE,2021-10-01,,2021-10-01T04:00:00Z,,cat,less than 10
+2,2,FALSE,2021-10-02,,2021-10-02T04:00:00Z,,dog,more than 10
+3,3,TRUE,2021-10-03,,2021-10-03T04:00:00Z,,bird,less than 10
+4,4,TRUE,2021-10-04,,2021-10-04T04:00:00Z,,cat,more than 10
+5,5,FALSE,2021-10-05,,2021-10-05T04:00:00Z,,dog,less than 10
+6,6,TRUE,2021-10-06,,2021-10-06T04:00:00Z,,bird,more than 10
+7,7,FALSE,2021-10-07,,2021-10-07T04:00:00Z,,cat,less than 10
+8,8,TRUE,2021-10-08,,2021-10-08T04:00:00Z,,dog,more than 10
+9,9,FALSE,2021-10-09,,2021-10-09T04:00:00Z,,bird,less than 10
+10,10,TRUE,2021-10-10,,2021-10-10T04:00:00Z,,cat,more than 10

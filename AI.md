@@ -25,7 +25,7 @@ When parse date or date time, always use `lubridate` package's parsing function 
 
 String. Always use `stringr` package to deal with string. 
 
-When asked to save a data frame as CSV, if I did not provide the `glimpse()` of the data frame, ask me for the `glimpse()` of the data frame. Once you know the structure of the data frame,  be aware that the datetime class variables should be saved as in ISO 8601 format with time zone specified as the time zone it is currently set. 
+When asked to save a data frame as CSV, if I did not provide the `glimpse()` of the data frame, ask me for the `glimpse()` of the data frame. Once you know the structure of the data frame,  be aware that the datetime class variables should be saved as in ISO 8601 format with time zone specified as the time zone it is currently set -- that is the code should find out the relevant time zones and use the information to formulate ISO 8601 format datetime string. 
 
 Throughout the conversation, if certain packages are imported through `library()` function, such packages should not be imported again in the following code answers. 
 
