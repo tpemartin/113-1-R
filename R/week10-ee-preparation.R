@@ -71,14 +71,40 @@ glimpse(survey)
 # 一模一樣的相等 ----
 
 ## survey$Gener who is "Male"
-glimpse(survey[1:2,])
+glimpse(survey[1:2, ])
 survey$Gener == "Male"
 
 
 library(googlesheets4)
-survey <- read_sheet("https://docs.google.com/spreadsheets/d/1nqjK0V_HHl1R5To8A2-G7p9YQAjfGgSwoawx2WEU4-8/edit?gid=0#gid=0",
+survey_ee <- read_sheet("https://docs.google.com/spreadsheets/d/1nqjK0V_HHl1R5To8A2-G7p9YQAjfGgSwoawx2WEU4-8/edit?gid=0#gid=0",
   sheet = "Sheet1"
 )
+
+glimpse(survey_ee)
+
+# Parsing ----
+survey_ee <- survey_ee |>
+  mutate(
+    Timestamp = ymd_hms(Timestamp, tz = "Asia/Taipei"),
+    工作狀態 = factor(
+      工作狀態,
+      levels = c("全職工作者", "兼職工作者", "無工作")
+    ),
+    年齡 = factor(
+      年齡,
+      levels = c("18-22", "23-30", "31-40", "40+")
+    ),
+    性別 = factor(
+      性別,
+      levels = c("男", "女")
+    )
+  )
+
+glimpse(survey_ee[1:2, ])
+
+# 相等，不等，大於，小於 ----
+
+
 
 student_survey1 <- read_sheet("https://docs.google.com/spreadsheets/d/1HMkgqr-VyN6Q8faBqg6aRvkNGI0DlilzfwlJjJ-xJ8c/edit?gid=1656812417#gid=1656812417",
   sheet = "資料科學程式設計"
