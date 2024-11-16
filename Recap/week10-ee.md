@@ -27,6 +27,4 @@ write_csv(df, "df.csv")
 
 > :exclamation: 注意datetime class variables會自動以ISO 8601格式儲存，並將時間轉換成為UTC時區儲存。
 
-```r
-df <- read_csv("df.csv")
-```
+<https://github.com/tpemartin/113-1-R/blob/2521c828813b584a3c3d2663fb2c37b70e93e5ed/R/week10-ee-preparation.R#L46-L53>
