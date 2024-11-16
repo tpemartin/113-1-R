@@ -41,38 +41,14 @@ glimpse(df[1:2,])
 
 # save df as csv---- 
 
-
-
-df2 <- df %>%
-  mutate(DateTime1 = with_tz(DateTime1, tzone = "Asia/Taipei"),
-         DateTime2 = with_tz(DateTime2, tzone = "Asia/Taipei"))
-
-
-glimpse(df2)
-
-write_csv(df, "df_iso.csv", na = "",
-          col_names = TRUE)
-
-
-
-
-# Convert the datetime columns to ISO 8601 format
-df <- df %>%
-  mutate(across(where(is.POSIXt), ~ format(.x, tz = attr(.x, "tzone"), usetz = TRUE)))
-
-# Save the data frame as a CSV file
 write_csv(df, "df.csv")
 
 df2 <- read_csv("df.csv") 
- glimpse(df2)
+glimpse(df2)
 
-tz(df2$DateTime1) 
+tz(df2$DateTime1)
 tz(df2$DateTime2)
 
-glimpse(df2$DateTime1)
-tz(df2$DateTime1) <- "Asia/Taipei"
-glimpse(df2$DateTime1)
-tz(df2$DateTime1)
 
 # 多類字串處理
 library(tidyverse)
