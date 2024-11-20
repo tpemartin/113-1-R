@@ -124,7 +124,7 @@ library(ntpuR)
 setup_github_personal_access_token()
 ```
 
-
+> :exclamation: In the future, when you do "push" in Git and it asks for password, use the token that saved in ".Renviron" file instead. 
 
 ## `usethis` package`
 
