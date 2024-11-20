@@ -103,3 +103,29 @@ At the Git tab in RStudio, click "push" to store the committed changes in Github
 ## Exercise
 
 Add some .R files to the repository and push them to Github.
+
+
+## `ntpuR` package
+
+```R
+install.packages("tidyverse")
+```
+
+```R
+install.packages("remotes")
+```
+
+```R
+remotes::install_github("tpemartin/ntpuR")
+```
+
+```R
+library(ntpuR)
+setup_github_personal_access_token()
+```
+
+
+
+## `usethis` package`
+
+  - <https://usethis.r-lib.org/articles/git-credentials.html>
