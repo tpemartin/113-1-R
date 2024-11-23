@@ -41,8 +41,15 @@ Pattern is the regularity you want to detect. The expression of pattern in compu
 
 </details>
 
+#### 2. Or
 
-#### 2. length of string, starting/ending character
+Who is from "台中市" or "臺中市"? 
+
+<https://github.com/tpemartin/113-1-R/blob/b61b0927b3f72e5e4f75231245cab1150a218f7a/R/week11-ee-preparation.r#L157-L162>
+
+> :exclamation: REGEX: "(台|臺)中市", where `|` means "or".
+
+#### 3. length of string, starting/ending character
 
 <details>
 <summary>Taiwan county or township</summary>
@@ -69,7 +76,7 @@ Extract the string from `string_df$taiwan_address` that fits the following patte
 
 </details>
 
-#### 3. Maybe there
+#### 4. Maybe there
 
 Detect if `string_df$high_school` fit the following patter. 
 The pattern consists of the following parts in order:  
@@ -95,21 +102,3 @@ The pattern consists of the following parts in order:
 
 <https://github.com/tpemartin/113-1-R/blob/d0e98595517d290d8fa7b7dd2f52dbb964a67369/R/week11-ee-preparation.r#L149-L154>
 
-#### 4. Or
-
-Who is from "台中市" or "臺中市"? 
-
-
-
-<details>
-
-<summary> that fits the following pattern: it has "台北" or "新北" in it.</summary>
-
-Detect if `string_df$taiwan_address` any place in it the the following pattern detected:  
-  - "台" or "臺" followed by "中市".
-
-
-
-
-
-<details>
