@@ -27,13 +27,17 @@ Create new columns `location` and `department` in the dataframe `string_df`, whe
 
 ### Pattern
 
-Pattern is the regularity you want to detect.
+Pattern is the regularity you want to detect. The expression of pattern in computer language is called regular expression (aka **REGEX**).
 
 #### Exact match
 
 <details>
 <summary>Who has "Python" skill? </summary>
   
+<https://github.com/tpemartin/113-1-R/blob/cb43c371e7faf08fe36dccff5bd6820a29881d0d/R/week11-ee-preparation.r#L38-L41>
+
+
+> :exclamation: REGEX: "Python"
 
 </details>
 
@@ -47,6 +51,8 @@ Pattern is the regularity you want to detect.
   - ending character is one of "鄉", "鎮", "區", "里".
 
 > Extract the string from `string_df$taiwan_address` that fits the following pattern: it has three to five traditional Chinese characters of which the ending character is one of "鄉", "鎮", "區", or "里".
+
+> :exclamation: REGEX: `"[\u4e00-\u9fff]{2,4}(鄉|鎮|區|里)"`
 
 Extract the string from `string_df$taiwan_address` that fits the following pattern: 
  - the length of the string is three to five characters including an ending character.  
