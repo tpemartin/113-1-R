@@ -41,10 +41,13 @@ Pattern is the regularity you want to detect.
 
 > Extract the string from `string_df$taiwan_address` that fits the following pattern: it has three to five traditional Chinese characters of which the ending character is one of "鄉", "鎮", "區", or "里".
 
+<https://github.com/tpemartin/113-1-R/blob/99e8e7b5b717db711a1f877d868e4f3c5fcf8afd/R/week11-ee-preparation.r#L60-L67>
+
   - :exclamation: Trim off unwanted characters to shorten the sentence can enhance precision.
-  
+
 > Remove the first three characters of `string_df$taiwan_address` as `trimmed_taiwan_address` then extract the string from `trimmed_taiwan_address` that fits the following pattern: it has three to five traditional Chinese characters of which the ending character is one of "鄉", "鎮", "區", or "里".
 
+<https://github.com/tpemartin/113-1-R/blob/99e8e7b5b717db711a1f877d868e4f3c5fcf8afd/R/week11-ee-preparation.r#L69-L77>
 
 </details>
 
