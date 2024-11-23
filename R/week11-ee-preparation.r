@@ -187,8 +187,12 @@ survey_ee |>
 survey_ee |>
     filter(性別 != "男")
 
-respondents_python <- survey_ee |>
+
+survey_ee |>
+  filter(接觸過的程式 == "Python")
+
+survey_ee |>
   filter(stringr::str_detect(接觸過的程式, "Python"))
 
-respondents_python <- survey_ee |>
+survey_ee |>
   filter(!stringr::str_detect(接觸過的程式, "Python"))
