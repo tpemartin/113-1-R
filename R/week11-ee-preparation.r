@@ -152,3 +152,4 @@ string_df$matches_pattern <- stringr::str_detect(
 )
 
 string_df |> glimpse()
+
