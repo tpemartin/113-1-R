@@ -102,3 +102,6 @@ The pattern consists of the following parts in order:
 
 <https://github.com/tpemartin/113-1-R/blob/d0e98595517d290d8fa7b7dd2f52dbb964a67369/R/week11-ee-preparation.r#L149-L154>
 
+
+## Exercise
+
