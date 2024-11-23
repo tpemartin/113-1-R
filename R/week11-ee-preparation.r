@@ -167,3 +167,28 @@ string_df |> glimpse()
 baby <- read_csv("https://raw.githubusercontent.com/tpemartin/113-1-R/refs/heads/main/data-public/%E5%85%AC%E8%BE%A6%E6%B0%91%E7%87%9F%E6%89%98%E5%AC%B0%E4%B8%AD%E5%BF%83.csv")
 
 glimpse(baby)
+
+library(googlesheets4)
+survey_ee <- read_sheet("https://docs.google.com/spreadsheets/d/1nqjK0V_HHl1R5To8A2-G7p9YQAjfGgSwoawx2WEU4-8/edit?gid=0#gid=0",
+  sheet = "Sheet1"
+)
+
+
+# 等於，不等於
+
+survey_ee |>
+  filter(一週工時 == 40)
+survey_ee |>
+  filter(一週工時 != 40)
+
+survey_ee |>
+  filter(性別 == "男")
+
+survey_ee |>
+    filter(性別 != "男")
+
+respondents_python <- survey_ee |>
+  filter(stringr::str_detect(接觸過的程式, "Python"))
+
+respondents_python <- survey_ee |>
+  filter(!stringr::str_detect(接觸過的程式, "Python"))
