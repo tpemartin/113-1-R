@@ -14,7 +14,7 @@ Most work on character class is associated with pattern matching. With clear spe
 
 <https://github.com/tpemartin/113-1-R/blob/b61b0927b3f72e5e4f75231245cab1150a218f7a/R/week11-ee-preparation.r#L2-L41>
 
-### Precise locations
+## Precise locations
 
     - `string_df$taiwan_address`: extract "XX市" or "XX縣" (first three characters: location from 1 to 3).  
     - `string_df$school_id`: extract department code. (location from 5 to 6).  
@@ -25,11 +25,11 @@ Create new columns `location` and `department` in the dataframe `string_df`, whe
 
 <https://github.com/tpemartin/113-1-R/blob/d5a5718876adc9f46cfdfe2d2754407374b7c6d7/R/week11-ee-preparation.r#L24-L29>
 
-### Pattern (REGEX)
+## Pattern (REGEX)
 
 Pattern is the regularity you want to detect. The expression of pattern in computer language is called regular expression (aka **REGEX**).
 
-#### 1. Exact match
+### 1. Exact match
 
 <details>
 <summary>Who has "Python" skill? </summary>
@@ -41,7 +41,7 @@ Pattern is the regularity you want to detect. The expression of pattern in compu
 
 </details>
 
-#### 2. Or
+### 2. Or
 
 Who is from "台中市" or "臺中市"? 
 
@@ -49,7 +49,7 @@ Who is from "台中市" or "臺中市"?
 
 > :exclamation: REGEX: "(台|臺)中市", where `|` means "or".
 
-#### 3. length of string, starting/ending character
+### 3. length of string, starting/ending character
 
 <details>
 <summary>Taiwan county or township</summary>
@@ -76,7 +76,7 @@ Extract the string from `string_df$taiwan_address` that fits the following patte
 
 </details>
 
-#### 4. Maybe there
+### 4. Maybe there
 
 Detect if `string_df$high_school` fit the following patter. 
 The pattern consists of the following parts in order:  
