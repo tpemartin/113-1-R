@@ -105,3 +105,6 @@ The pattern consists of the following parts in order:
 
 ## Exercise
 
+<https://github.com/tpemartin/113-1-R/blob/42d527feaae9667c583085f2ae207f972cc1b1bc/R/week11-ee-preparation.r#L167-L169>
+
+  - 增加"區"、"路"的欄位。
