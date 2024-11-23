@@ -145,3 +145,10 @@ string_df$matches_pattern <- stringr::str_detect(
 )
 
 string_df |> glimpse()
+
+string_df$matches_pattern <- stringr::str_detect(
+  string_df$high_school,
+  "^台?北(市立第)?一女子?高?級?中?學?$"
+)
+
+string_df |> glimpse()

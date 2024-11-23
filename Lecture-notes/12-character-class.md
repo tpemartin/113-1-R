@@ -83,3 +83,12 @@ The pattern consists of the following parts in order:
   - "級": may not be there.   
   - "中": may not be there. 
   - "學": may not be there. 
+
+<https://github.com/tpemartin/113-1-R/blob/8e9347137f39afc4229a05938637ad40ff98abf2/R/week11-ee-preparation.r#L142-L147>
+
+> :exclamation: REGEX: "台?北(市立第)?一女子?高?級?中?學?"
+
+> "新北一女"也符合此規則，為什麼？
+
+> ：exclamation: If to make sure if the entire sentence fits the pattern, add `^` at the beginning and `$` at the end of the pattern. 
+> REGEX: "^台?北(市立第)?一女子?高?級?中?學?$"
