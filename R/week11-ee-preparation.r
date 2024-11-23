@@ -17,7 +17,12 @@ string_df <- tibble(
         c("411273008",
         "411382009",
         "411274010",
-        "411263011")
+        "411263011"),
+    skill = 
+        c("C++, R",
+        "R, Python",
+        "R",
+        "Python, Java")
 )
 
 
@@ -29,6 +34,11 @@ string_df %>%
     )
 
 # target pattern -----
+
+## exact pattern 
+
+string_df |>
+    filter(str_detect(skill,"Python"))
 
 ## 1. taiwan_address's subdivision 2 (區里鄉鎮)
 library(stringr)
@@ -72,6 +82,15 @@ library(stringr)
 extracted_addresses <- string_df %>%
   mutate(trimmed_taiwan_address = str_sub(taiwan_address, 4)) %>%
   mutate(extracted = str_extract(trimmed_taiwan_address, "[\u4e00-\u9fff]{2,4}(鄉|鎮|區|里)")) %>%
+  filter(!is.na(extracted))
+
+extracted_addresses |> glimpse()
+
+library(dplyr)
+library(stringr)
+
+extracted_addresses <- string_df %>%
+  mutate(extracted = str_extract(taiwan_address, ".{2,4}(鄉|鎮|區|里)")) %>%
   filter(!is.na(extracted))
 
 extracted_addresses |> glimpse()
