@@ -94,3 +94,22 @@ The pattern consists of the following parts in order:
 > REGEX: "^台?北(市立第)?一女子?高?級?中?學?$"
 
 <https://github.com/tpemartin/113-1-R/blob/d0e98595517d290d8fa7b7dd2f52dbb964a67369/R/week11-ee-preparation.r#L149-L154>
+
+#### 4. Or
+
+Who is from "台中市" or "臺中市"? 
+
+
+
+<details>
+
+<summary> that fits the following pattern: it has "台北" or "新北" in it.</summary>
+
+Detect if `string_df$taiwan_address` any place in it the the following pattern detected:  
+  - "台" or "臺" followed by "中市".
+
+
+
+
+
+<details>

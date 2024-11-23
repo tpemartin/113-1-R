@@ -5,7 +5,7 @@ string_df <- tibble(
     # 台灣地址
     taiwan_address = 
         c("新竹市東區食品路228號",
-        "台中市大甲區蔣公路140號",
+        "臺中市大甲區蔣公路140號",
         "台南市北區中華北路一段85號",
         "嘉義縣大林鎮民權路53號",
         "雲林縣西螺鎮福興里中山路70號",
@@ -153,3 +153,10 @@ string_df$matches_pattern <- stringr::str_detect(
 
 string_df |> glimpse()
 
+
+string_df$from_taichung_city <- stringr::str_detect(
+  string_df$taiwan_address,
+  "(台|臺)中市"
+)
+
+string_df |> glimpse()
