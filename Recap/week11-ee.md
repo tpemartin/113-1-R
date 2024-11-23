@@ -18,7 +18,7 @@
 
 > `survey_ee$接觸過的程式` 來自於調查問卷中的check box題型，誰有勾"Python"這個選項。
 
-
+<https://github.com/tpemartin/113-1-R/blob/5eb72f38bd3f6c203566c398992208a50624f0ad/R/week11-ee-preparation.r#L194-L198>
 
 
 
