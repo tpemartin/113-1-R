@@ -25,11 +25,11 @@ Create new columns `location` and `department` in the dataframe `string_df`, whe
 
 <https://github.com/tpemartin/113-1-R/blob/d5a5718876adc9f46cfdfe2d2754407374b7c6d7/R/week11-ee-preparation.r#L24-L29>
 
-### Pattern
+### Pattern (REGEX)
 
 Pattern is the regularity you want to detect. The expression of pattern in computer language is called regular expression (aka **REGEX**).
 
-#### Exact match
+#### 1. Exact match
 
 <details>
 <summary>Who has "Python" skill? </summary>
@@ -42,7 +42,7 @@ Pattern is the regularity you want to detect. The expression of pattern in compu
 </details>
 
 
-#### length of string, starting/ending character
+#### 2. length of string, starting/ending character
 
 <details>
 <summary>Taiwan county or township</summary>
@@ -69,4 +69,17 @@ Extract the string from `string_df$taiwan_address` that fits the following patte
 
 </details>
 
-### Enhanced regular expression
+#### 3. Maybe there
+
+Detect if `string_df$high_school` fit the following patter. 
+The pattern consists of the following parts in order:  
+  - "台": may not be there.
+  - "北": must be there.
+  - "市立第": may not be there.
+  - "一": must be there. 
+  - "女": must be there.  
+  - "子": may not be there. 
+  - "高": may not be there. 
+  - "級": may not be there.   
+  - "中": may not be there. 
+  - "學": may not be there. 
