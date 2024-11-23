@@ -12,7 +12,7 @@ Most work on character class is associated with pattern matching. With clear spe
 ## example data frame
 
 
-<https://github.com/tpemartin/113-1-R/blob/d5a5718876adc9f46cfdfe2d2754407374b7c6d7/R/week11-ee-preparation.r#L2-L21>
+<https://github.com/tpemartin/113-1-R/blob/b61b0927b3f72e5e4f75231245cab1150a218f7a/R/week11-ee-preparation.r#L2-L41>
 
 ### Precise locations
 
