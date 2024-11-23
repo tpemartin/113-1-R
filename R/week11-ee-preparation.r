@@ -31,7 +31,47 @@ string_df %>%
 # target pattern -----
 
 ## 1. taiwan_address's subdivision 2 (區里鄉鎮)
-string_df %>% 
-    mutate(
-        subdivision = str_extract(taiwan_address, "市|縣.+[區鎮里]")
-    )
+library(stringr)
+
+extracted_addresses <- string_df %>%
+  filter(str_detect(taiwan_address, "[\u4e00-\u9fff]{3,5}(鄉|鎮|區|里)")) %>%
+  mutate(extracted = str_extract(taiwan_address, "[\u4e00-\u9fff]{3,5}(鄉|鎮|區|里)"))
+
+extracted_addresses |> glimpse()
+
+library(stringr)
+
+extracted_addresses <- string_df %>%
+  filter(str_detect(taiwan_address, "[\u4e00-\u9fff]{2,4}(鄉|鎮|區|里)")) %>%
+  mutate(extracted = str_extract(taiwan_address, "[\u4e00-\u9fff]{2,4}(鄉|鎮|區|里)"))
+
+extracted_addresses |> glimpse()
+
+library(stringr)
+
+extracted_addresses <- string_df %>%
+  mutate(trimmed_address = str_sub(taiwan_address, 4)) %>%
+  filter(str_detect(trimmed_address, "^[\u4e00-\u9fff]{3,5}(鄉|鎮|區|里)$")) %>%
+  mutate(extracted = str_extract(trimmed_address, "^[\u4e00-\u9fff]{3,5}(鄉|鎮|區|里)$"))
+
+extracted_addresses |> glimpse()
+
+
+library(dplyr)
+library(stringr)
+
+extracted_addresses <- string_df %>%
+  mutate(extracted = str_extract(taiwan_address, "[\u4e00-\u9fff]{2,4}(鄉|鎮|區|里)")) %>%
+  filter(!is.na(extracted))
+
+extracted_addresses |> glimpse()
+
+library(dplyr)
+library(stringr)
+
+extracted_addresses <- string_df %>%
+  mutate(trimmed_taiwan_address = str_sub(taiwan_address, 4)) %>%
+  mutate(extracted = str_extract(trimmed_taiwan_address, "[\u4e00-\u9fff]{2,4}(鄉|鎮|區|里)")) %>%
+  filter(!is.na(extracted))
+
+extracted_addresses |> glimpse()
