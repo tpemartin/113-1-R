@@ -160,3 +160,10 @@ string_df$from_taichung_city <- stringr::str_detect(
 )
 
 string_df |> glimpse()
+
+
+# exercise
+
+baby <- read_csv("https://raw.githubusercontent.com/tpemartin/113-1-R/refs/heads/main/data-public/%E5%85%AC%E8%BE%A6%E6%B0%91%E7%87%9F%E6%89%98%E5%AC%B0%E4%B8%AD%E5%BF%83.csv")
+
+glimpse(baby)
