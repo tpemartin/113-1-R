@@ -1,4 +1,4 @@
-# Character class
+# Character class (1)
 
 Most work on character class is associated with pattern matching. With clear specification of the pattern (規律), we can 
 
