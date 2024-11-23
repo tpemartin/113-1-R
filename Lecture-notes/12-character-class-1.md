@@ -108,3 +108,10 @@ The pattern consists of the following parts in order:
 <https://github.com/tpemartin/113-1-R/blob/42d527feaae9667c583085f2ae207f972cc1b1bc/R/week11-ee-preparation.r#L167-L169>
 
   - 增加"區"、"路"的欄位。
+
+<details>
+<summary>Reference answer</summary>
+
+<https://github.com/econmtlin/113-1-R-final-project/blob/67f2ebfbf0c7a1f41d4aac05b05c572db79d5dba/baby-data-import.R#L7-L35>
+
+</details>
