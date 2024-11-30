@@ -65,38 +65,20 @@ AI conversation with neighbor regex:
 
 #### Customized Emails
 
-  - <https://developers.google.com/apps-script/samples/automations/mail-merge>
-
 <https://github.com/tpemartin/113-1-R/blob/ecd01a72f060c46ce5eb17323412b596f6074fbd/R/week12-ee.R#L121-L134>
+
+AI conversation:
+
+<https://github.com/tpemartin/113-1-R/blob/1d356abc9cd6a081138bd84d5039b2abe7aca646/chat/regex-neighor.txt#L256-L313>
+
+<details>
+
+<summary>**Code**</summary>
+
+<https://github.com/tpemartin/113-1-R/blob/1d356abc9cd6a081138bd84d5039b2abe7aca646/R/week12-ee.R#L178-L194>
+
+</details>
 
 > :exclamation: You can use `gmailr` package to send emails in R through your gmail. (<<https://github.com/r-lib/gmailr>>)
 
-#### Customized Emails
-
-
-  - <https://developers.google.com/apps-script/samples/automations/mail-merge>
-
-
-### How many words/sentences
-
-
-
-### Word boundary
-
-- `\\b`: word boundary.
-
-
-## JiabaR
-
-## Application
-
-
-#### Gmail merger
-
-  - <https://support.google.com/mail/answer/12921167?hl=en>
-
-
-#### gmailr
-
-  - <https://github.com/r-lib/gmailr>
-
+  - Use Google sheets to finish the job: <https://developers.google.com/apps-script/samples/automations/mail-merge>
