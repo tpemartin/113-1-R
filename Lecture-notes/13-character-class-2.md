@@ -26,7 +26,7 @@ AI conversation:
 
 </details>
 
-> :exclemation: if AI does not use the neighbor regex, you can ask it to use "look ahead" or "look behind" regex.
+> :exclamation: if AI does not use the neighbor regex, you can ask it to use "look ahead" or "look behind" regex.
 
 AI conversation:
 
@@ -59,7 +59,7 @@ AI conversation with neighbor regex:
 
 </details>
 
-> :exclemation: Double check `{m, n}` for the number of characters if it includes the character you want to match. 
+> :exclamation: Double check `{m, n}` for the number of characters if it includes the character you want to match. 
 
 
 ## Applications
