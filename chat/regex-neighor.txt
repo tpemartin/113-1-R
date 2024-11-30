@@ -1,0 +1,107 @@
+>>> USER:
+You are using RStudio to conduct R programming tasks in POSIT remote server with preloaded tidyverse package. If the task is programming related, the programming style should follow tidyverse style as closely as possible, i.e. if certain task can be done in both base R and tidyverse, use tidyverse. The package `tidyverse` is already loaded. Any provided code that uses its functions will work -- no need to `library` it again. `tidyverse` is a collection of packages designed for data science. It includes `ggplot2`, `dplyr`, `tidyr`, `readr`, `purrr`, `tibble`, `stringr`, `forcats`, and `haven`. When there is possibility to use chain operator, always use `|>` instead of `%>%`.
+
+When codes are involved with labels or names that are not conventional (i.e using only a-z, A-Z, 0-9, and `_`), the labels or names should be enclosed in backticks.
+
+If the task mentions an object but does not give the content of the object, assume that the object is already in the global environment, and don't create an example of that object in the code.
+
+If I ask you to rename a data frame's variables but provide no current variable names, ask me what are they. Then rename them to concise names in snake case.
+
+If I ask you to parse a variable into a factor or ordered factor without mentioning its levels, ask me "what are the levels of the factor? or ignore this question", and also give me the command of using `unique()` to find the levels. If I provide the levels, then parse the variable into a factor with the specified levels. 
+
+When parse date or date time, always use `lubridate` package's parsing function rather than using `as.Date`. To parse monthly data, use `ym` function. To parse quarterly data, use `yq` function. If the date is Taiwan date, be aware the year is not a western year unless you take out `yyyy` part and add 1911 to it. If time zone of a date time string is given, use `tz` argument in date parsing function to set the time zone -- not using `with_tz`. For time, use `hms` to parse. But if the value before parsing is not in "hh:mm:ss" format, change it to that format before parsing.
+
+String. Always use `stringr` package to deal with string. For pattern regarding "may or may not be there", if it is about one character, say "X may or may not be there", use "X?"; if it is about a phrase "XXX may or may not be there" use "(XXX)?". When applying a function from `stringr` package to a variable, if the variable is not a character type, convert it to character type first.
+
+Throughout the conversation, if certain packages are imported through `library()` function, such packages should not be imported again in the following code answers. 
+
+When my task requires more details to be clear, ask me for more details. If the task is too broad, help me narrow it down by listing directions that I can pursue.
+
+>>> ASSISTANT:
+Got it! I'm ready to assist you with your R programming tasks using the tidyverse style on the POSIT remote server. Just let me know what you need help with, and I'll provide the appropriate code and guidance!
+
+>>> USER:
+glimpse(`string_df$github`) shows:
+ chr [1:8] "https://github.com/Tang0724/113-1-R-final-project.git" ...
+粹取出`username`, 它是"不含/的一串文字"，它的前面鄰居要有"https://github.com/"
+
+>>> ASSISTANT:
+你可以使用 `stringr` 套件中的 `str_extract()` 函數來提取 `username`。具體來說，這個操作會使用正則表達式來匹配以 `https://github.com/` 為前綴，並且後面跟著不包含 `/` 的字元串。以下是相應的代碼：
+
+```r
+`string_df` <- `string_df` |>
+    mutate(`username` = str_extract(`github`, "https://github.com/([^/]+)")) |>
+    mutate(`username` = str_remove(`username`, "https://github.com/"))
+```
+
+這段代碼首先提取出包含 `username` 的部分，然後將其前綴移除，只保留用戶名。如果你有進一步的要求或問題，請告訴我！
+
+>>> USER:
+其他作法
+
+>>> ASSISTANT:
+除了使用 `str_extract()` 外，還有其他方法可以達到同樣的目標。例如，你也可以使用 `str_split()` 函數來將字串分割，然後提取相應的部分。以下是另一種做法：
+
+```r
+`string_df` <- `string_df` |>
+    mutate(`username` = str_split(`github`, "/", n = 4) |>
+               purrr::map_chr(3))
+```
+
+在這段代碼中，我們使用 `str_split()` 將 URL 按斜線 `/` 分割，並限定分割的次數為 4，這樣可以確保不會將 `username` 超過一次分割。接著，使用 `map_chr()` 提取第三個元素，即用戶名。
+
+如果你想要進一步優化或有其他要求，請隨時告訴我！
+
+>>> USER:
+使用regex look behind
+
+>>> ASSISTANT:
+若要使用正則表達式的反向查找（lookbehind），可以利用 `str_extract()` 結合 `(?<=...)` 來實現，這樣可以確保只有當 `username` 前面是指定的字串時才進行匹配。下面是使用 regex lookbehind 的範例：
+
+```r
+`string_df` <- `string_df` |>
+    mutate(`username` = str_extract(`github`, "(?<=https://github.com/)[^/]+"))
+```
+
+在這段代碼中，`(?<=https://github.com/)` 是一個反向查找模式，它確保了我們只提取在 `https://github.com/` 之後的部分，並且 `[^/]+` 表示提取的字串不應包含 `/`。
+
+如果有其他要求或想進一步探討，隨時告訴我！
+
+>>> USER:
+glimpse(string_df$taiwan_address)
+ chr [1:8] "新竹市東區食品路228號" "臺中市大甲區蔣公路140號" "台南市北區中華北路一段85號" ...
+粹取`district`，它是由"2到3個繁體中文字組成而且最後一個字必需是以下其中一個：市區鄉鎮"
+
+>>> ASSISTANT:
+要提取 `district`，你可以使用 `stringr` 的 `str_extract()` 函數，搭配適當的正則表達式來匹配 2 到 3 個繁體中文字，且最後一個字必須是 "市"、"區"、"鄉" 或 "鎮"。以下是具體的代碼：
+
+```r
+`string_df` <- `string_df` |>
+    mutate(`district` = str_extract(`taiwan_address`, "[\\u4e00-\\u9fa5]{2,3}(市|區|鄉|鎮)"))
+```
+
+這段代碼使用的正則表達式如下：
+- `[\\u4e00-\\u9fa5]{2,3}`：匹配 2 到 3 個繁體中文字。
+- `(市|區|鄉|鎮)`：確保最後一個字是 "市"、"區"、"鄉" 或 "鎮"。
+
+如果你有進一步的問題或需求，請告訴我！
+
+>>> USER:
+glimpse(string_df$taiwan_address)
+ chr [1:8] "新竹市東區食品路228號" "臺中市大甲區蔣公路140號" "台南市北區中華北路一段85號" ...
+粹取`district2`，它是由"2到3個繁體中文字組成而且最後一個字必需是以下其中一個：市區鄉鎮", 而且它的前面鄰居必需是以下其中一個字："縣"或"市"
+
+>>> ASSISTANT:
+要提取 `district2`，你可以使用 `stringr` 的 `str_extract()` 函數，結合適當的正則表達式來匹配 2 到 3 個繁體中文字，並且確保前面是 "縣" 或 "市"。以下是相應的代碼：
+
+```r
+`string_df` <- `string_df` |>
+    mutate(`district2` = str_extract(`taiwan_address`, "(?<=縣|市)[\\u4e00-\\u9fa5]{2,3}(市|區|鄉|鎮)"))
+```
+
+這段代碼中，正則表達式的部分解釋如下：
+- `(?<=縣|市)`：這是一個正向查找（lookbehind），用來確保 "縣" 或 "市" 在 `district2` 的前面。
+- `[\\u4e00-\\u9fa5]{2,3}`：匹配 2 到 3 個繁體中文字。
+- `(市|區|鄉|鎮)`：確保最後一個字是 "市"、"區"、"鄉" 或 "鎮"。
+
+如果你有任何問題或需要更多幫助，請告訴我！
