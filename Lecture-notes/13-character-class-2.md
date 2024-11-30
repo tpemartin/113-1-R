@@ -62,12 +62,17 @@ AI conversation with neighbor regex:
 > :exclamation: Double check `{m, n}` for the number of characters if it includes the character you want to match. 
 
 
-## Applications
 
-### Customized Emails
+#### Customized Emails
 
   - <https://developers.google.com/apps-script/samples/automations/mail-merge>
 
+> :exclamation: You can use `gmailr` package to send emails in R through your gmail. (<<https://github.com/r-lib/gmailr>>)
+
+#### Customized Emails
+
+
+  - <https://developers.google.com/apps-script/samples/automations/mail-merge>
 
 
 ### How many words/sentences
@@ -83,7 +88,6 @@ AI conversation with neighbor regex:
 
 ## Application
 
-### Customized Emails
 
 #### Gmail merger
 

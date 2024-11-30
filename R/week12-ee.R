@@ -193,3 +193,20 @@ emails |> select(`name`, `email_body`)
 
 cat(emails$email_body[2])
 
+
+## upload to gs sheet
+library(googlesheets4)
+gsUrl <- "https://docs.google.com/spreadsheets/d/1ZgXV_N6-SsuFlePoxOfQv6Rq8uSqS7v5zJ2CjxRsjJ4/edit?pli=1&gid=0#gid=0"
+
+students2 <- students |>
+   mutate(
+    Recipient= email,
+    `Email Sent` = ""
+   )
+
+
+write_sheet(
+    students2,
+    gsUrl,
+    sheet="students2"
+)
