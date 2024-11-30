@@ -19,7 +19,7 @@ AI conversation:
 
 <details>
 
-<summary>Code</summary>
+<summary>**Code**</summary>
 
 
 <https://github.com/tpemartin/113-1-R/blob/17c21d027143ffb312b22391221817808e043253/R/week12-ee.R#L62-L68>
@@ -40,7 +40,7 @@ AI conversation without neighbor regex:
 
 <details>
 
-<summary>Without neighbor regex</summary>
+<summary>**Code** without neighbor regex</summary>
 
 <https://github.com/tpemartin/113-1-R/blob/17c21d027143ffb312b22391221817808e043253/R/week12-ee.R#L70-L76>
 
@@ -53,7 +53,7 @@ AI conversation with neighbor regex:
 
 <details>
 
-<summary>With neighbor regex</summary>
+<summary>**Code** with neighbor regex</summary>
 
 <https://github.com/tpemartin/113-1-R/blob/17c21d027143ffb312b22391221817808e043253/R/week12-ee.R#L78-L81>
 
