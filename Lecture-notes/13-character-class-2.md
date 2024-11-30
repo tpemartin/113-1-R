@@ -67,6 +67,8 @@ AI conversation with neighbor regex:
 
   - <https://developers.google.com/apps-script/samples/automations/mail-merge>
 
+<https://github.com/tpemartin/113-1-R/blob/ecd01a72f060c46ce5eb17323412b596f6074fbd/R/week12-ee.R#L121-L134>
+
 > :exclamation: You can use `gmailr` package to send emails in R through your gmail. (<<https://github.com/r-lib/gmailr>>)
 
 #### Customized Emails

@@ -252,3 +252,62 @@ emails |> select(`name`, `email_body`)
 我們用 `str_replace()` 逐一替換各個佔位符，生成每位學生的個性化電子郵件內容。
 
 如果你對這個方法有任何疑問或其他需求，請告訴我！
+
+>>> USER:
+glimpse(students)
+Rows: 3
+Columns: 5
+$ name      <chr> "Alice", "Bob", "Charlie"
+$ email     <chr> "econmtlin@gmail.com", "econmtlin@gmail.com", "econmtlin@gmail.com"
+$ homework1 <int> 3, 3, 10
+$ homework2 <int> 2, 6, 5
+$ homework3 <int> 4, 6, 9
+我有一個email範本如下：
+Dear {{name}},
+
+I hope this message finds you well!
+
+I am writing to inform you of your grades for the recent homework assignments. Here are your scores:
+
+- Homework 1: {{homework1}}
+- Homework 2: {{homework2}}
+- Homework 3: {{homework3}}  
+
+If you have any questions regarding the grades or would like to discuss any feedback, please feel free to reach out.
+
+Congratulations on your hard work, and keep it up!
+
+Best regards,
+Martin
+為每個observation, 產生它客製化的email內文，其中"{{xxx}}"代表它的文字必需來自對應的variable XXX。使用str_replace, 並為每個variable創一個placeholder.
+
+>>> ASSISTANT:
+你可以像之前所提到的那樣，使用 `str_replace()` 來替換電子郵件範本中的佔位符。首先，定義一個電子郵件範本，並為每個變數使用特定的佔位符。接下來，依序替換每個佔位符來生成客製化的電子郵件內容。以下是相應的程式碼：
+
+```r
+library(dplyr)
+library(stringr)
+
+# 定義電子郵件範本，使用特定佔位符
+email_template <- "Dear {name},\n\nI hope this message finds you well!\n\nI am writing to inform you of your grades for the recent homework assignments. Here are your scores:\n\n- Homework 1: {homework1}\n- Homework 2: {homework2}\n- Homework 3: {homework3}\n\nIf you have any questions regarding the grades or would like to discuss any feedback, please feel free to reach out.\n\nCongratulations on your hard work, and keep it up!\n\nBest regards,\nMartin"
+
+# 生成客製化電子郵件內容
+emails <- students |>
+    mutate(`email_body` = 
+        str_replace(email_template, "\\{name\\}", name) |>      # 替換姓名
+        str_replace(., "\\{homework1\\}", as.character(homework1)) |>  # 替換作業1成績
+        str_replace(., "\\{homework2\\}", as.character(homework2)) |>  # 替換作業2成績
+        str_replace(., "\\{homework3\\}", as.character(homework3))      # 替換作業3成績
+    )
+
+# 查看生成的郵件內容
+emails |> select(name, email_body)
+```
+
+在這段代碼中：
+- 我們定義了電子郵件範本 `email_template`，並使用 `{name}`、`{homework1}`、`{homework2}` 和 `{homework3}` 作為佔位符。
+- 使用 `mutate()` 和 `str_replace()` 方法，逐步替換這些佔位符為學生的具體信息。
+  
+最終，`emails` 資料框將包含每位學生的姓名及其對應的客製化電子郵件內容。
+
+如果你有更多的問題或需要進一步幫助，請隨時告訴我！
