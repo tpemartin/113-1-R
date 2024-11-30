@@ -19,7 +19,7 @@ AI conversation:
 
 <details>
 
-<summary>**Code**</summary>
+<summary> **Code** </summary>
 
 
 <https://github.com/tpemartin/113-1-R/blob/17c21d027143ffb312b22391221817808e043253/R/week12-ee.R#L62-L68>
