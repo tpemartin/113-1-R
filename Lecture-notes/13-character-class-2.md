@@ -11,7 +11,7 @@
  -  Preceded by / Not preceded by a neighbor pattern (前面要有 / 前面不能有 鄰居pattern).  
  -  Followed by / Not followed by a neighbor pattern (後面要有 / 後面不能有 鄰居pattern).
 
-#### github username
+#### 1. github username
 
 AI conversation:
 
@@ -32,7 +32,7 @@ AI conversation:
 
 <https://github.com/tpemartin/113-1-R/blob/b682de46a38023e0d548afb1fd80d4e5ea081b72/chat/regex-neighor.txt#L55-L68>
 
-#### Taiwan district
+#### 2. Taiwan district
 
 AI conversation without neighbor regex:
 
@@ -63,7 +63,7 @@ AI conversation with neighbor regex:
 
 
 
-#### Customized Emails
+## Customized Emails
 
 <https://github.com/tpemartin/113-1-R/blob/ecd01a72f060c46ce5eb17323412b596f6074fbd/R/week12-ee.R#L121-L134>
 
