@@ -89,45 +89,6 @@ string_df$district <- stringr::str_extract(string_df$taiwan_address, "(?<=(縣|�
 
 string_df$district
 
-# word boundary
-
-# Sample text in Traditional Chinese
-text <- "水果是健康的，水果可以讓你更有活力。沒有水果的人生是乾枯的。"
-
-# Define a pattern to search for the word "水果" (fruit) as a whole word
-pattern <- "\\b水果"
-
-# Finding matches for "水果"
-str_count(text, pattern)
-
-matches <- gregexpr(pattern, text)
-
-# Get actual matches
-matched_words <- regmatches(text, matches)
-
-# Print the matched words
-cat("找到的匹配:", unlist(matched_words), "\n")
-
-# Replacing "水果" with "食物" (food) only when it is a whole word
-replaced_text <- gsub(pattern, "食物", text)
-
-# Print the replaced text
-cat("替換後的文本:", replaced_text, "\n")
-
-
-
-# a character vector for practicing regular expression using before and after neighbors
-
-# 1. extract the number of the address
-
-
-
-# 2. extract the city name
-# 3. extract the district name
-
-# 4. extract the school name
-# 5. extract the school id
-# 6. extract the programming language
 
 
 library(epubr)
@@ -170,7 +131,7 @@ students <- data.frame(
 )
 
 # Print the data frame
-print(students)
+glimpse(students)
 
 # email template
 
@@ -192,52 +153,43 @@ Congratulations on your hard work, and keep it up!
 Best regards,
 Martin"
 
-library(tidyverse)
+library(glue)
 
-# Customized email for the 1st student, convert homework grades to strings
-email1 <- email_template %>%
-    str_replace("\\{\\{name\\}\\}", students$name[1]) %>%
-    str_replace("\\{\\{homework1\\}\\}", as.character(students$homework1[1])) %>%
-    str_replace("\\{\\{homework2\\}\\}", as.character(students$homework2[1])) %>%
-    str_replace("\\{\\{homework3\\}\\}", as.character(students$homework3[1]))
+emails <- students |>
+    mutate(`email_body` = glue(
+        "Dear {`name`},\n\n",
+        "I hope this message finds you well!\n\n",
+        "I am writing to inform you of your grades for the recent homework assignments. Here are your scores:\n\n",
+        "- Homework 1: {homework1}\n",
+        "- Homework 2: {homework2}\n",
+        "- Homework 3: {homework3}\n\n",
+        "If you have any questions regarding the grades or would like to discuss any feedback, please feel free to reach out.\n\n",
+        "Congratulations on your hard work, and keep it up!\n\n",
+        "Best regards,\n",
+        "Martin"
+    ))
 
-print(email1)
-cat(email1)
+# 查看生成的郵件內容
+emails |> select(`name`, `email_body`)
 
-# set up email server
+cat(emails$email_body[2])
 
-# Load necessary libraries
-library(sendmailR)
-# Load necessary library
-library(sendmailR)
 
-# Function to send an email
-send_email <- function(to, subject, body) {
-  from <- "tpemartin@gmail.com"  # Replace with your Gmail address
-  smtp <- list(host.name = "smtp.gmail.com", port = 587, 
-               user.name = "tpemartin@gmail.com", passwd = Sys.getenv("Google_Appp_PWD"), 
-               ssl = TRUE)
+library(stringr)
 
-  # Create the email
-  email <- sendmail(
-    from = from,
-    to = to,
-    subject = subject,
-    msg = body,
-    control = smtp
-  )
+# 定義電子郵件範本，使用特定佔位符
+email_template <- "Dear {name},\n\nI hope this message finds you well!\n\nI am writing to inform you of your grades for the recent homework assignments. Here are your scores:\n\n- Homework 1: {homework1}\n- Homework 2: {homework2}\n- Homework 3: {homework3}\n\nIf you have any questions regarding the grades or would like to discuss any feedback, please feel free to reach out.\n\nCongratulations on your hard work, and keep it up!\n\nBest regards,\nMartin"
 
-  return(email)
-}
+emails <- students |>
+    mutate(`email_body` = 
+        str_replace(email_template, "\\{name\\}", `name`) |>      # 替換姓名
+        str_replace(., "\\{homework1\\}", as.character(homework1)) |>  # 替換 homework1 成績
+        str_replace(., "\\{homework2\\}", as.character(homework2)) |>  # 替換 homework2 成績
+        str_replace(., "\\{homework3\\}", as.character(homework3))      # 替換 homework3 成績
+    )
 
-# Example usage
-recipient <- "tpemartin@gmail.com"
-email_subject <- "Your Homework Grades"
-email_body <- "Dear Student,\n\nHere are your grades:\nHomework 1: 8\nHomework 2: 7\nHomework 3: 9\n\nBest regards,\nYour Teacher"
+# 查看生成的郵件內容
+emails |> select(`name`, `email_body`)
 
-# Send the email
-send_email(recipient, email_subject, email_body)
+cat(emails$email_body[2])
 
-# Gmail -----
-
-library(gmailr)

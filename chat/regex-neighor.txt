@@ -105,3 +105,150 @@ glimpse(string_df$taiwan_address)
 - `(市|區|鄉|鎮)`：確保最後一個字是 "市"、"區"、"鄉" 或 "鎮"。
 
 如果你有任何問題或需要更多幫助，請告訴我！
+
+>>> USER:
+glimpse(students)
+Rows: 3
+Columns: 5
+$ name      <chr> "Alice", "Bob", "Charlie"
+$ email     <chr> "econmtlin@gmail.com", "econmtlin@gmail.com", "econmtlin@gmail.com"
+$ homework1 <int> 3, 3, 10
+$ homework2 <int> 2, 6, 5
+$ homework3 <int> 4, 6, 9
+我有一個email範本如下：
+Dear {{name}},
+
+I hope this message finds you well!
+
+I am writing to inform you of your grades for the recent homework assignments. Here are your scores:
+
+- Homework 1: {{homework1}}
+- Homework 2: {{homework2}}
+- Homework 3: {{homework3}}  
+
+If you have any questions regarding the grades or would like to discuss any feedback, please feel free to reach out.
+
+Congratulations on your hard work, and keep it up!
+
+Best regards,
+Martin
+為每個observation, 產生它客製化的email內文，其中"{{xxx}}"代表它的文字必需來自對應的variable XXX.
+
+>>> ASSISTANT:
+你可以使用 `glue` 套件來根據每位學生的資料生成客製化的電子郵件內文。以下是如何為每個觀察（即每位學生）生成電子郵件的範例代碼：
+
+```r
+library(glue)
+
+emails <- students |>
+    mutate(`email_body` = glue(
+        "Dear {`name`},\n\n",
+        "I hope this message finds you well!\n\n",
+        "I am writing to inform you of your grades for the recent homework assignments. Here are your scores:\n\n",
+        "- Homework 1: {homework1}\n",
+        "- Homework 2: {homework2}\n",
+        "- Homework 3: {homework3}\n\n",
+        "If you have any questions regarding the grades or would like to discuss any feedback, please feel free to reach out.\n\n",
+        "Congratulations on your hard work, and keep it up!\n\n",
+        "Best regards,\n",
+        "Martin"
+    ))
+
+# 查看生成的郵件內容
+emails |> select(`name`, `email_body`)
+```
+
+在這段代碼中，我們使用 `glue()` 函數來生成每位學生的電子郵件，並且使用 `{}` 來插入相應的變數值。最終生成的資料框 `emails` 包含了每位學生的姓名及對應的客製化郵件內容。
+
+如果有其他要求或問題，請告訴我！
+
+>>> USER:
+不使用glue package
+
+>>> ASSISTANT:
+如果不使用 `glue` 套件，我們可以使用 `paste()` 或 `sprintf()` 來生成每位學生的客製化電子郵件內文。以下是使用 `paste()` 的範例代碼：
+
+```r
+emails <- students |>
+    mutate(`email_body` = paste(
+        "Dear", `name`, ",\n\n",
+        "I hope this message finds you well!\n\n",
+        "I am writing to inform you of your grades for the recent homework assignments. Here are your scores:\n\n",
+        "- Homework 1:", homework1, "\n",
+        "- Homework 2:", homework2, "\n",
+        "- Homework 3:", homework3, "\n\n",
+        "If you have any questions regarding the grades or would like to discuss any feedback, please feel free to reach out.\n\n",
+        "Congratulations on your hard work, and keep it up!\n\n",
+        "Best regards,\n",
+        "Martin"
+    ))
+
+# 查看生成的郵件內容
+emails |> select(`name`, `email_body`)
+```
+
+這段代碼使用 `paste()` 函數將字符串連接在一起，同時使用 `,` 分隔要插入的變數。最終生成的資料框 `emails` 中會包含每位學生的姓名及其對應的電子郵件內容。
+
+如果你有其他需求或問題，請隨時告訴我！
+
+>>> USER:
+只使用str_replace
+
+>>> ASSISTANT:
+如果只使用 `str_replace()`，可以再結合一個初始的電子郵件範本，然後依序替換參數。首先，我們需要創建一個包含範本的字串，然後針對每個學生進行替換。這裡是如何用 `str_replace()` 來達成的範例：
+
+```r
+library(stringr)
+
+# 定義電子郵件範本
+email_template <- "Dear —,\n\nI hope this message finds you well!\n\nI am writing to inform you of your grades for the recent homework assignments. Here are your scores:\n\n- Homework 1: —\n- Homework 2: —\n- Homework 3: —\n\nIf you have any questions regarding the grades or would like to discuss any feedback, please feel free to reach out.\n\nCongratulations on your hard work, and keep it up!\n\nBest regards,\nMartin"
+
+emails <- students |>
+    mutate(`email_body` = 
+        str_replace(email_template, "—", `name`) |>  # 替換姓名
+        str_replace("—", as.character(homework1)) |> # 替換 homework1 成績
+        str_replace("—", as.character(homework2)) |> # 替換 homework2 成績
+        str_replace("—", as.character(homework3))    # 替換 homework3 成績
+    )
+
+# 查看生成的郵件內容
+emails |> select(`name`, `email_body`)
+```
+
+在這段代碼中，我們首先定義了一個電子郵件範本字串 `email_template`，然後使用 `str_replace()` 逐步替換範本中的特定佔位符（"—"）為姓名及成績。注意由於 `str_replace()` 只會替換第一個匹配的佔位符，因此在重複使用時需要分步進行。這樣可以生成每位學生的客製化電子郵件。
+
+如果你對這個方法有任何疑問，或需要進一步的調整，請告訴我！
+
+>>> USER:
+為不同variable創作不同placeholders
+
+>>> ASSISTANT:
+如果要為不同的變數創建不同的佔位符，可以在電子郵件範本中使用特定的符號作為佔位符，然後依照這些符號來替換。以下是示範如何這樣做的程式碼，使用 `str_replace()` 來替換不同的佔位符：
+
+```r
+library(stringr)
+
+# 定義電子郵件範本，使用特定佔位符
+email_template <- "Dear {name},\n\nI hope this message finds you well!\n\nI am writing to inform you of your grades for the recent homework assignments. Here are your scores:\n\n- Homework 1: {homework1}\n- Homework 2: {homework2}\n- Homework 3: {homework3}\n\nIf you have any questions regarding the grades or would like to discuss any feedback, please feel free to reach out.\n\nCongratulations on your hard work, and keep it up!\n\nBest regards,\nMartin"
+
+emails <- students |>
+    mutate(`email_body` = 
+        str_replace(email_template, "\\{name\\}", `name`) |>      # 替換姓名
+        str_replace(., "\\{homework1\\}", as.character(homework1)) |>  # 替換 homework1 成績
+        str_replace(., "\\{homework2\\}", as.character(homework2)) |>  # 替換 homework2 成績
+        str_replace(., "\\{homework3\\}", as.character(homework3))      # 替換 homework3 成績
+    )
+
+# 查看生成的郵件內容
+emails |> select(`name`, `email_body`)
+```
+
+在這段代碼中，我們定義了一個包含特定佔位符的電子郵件範本。這些佔位符如下：
+- `{name}`：用於替換姓名。
+- `{homework1}`：用於替換作業1成績。
+- `{homework2}`：用於替換作業2成績。
+- `{homework3}`：用於替換作業3成績。
+
+我們用 `str_replace()` 逐一替換各個佔位符，生成每位學生的個性化電子郵件內容。
+
+如果你對這個方法有任何疑問或其他需求，請告訴我！
