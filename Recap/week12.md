@@ -2,6 +2,8 @@
 
 ## Import and parsing
 
+  - <https://docs.google.com/spreadsheets/d/1RnT-dD0WAND8lS7v_nkhtnArBqChzLAqPJ3IKe0wSzA/edit?gid=1045486302#gid=1045486302>
+
 <https://github.com/tpemartin/113-1-R/blob/d7b1344a55d412f9c5a32cbd9c1752f785ca1541/R/week13-preparation.R#L1-L18>
 
 ## equal (`==`), not equal (`!=`)
