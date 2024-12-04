@@ -18,8 +18,7 @@
 
 > `survey_ee$device_used_last_week` comes from a check box question in a Google Form survey. Who has checked "手機" option?
 
-<survey_ee |>
-  dplyr::filter(str_detect(device_used_last_week,"手機"))>
+<https://github.com/tpemartin/113-1-R/blob/d7b1344a55d412f9c5a32cbd9c1752f785ca1541/R/week13-preparation.R#L28-L29>
 
 
 
