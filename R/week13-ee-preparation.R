@@ -48,3 +48,24 @@ sheetname <- "R-2020-總統大選"
 presidential_election <- read_sheet(gsUrl, sheet = sheetname)
 
 glimpse(presidential_election[1:2,])
+
+
+presidential_election <- presidential_election |>
+  dplyr::mutate(`政黨` = dplyr::case_when(
+    `候選人` == "(1)\n宋楚瑜\n余湘" ~ "親民黨",
+    `候選人` == "(2)\n韓國瑜\n張善政" ~ "國民黨",
+    TRUE ~ "民進黨"
+  ))
+
+# Calculate 得票率 for each party in each district
+result <- presidential_election |>
+  dplyr::group_by(`行政區別`, `政黨`) |>
+  dplyr::summarise(`得票率` = sum(`得票數`) / sum(`有效票數`) * 100, .groups = 'drop')
+
+# View the result
+print(result)
+
+write_csv(result, "data-public/presidential_election_result2020.csv")
+saveRDS(result, "data-public/presidential_election_result2020.rds")
+
+result <- readRDS("data-public/presidential_election_result2020.rds")

@@ -56,3 +56,4 @@ Prompt Engineering for Generative AI.pdf
 .DS_Store
 
 data/
+data-public/presidential_election_result2020.rds
