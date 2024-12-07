@@ -39,3 +39,12 @@ df_random |>
         Restore_as_character = as.character(RandomIntegers_as_factor)
         )
 
+
+# 引入2020總統大選資料 
+library(googlesheets4)
+gsUrl <- "https://docs.google.com/spreadsheets/d/1-jX-3EK_yspYDgPIy5vwnRKHntw9-dQIpFVhLc5JcXc/edit?gid=1123137106#gid=1123137106"
+sheetname <- "R-2020-總統大選"
+
+presidential_election <- read_sheet(gsUrl, sheet = sheetname)
+
+glimpse(presidential_election)
