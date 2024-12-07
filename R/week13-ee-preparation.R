@@ -47,4 +47,4 @@ sheetname <- "R-2020-總統大選"
 
 presidential_election <- read_sheet(gsUrl, sheet = sheetname)
 
-glimpse(presidential_election)
+glimpse(presidential_election[1:2,])
