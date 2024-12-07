@@ -226,5 +226,19 @@ data frame `survey`的'一週工時'欄位是integer型變數，請產生一個�
 將"單位"Parse成factor, 將"發生件數"cut成"低"，"中"，"高"三個levels的ordered factor。
 
 
-## How R store factor/ordered factor
+## as.character/as.numeric
 
+<https://github.com/tpemartin/113-1-R/blob/fb1cd40b545bf5c966f6a3d56d5f677779ff35fd/R/week13-ee-preparation.R#L1-L9>
+ 
+  - as.character: 會將資料直接轉換成character型態。  
+  - as.numeric: 會將資料在levels的順序轉換成數值型態。
+  
+<https://github.com/tpemartin/113-1-R/blob/fb1cd40b545bf5c966f6a3d56d5f677779ff35fd/R/week13-ee-preparation.R#L12-L18>
+
+### A cautious example
+
+<https://github.com/tpemartin/113-1-R/blob/fb1cd40b545bf5c966f6a3d56d5f677779ff35fd/R/week13-ee-preparation.R#L20-L34>
+
+原本的數值被parse成factor，現在要將它們轉換回數值型態。
+
+<https://github.com/tpemartin/113-1-R/blob/fb1cd40b545bf5c966f6a3d56d5f677779ff35fd/R/week13-ee-preparation.R#L36-L40>
