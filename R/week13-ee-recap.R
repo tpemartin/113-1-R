@@ -60,3 +60,58 @@ library(tidyverse)
   
  glimpse(string_df[1:2,]) 
 
+library(dplyr)
+library(stringr)
+
+# Step 1: Add the 'district' column
+string_df <- string_df |> 
+  mutate(`district` = str_extract(`taiwan_address`, "(?<=縣|市)[^\\u4e00-\\u9fa5]*[\\u4e00-\\u9fa5]{1,2}(區|鎮|鄉|市)"))
+
+# Step 2: Filter for '北一女' and create 'first_girl_high_school'
+first_girl_high_school <- string_df |> 
+  filter(str_detect(`high_school`, "台?北(市立第)?一女子?高?級?中學?"))
+
+# Step 3: Add the 'department_code' column
+string_df <- string_df |> 
+  mutate(`department_code` = str_sub(`school_id`, 5, 6))
+
+# Step 4: Add the 'github_user' column
+string_df <- string_df |> 
+  mutate(`github_user` = str_extract(`github`, "(?<=github.com/)[^/]+"))
+
+# Step 5: Create 'python_users' dataframe
+python_users <- string_df |> 
+  filter(str_detect(`skill`, "Python"))
+
+# Display the modified data frame and new data frames
+glimpse(string_df)
+glimpse(first_girl_high_school)
+glimpse(python_users)
+
+library(dplyr)
+library(stringr)
+
+# Step 1: Add the 'district' column
+string_df <- string_df |> 
+  mutate(`district` = str_extract(`taiwan_address`, "(?<=縣|市)[^\\u4e00-\\u9fa5]*[\\u4e00-\\u9fa5]{1,2}(區|鎮|鄉|市)"))
+
+# Step 2: Filter for '北一女' and create 'first_girl_high_school'
+first_girl_high_school <- string_df |> 
+  dplyr::filter(str_detect(`high_school`, "台?北(市立第)?一女子?高?級?中學?"))
+
+# Step 3: Add the 'department_code' column
+string_df <- string_df |> 
+  mutate(`department_code` = str_sub(`school_id`, 5, 6))
+
+# Step 4: Add the 'github_user' column
+string_df <- string_df |> 
+  mutate(`github_user` = str_extract(`github`, "(?<=github.com/)[^/]+"))
+
+# Step 5: Create 'python_users' dataframe
+python_users <- string_df |> 
+  dplyr::filter(str_detect(`skill`, "Python"))
+
+# Display the modified data frame and new data frames
+glimpse(string_df)
+glimpse(first_girl_high_school)
+glimpse(python_users)
