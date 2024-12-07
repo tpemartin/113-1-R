@@ -66,6 +66,30 @@ result <- presidential_election |>
 print(result)
 
 write_csv(result, "data-public/presidential_election_result2020.csv")
-saveRDS(result, "data-public/presidential_election_result2020.rds")
 
-result <- readRDS("data-public/presidential_election_result2020.rds")
+library(tidyverse)
+result <- read_csv("https://raw.githubusercontent.com/tpemartin/113-1-R/refs/heads/main/data-public/presidential_election_result2020.csv")
+
+glimpse(result[1:2,])
+
+result_wide <- result |>
+  tidyr::pivot_wider(
+    names_from = `政黨`,
+    values_from = `得票率`,
+    values_fill = list(`得票率` = NA)  # Fill with NA for any missing values
+  )
+
+# View the result
+print(result_wide)
+
+glimpse(result_wide[1:2,])
+
+result_long <- result_wide |>
+  tidyr::pivot_longer(
+    cols = c(`國民黨`, `民進黨`, `親民黨`),
+    names_to = "政黨",
+    values_to = "得票率"
+  )
+
+# View the result
+print(result_long)
