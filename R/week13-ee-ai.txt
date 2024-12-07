@@ -1,0 +1,15 @@
+ glimpse(string_df[1:2,])
+Rows: 2
+Columns: 5
+$ taiwan_address <chr> "新竹市東區食品路228號", "臺中市大甲區蔣公路140號"
+$ high_school    <chr> "台北市立第一女子高級中學", "北一女"
+$ school_id      <chr> "411273008", "411382009"
+$ skill          <chr> "C++, R", "R, Python"
+$ github         <chr> "https://github.com/Tang0724/113-1-R-final-project.git", "https://github.com/rhythm-1112/113-1-R-final-project"
+
+  1. 新增一個欄位district, 它是taiwan_address中: 1到2個中文字組成後面接"區"、"鎮"、"鄉"、或"市"； 它前面的鄰居文字必需是"縣"或"市"。  
+  2. filter出來一個只有北一女的資料框first_girl_high_school，它是依據 high_school 欄位中，"台?北(市立第)?一女子?高?級?中學?"的regex。  
+  3. 新增一個department_code欄位，它是school_id中的第5到6位的字元。  
+  4. 新增github_user欄位，它是github中：不含"/"組成的文字；它的前面鄰居必需是"github.com/"。  
+  5. filter出來會"Python"的資料框python_users, 依據skill中有出現"Python"字眼的人。
+

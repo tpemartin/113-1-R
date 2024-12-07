@@ -1,0 +1,87 @@
+>>> USER:
+You are using RStudio to conduct R programming tasks in POSIT remote server with preloaded tidyverse package. If the task is programming related, the programming style should follow tidyverse style as closely as possible, i.e. if certain task can be done in both base R and tidyverse, use tidyverse. The package `tidyverse` is already loaded. Any provided code that uses its functions will work -- no need to `library` it again. `tidyverse` is a collection of packages designed for data science. It includes `ggplot2`, `dplyr`, `tidyr`, `readr`, `purrr`, `tibble`, `stringr`, `forcats`, and `haven`. When there is possibility to use chain operator, always use `|>` instead of `%>%`.
+
+When codes are involved with labels or names that are not conventional (i.e using only a-z, A-Z, 0-9, and `_`), the labels or names should be enclosed in backticks.
+
+If the task mentions an object but does not give the content of the object, assume that the object is already in the global environment, and don't create an example of that object in the code.
+
+If I ask you to rename a data frame's variables but provide no current variable names, ask me what are they. Then rename them to concise names in snake case.
+
+If I ask you to parse a variable into a factor or ordered factor without mentioning its levels, ask me "what are the levels of the factor? or ignore this question", and also give me the command of using `unique()` to find the levels. If I provide the levels, then parse the variable into a factor with the specified levels.
+
+When parse date or date time, always use `lubridate` package's parsing function rather than using `as.Date`. To parse monthly data, use `ym` function. To parse quarterly data, use `yq` function. If the date is Taiwan date, be aware the year is not a western year unless you take out `yyyy` part and add 1911 to it. If time zone of a date time string is given, use `tz` argument in date parsing function to set the time zone -- not using `with_tz`. For time, use `hms` to parse. But if the value before parsing is not in "hh:mm:ss" format, change it to that format before parsing.
+
+String. Always use `stringr` package to deal with string. For pattern regarding "may or may not be there", if it is about one character, say "X may or may not be there", use "X?"; if it is about a phrase "XXX may or may not be there" use "(XXX)?". When applying a function from `stringr` package to a variable, if the variable is not a character type, convert it to character type first.
+
+Throughout the conversation, if certain packages are imported through `library()` function, such packages should not be imported again in the following code answers.
+
+When my task requires more details to be clear, ask me for more details. If the task is too broad, help me narrow it down by listing directions that I can pursue.
+
+>>> ASSISTANT:
+Got it! I'm ready to assist you with R programming tasks using the tidyverse style and following the guidelines you've provided. Please let me know what specific task you would like to perform or any questions you have!
+
+>>> USER:
+glimpse(string_df[1:2,])
+Rows: 2
+Columns: 5
+$ taiwan_address <chr> "新竹市東區食品路228號", "臺中市大甲區蔣公路140號"
+$ high_school    <chr> "台北市立第一女子高級中學", "北一女"
+$ school_id      <chr> "411273008", "411382009"
+$ skill          <chr> "C++, R", "R, Python"
+$ github         <chr> "https://github.com/Tang0724/113-1-R-final-project.git", "https://github.com/rhythm-1112/113-1-R-final-project"
+
+  1. 新增一個欄位district, 它是taiwan_address中: 1到2個中文字組成後面接"區"、"鎮"、"鄉"、或"市"； 它前面的鄰居文字必需是"縣"或"市"。  
+  2. filter出來一個只有北一女的資料框first_girl_high_school，它是依據 high_school 欄位中，"台?北(市立第)?一女子?高?級?中學?"的regex。  
+  3. 新增一個department_code欄位，它是school_id中的第5到6位的字元。  
+  4. 新增github_user欄位，它是github中：不含"/"組成的文字；它的前面鄰居必需是"github.com/"。  
+  5. filter出來會"Python"的資料框python_users, 依據skill中有出現"Python"字眼的人。
+
+>>> ASSISTANT:
+Let's break down your request into steps and implement each one using tidyverse functions. 
+
+1. **Add a new column `district`.**
+2. **Filter to find entries for "北一女" and create a new dataframe `first_girl_high_school`.**
+3. **Add a `department_code` column derived from `school_id`.**
+4. **Add a `github_user` column by extracting the relevant part from the `github` URL.**
+5. **Filter to create a dataframe `python_users` that contains individuals with "Python" in the `skill` column.**
+
+Here’s how you can do it:
+
+```r
+library(dplyr)
+library(stringr)
+
+# Step 1: Add the 'district' column
+string_df <- string_df |> 
+  mutate(`district` = str_extract(`taiwan_address`, "(?<=縣|市)[^\\u4e00-\\u9fa5]*[\\u4e00-\\u9fa5]{1,2}(區|鎮|鄉|市)"))
+
+# Step 2: Filter for '北一女' and create 'first_girl_high_school'
+first_girl_high_school <- string_df |> 
+  filter(str_detect(`high_school`, "台?北(市立第)?一女子?高?級?中學?"))
+
+# Step 3: Add the 'department_code' column
+string_df <- string_df |> 
+  mutate(`department_code` = str_sub(`school_id`, 5, 6))
+
+# Step 4: Add the 'github_user' column
+string_df <- string_df |> 
+  mutate(`github_user` = str_extract(`github`, "(?<=github.com/)[^/]+"))
+
+# Step 5: Create 'python_users' dataframe
+python_users <- string_df |> 
+  filter(str_detect(`skill`, "Python"))
+
+# Display the modified data frame and new data frames
+glimpse(string_df)
+glimpse(first_girl_high_school)
+glimpse(python_users)
+```
+
+### Code Explanation:
+1. For extracting the `district`, we use `str_extract` with a regex pattern that looks for characters after "縣" or "市" and captures 1 to 2 Chinese characters followed by "區", "鎮", "鄉", or "市".
+2. The filtering for `first_girl_high_school` looks for matches with the regex in the `high_school` column.
+3. The `department_code` extracts characters from the 5th to 6th position of `school_id` using `str_sub`.
+4. To get the `github_user`, we extract the username from the `github` string using a regex that looks for patterns following "github.com/" and ignoring any "/" afterwards.
+5. Finally, we create the `python_users` dataframe by filtering entries that have "Python" in their `skill`.
+
+Feel free to ask if you need any adjustments or further details!
