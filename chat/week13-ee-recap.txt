@@ -85,3 +85,110 @@ glimpse(python_users)
 5. Finally, we create the `python_users` dataframe by filtering entries that have "Python" in their `skill`.
 
 Feel free to ask if you need any adjustments or further details!
+
+>>> USER:
+How to find out which `filter` function will R call from what package
+
+>>> ASSISTANT:
+In R, when you are using multiple packages that have functions with the same name, and you want to determine which specific function will be called when you use a common function name like `filter`, you can use the `conflicts()` function or check the function's source with `getAnywhere()`. Here's how you can do it:
+
+1. **Using `conflicts()` Function**:
+   The `conflicts()` function shows you a list of functions that have the same name in different packages that are currently loaded in your R session.
+
+   ```r
+   conflicts()
+   ```
+
+   This will provide you with a list that indicates which functions conflict with each other and from which packages they originate.
+
+2. **Using `getAnywhere()` Function**:
+   If you want to see the source of the specific `filter` function and which package it belongs to, you can run:
+
+   ```r
+   getAnywhere("filter")
+   ```
+
+   This function will return information about the `filter` function, including where it is found (which package).
+
+3. **Using the `pkg::function()` Syntax**:
+   If you are aware of the packages that contain a `filter` function (e.g., `dplyr`, `stats`), you can directly call it using the package name, like so:
+
+   ```r
+   dplyr::filter()
+   stats::filter()
+   ```
+
+   This way, you can specify which `filter` function you want to use.
+
+4. **Check the Environment**:
+   You can also use the `search()` function to see the order of attached packages in your R session, which can give you an idea of which one is loaded last, as R will use the last loaded package's function in case of conflicts.
+
+   ```r
+   search()
+   ```
+
+By using these methods, you can easily find out which `filter` function will be called in your R session and from which package.
+
+>>> USER:
+If the code uses `filter()` from `dplyr` package, ALWAYS write `dplyr::filter()` instead of just `filter()`.
+
+>>> ASSISTANT:
+Understood! I'll ensure to use the `dplyr::filter()` syntax whenever referring to the `filter` function from the `dplyr` package in the code examples. If you have any more tasks or questions, let me know!
+
+>>> USER:
+glimpse(string_df[1:2,])
+Rows: 2
+Columns: 5
+$ taiwan_address <chr> "新竹市東區食品路228號", "臺中市大甲區蔣公路140號"
+$ high_school    <chr> "台北市立第一女子高級中學", "北一女"
+$ school_id      <chr> "411273008", "411382009"
+$ skill          <chr> "C++, R", "R, Python"
+$ github         <chr> "https://github.com/Tang0724/113-1-R-final-project.git", "https://github.com/rhythm-1112/113-1-R-final-project"
+
+  1. 新增一個欄位district, 它是taiwan_address中: 1到2個中文字組成後面接"區"、"鎮"、"鄉"、或"市"； 它前面的鄰居文字必需是"縣"或"市"。  
+  2. filter出來一個只有北一女的資料框first_girl_high_school，它是依據 high_school 欄位中，"台?北(市立第)?一女子?高?級?中學?"的regex。  
+  3. 新增一個department_code欄位，它是school_id中的第5到6位的字元。  
+  4. 新增github_user欄位，它是github中：不含"/"組成的文字；它的前面鄰居必需是"github.com/"。  
+  5. filter出來會"Python"的資料框python_users, 依據skill中有出現"Python"字眼的人。
+
+>>> ASSISTANT:
+Let's implement the tasks you specified using the `dplyr` package functions. Here’s the code that addresses each of your requirements step-by-step, with the appropriate use of `dplyr::filter()` for filtering:
+
+```r
+library(dplyr)
+library(stringr)
+
+# Step 1: Add the 'district' column
+string_df <- string_df |> 
+  mutate(`district` = str_extract(`taiwan_address`, "(?<=縣|市)[^\\u4e00-\\u9fa5]*[\\u4e00-\\u9fa5]{1,2}(區|鎮|鄉|市)"))
+
+# Step 2: Filter for '北一女' and create 'first_girl_high_school'
+first_girl_high_school <- string_df |> 
+  dplyr::filter(str_detect(`high_school`, "台?北(市立第)?一女子?高?級?中學?"))
+
+# Step 3: Add the 'department_code' column
+string_df <- string_df |> 
+  mutate(`department_code` = str_sub(`school_id`, 5, 6))
+
+# Step 4: Add the 'github_user' column
+string_df <- string_df |> 
+  mutate(`github_user` = str_extract(`github`, "(?<=github.com/)[^/]+"))
+
+# Step 5: Create 'python_users' dataframe
+python_users <- string_df |> 
+  dplyr::filter(str_detect(`skill`, "Python"))
+
+# Display the modified data frame and new data frames
+glimpse(string_df)
+glimpse(first_girl_high_school)
+glimpse(python_users)
+```
+
+### Code Steps:
+1. **Adding `district`:** We extract the district following the specified rules using `str_extract()`.
+2. **Filtering for `first_girl_high_school`:** We filter the dataset to get only the entries where `high_school` matches the given regex pattern for "北一女", using `dplyr::filter()`.
+3. **Adding `department_code`:** We extract characters from `school_id` positions 5 and 6 using `str_sub()`.
+4. **Adding `github_user`:** We extract the username from the `github` URL, ensuring it does not contain slashes.
+5. **Filtering for `python_users`:** We filter the dataset to create a subset where `skill` contains "Python", again using `dplyr::filter()`.
+
+Feel free to ask if you need more modifications or explanations!
