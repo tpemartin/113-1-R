@@ -224,3 +224,7 @@ data frame `survey`的'一週工時'欄位是integer型變數，請產生一個�
   - [臺北市政府警察局詐欺案件統計表](https://data.gov.tw/dataset/138892)
 
 將"單位"Parse成factor, 將"發生件數"cut成"低"，"中"，"高"三個levels的ordered factor。
+
+
+## How R store factor/ordered factor
+
