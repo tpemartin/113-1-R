@@ -131,3 +131,9 @@ print(support_rate)
 
 # save as csv
 write.csv(support_rate, "data-public/support_rate.csv", row.names = FALSE)
+
+# read csv
+csvUrl <- "https://raw.githubusercontent.com/tpemartin/113-1-R/refs/heads/main/data-public/support_rate.csv"
+support_rate <- read.csv(csvUrl)
+
+glimpse(support_rate)
