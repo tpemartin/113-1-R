@@ -2,7 +2,7 @@
 
 ## 2020 Taiwan Presidential Election
 
-<https://github.com/tpemartin/113-1-R/blob/bed50bf8775a9263bca9885972d34fce9d5d14e0/R/week13-ee-preparation.R#L43-L50>
+<https://github.com/tpemartin/113-1-R/blob/e0f706bf398376c7d8381946c422ac990751baaa/R/week15-preparation.R#L103-L109>
 
 ## Tasks
 

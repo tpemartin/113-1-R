@@ -107,3 +107,27 @@ sheetname <- "R-2020-presidential-election"
 presidential_election <- read_sheet(gsUrl, sheet = sheetname)
 
 glimpse(presidential_election)
+
+library(dplyr)
+
+# Create a "Party" variable based on the "Candidate" variable
+presidential_election <- presidential_election %>%
+  mutate(Party = case_when(
+    Candidate == "(1) James Soong / Sandra Yu" ~ "People First Party",
+    Candidate == "(2) Han Kuo-yu / Simon Chang" ~ "Kuomintang",
+    Candidate == "(3) Tsai Ing-wen / Lai Ching-te" ~ "Democratic Progressive Party",
+    TRUE ~ "Other"
+  ))
+
+# Compute the support rate of each party in each county based on "Votes_Received"
+support_rate <- presidential_election %>%
+  group_by(Administrative_District, Party) %>%
+  summarise(Total_Votes = sum(Votes_Received, na.rm = TRUE)) %>%
+  mutate(Support_Rate = Total_Votes / sum(Total_Votes) * 100) %>%
+  ungroup()
+
+# Display the support rate
+print(support_rate)
+
+# save as csv
+write.csv(support_rate, "data-public/support_rate.csv", row.names = FALSE)
