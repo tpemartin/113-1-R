@@ -12,30 +12,47 @@
 
 # Pivot
 
-<https://github.com/tpemartin/113-1-R/blob/f77d40d16912a64bd904d12512ad26433199d44c/R/week13-ee-preparation.R#L70-L73>
+<https://github.com/tpemartin/113-1-R/blob/e71e4b5365b842a05d59f04643c6d8ad63835b32/R/week15-preparation.R#L135-L139>
 
-### 長變寛
-
-```
-glimpse(result[1:2,])
-Rows: 2
-Columns: 3
-$ 行政區別 <chr> "南投縣", "南投縣"
-$ 政黨     <chr> "國民黨", "民進黨"
-$ 得票率   <dbl> 44.72342, 50.82567
-result pivot成寛的資料框result_wide，$ 政黨的值會變成欄位名稱，而新的欄位底下的值則為得票率。
-```
-
-### 寛變長
+### Long pivot wider
 
 ```
- glimpse(result_wide[1:2,])
+glimpse(support_rate[1:2,])
 Rows: 2
 Columns: 4
-$ 行政區別 <chr> "南投縣", "嘉義市"
-$ 國民黨   <dbl> 44.72342, 34.79022
-$ 民進黨   <dbl> 50.82567, 61.37395
-$ 親民黨   <dbl> 4.450915, 3.835833
-
-將result_wide pivot成長的，$ 國民黨 到 $ 親民黨 欄位收成"政黨"欄位值，而原先欄位的值則變成"得票率"欄位值。
+$ Administrative_District <chr> "Changhua County", "Changhua County"
+$ Party                   <chr> "Democratic Progressive Party", "Kuomintang"
+$ Total_Votes             <int> 436336, 291835
+$ Support_Rate            <dbl> 57.16959, 38.23679
+Pivot `support_rate` into a wider format, with `Party` as the column names and `Support_Rate` as the values under the new columns.
 ```
+
+> :exclamation: When pivot wider, keep only the necessary columns. Here it is `Administrative_District`, `Party`, and `Support_Rate`.
+
+
+```
+From `support_rate`, 
+  1. keep only `Administrative_District`, `Party`, and `Support_Rate`; then  
+  2. pivot into a wider format with `Party` as the column names and `Support_Rate` as the values under the new columns.  
+```
+
+```
+Arrange the wide data frame by $ `Democratic Progressive Party` in descending order.
+```
+
+### Wide pivot longer
+
+```
+glimpse(support_rate_wide[1:2,])
+Rows: 2
+Columns: 4
+$ Administrative_District        <chr> "Tainan City", "Chiayi County"
+$ `Democratic Progressive Party` <dbl> 67.37823, 64.22012
+$ Kuomintang                     <dbl> 29.10281, 32.15529
+$ `People First Party`           <dbl> 3.518961, 3.624589
+Pivot `support_rate_wide` into a longer format, with `Party` as the column names and `Support_Rate` as the values under the new `Party`.
+```
+
+> :exclamation: In most cases, 
+>   - long format is for data exploration and analysis,  
+>   - wide format is for publication purpose.  

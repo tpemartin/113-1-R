@@ -137,3 +137,58 @@ csvUrl <- "https://raw.githubusercontent.com/tpemartin/113-1-R/refs/heads/main/d
 support_rate <- read.csv(csvUrl)
 
 glimpse(support_rate)
+
+library(tidyr)
+
+# Pivot the support_rate data frame into a wider format
+support_rate_wide <- support_rate %>%
+  select(-Total_Votes) %>%
+  pivot_wider(
+    names_from = Party,
+    values_from = Support_Rate
+  )
+
+# Display the first few rows of the wide format data frame
+glimpse(support_rate_wide)
+
+library(dplyr)
+library(tidyr)
+
+# Step 1: Keep only `Administrative_District`, `Party`, and `Support_Rate`
+support_rate_filtered <- support_rate %>%
+  select(Administrative_District, Party, Support_Rate)
+
+# Step 2: Pivot into a wider format with `Party` as the column names and `Support_Rate` as the values
+support_rate_wide <- support_rate_filtered %>%
+  pivot_wider(
+    names_from = Party,
+    values_from = Support_Rate
+  )
+
+# Display the first few rows of the wide format data frame
+glimpse(support_rate_wide)
+
+# Arrange the wide data frame by `Democratic Progressive Party` in descending order
+support_rate_wide <- support_rate_wide %>%
+  arrange(desc(`Democratic Progressive Party`))
+
+# Display the first few rows of the arranged data frame
+glimpse(support_rate_wide)
+
+# upload to google sheet
+library(googlesheets4)
+gsUrl <- "https://docs.google.com/spreadsheets/d/1-jX-3EK_yspYDgPIy5vwnRKHntw9-dQIpFVhLc5JcXc/edit?gid=1123137106#gid=1123137106"
+sheetname <- "R-2020-presidential-election-wide"
+
+write_sheet(support_rate_wide, gsUrl, sheet = sheetname)
+
+# Pivot the wide data frame into a longer format
+support_rate_long <- support_rate_wide %>%
+  pivot_longer(
+    cols = -Administrative_District,
+    names_to = "Party",
+    values_to = "Support_Rate"
+  )
+
+# Display the first few rows of the long format data frame
+glimpse(support_rate_long)
