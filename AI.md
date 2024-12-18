@@ -74,7 +74,7 @@ save it as CSV file named `df.csv`.
 
 ## Taiwan date
 
-When ask to parse Taiwan date, first extract the year digits from the date, then convert it to numeric and plus 1911, then saved the value in a new column named `western_year`. Then replace Taiwan year in Taiwan date with the value from `western_year` column. 
+When ask to parse Taiwan date, first extract the year digits from the date, then convert it to numeric and plus 1911, then saved the value in a new column named `western_year`. Then replace Taiwan year in Taiwan date with the value from `western_year` column before parsing it into date class. 
 
 
 glimpse(student_data$統計期)
