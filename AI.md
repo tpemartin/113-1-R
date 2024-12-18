@@ -71,3 +71,12 @@ save it as CSV file named `df.csv`.
 
 `survey_ee$接觸過的程式`來自於調查問卷中的checked box題型，找出目前有那些題項有被勾選。
 
+
+## Taiwan date
+
+When ask to parse Taiwan date, first extract the year digits from the date, then convert it to numeric and plus 1911, then saved the value in a new column named `western_year`. Then replace Taiwan year in Taiwan date with the value from `western_year` column. 
+
+
+glimpse(student_data$統計期)
+ chr [1:322] "87年 1月" "87年 2月" "87年 3月" "87年 4月" "87年 5月" ...
+is Taiwan date with monthly frequency. Parse it to date class.
