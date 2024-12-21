@@ -126,3 +126,10 @@ average_price_wide <- average_price_by_year_quarter_street |>
 
 # 查看結果
 glimpse(average_price_wide)
+
+
+gsUrl <- "https://docs.google.com/spreadsheets/d/1-jX-3EK_yspYDgPIy5vwnRKHntw9-dQIpFVhLc5JcXc/edit?gid=0#gid=0"
+sheetname <- "sanxia_housing"
+
+average_price_wide |>
+  googlesheets4::write_sheet(gsUrl, sheetname)
