@@ -1,6 +1,9 @@
 # Recap
+  
+  - [不動產實價登錄資訊-預售屋案件-三峽區](https://data.gov.tw/dataset/146463)
 
-<https://github.com/tpemartin/113-1-R/blob/7e0746edd72a3f9e6ce29e27bbaa03c032c74a9b/chat/week15-ee.txt#L2-L6>
+<https://github.com/tpemartin/113-1-R/blob/bbbc258f49dbc4814d897062e119aab0bc7beead/R/week15.R#L1-L7>
+
 
 ## Renames variables 
 
@@ -34,7 +37,7 @@
 
 #### 2. 每季變化
 
-<https://github.com/tpemartin/113-1-R/blob/7e0746edd72a3f9e6ce29e27bbaa03c032c74a9b/chat/week15-ee.txt#L51C17-L51C51>
+<https://github.com/tpemartin/113-1-R/blob/7e0746edd72a3f9e6ce29e27bbaa03c032c74a9b/chat/week15-ee.txt#L51-L52>
 
 
 <https://github.com/tpemartin/113-1-R/blob/bbbc258f49dbc4814d897062e119aab0bc7beead/R/week15.R#L86-L109>
