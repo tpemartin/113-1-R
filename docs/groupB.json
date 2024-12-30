@@ -1,0 +1,102 @@
+[
+  [
+    "Timestamp",
+    "Email Address",
+    "Name",
+    "School Id",
+    "Title",
+    "Video link",
+    "Summary",
+    "Github final project link"
+  ],
+  [
+    "2024-12-17T07:58:55.394Z",
+    "mtlin@gm.ntpu.edu.tw",
+    "Martin",
+    "007",
+    "如何設定能commit/push的project",
+    "https://vimeo.com/1035823134/e9712cda54",
+    "如果你無法正常commit or/and push, 請依照這影片步驟重新建立一個Project，並完成commit/push設定。如果還沒fork final project, 請點本卡片左下角的貓咪在跳出來的頁面參照該頁底下的fork 說明完成fork。",
+    "https://github.com/tpemartin/113-1-R-Final-Project"
+  ],
+  [
+    "2024-12-27T04:35:11.522Z",
+    "20031203lily@gmail.com",
+    "(009) 陳雨蓉",
+    311351009,
+    "基金種類差異和淨值差距",
+    "https://youtu.be/50WEpt9NovU",
+    "三間投資公司的股票型和固定收益型基金的淨值差距和平均淨值",
+    "https://github.com/shaybaw/113-1-R-final-project"
+  ],
+  [
+    "2024-12-27T08:07:59.521Z",
+    "jarne2003@hotmail.com",
+    "(097) Jarne van Dongen",
+    411187097,
+    "What Pixar Movie will I watch tonight?",
+    "https://youtu.be/fwWHKyTYZrc",
+    "I have a problem. I want to watch a Pixar Movie with my friends tonight, but I only have 100 minutes before I have to go to sleep. I would love to watch a Comedy. Luckely I found a Pixar Movies dataset online. In this project I show you how I used it to determine what's the best movie to watch tonight.",
+    "https://github.com/jarne2703/113-1-R-final-project"
+  ],
+  [
+    "2024-12-28T03:52:49.798Z",
+    "s411373092@gm.ntpu.edu.tw",
+    "(092) 林恩加",
+    411373092,
+    "「自動化資料處理與視覺化：桃園市社會工作人員專職人員數量年度分析」",
+    "https://youtu.be/gg-UJqd1iGM",
+    "這段程式碼旨在全自動化地處理與分析桃園市社會工作人員專職人員數量的年度資料。程式首先檢查並安裝必要套件（如 readr、ggplot2 和 dplyr），接著讀取 CSV 檔案並針對中文資料進行 Big5 編碼處理。通過資料結構與欄位名稱檢查，程式確保欄位數量與名稱一致，並移除缺失值以保持數據完整性。最終，程式利用 ggplot2 繪製長條圖，呈現不同年度的專職人員總數分佈，為後續數據分析和決策提供視覺化支持。",
+    "https://github.com/Daniellin411373092/113-1-R-final-project"
+  ],
+  [
+    "2024-12-28T17:02:01.966Z",
+    "s411373018@gm.ntpu.edu.tw",
+    "(018) 黃靖媗",
+    411373018,
+    "臺北市樂齡學習中心：性別參與特徵與場次效率之分析",
+    "https://youtu.be/i0agTu-3VL0",
+    "本研究以臺北市樂齡學習中心的參與人數與性別比例為主題，探討不同學習中心的性別參與分佈、場次效率，以及女性比例與總參與人次之間的相關性。結果顯示，女性參與度普遍高於男性，部分學習中心場次效率明顯較高，女性比例與總參與人次呈正相關性但影響力有限。研究建議包括加強女性優勢課程設計、促進性別多元參與，以及改善場次效率，旨在提升樂齡學習活動的吸引力與成效，推動高齡族群的健康與幸福發展。",
+    "https://github.com/shellyhuang507/113-1-R-final-project"
+  ],
+  [
+    "2024-12-29T06:42:32.568Z",
+    "s411371247@gm.ntpu.edu.tw",
+    "(247) 王嘉鴻",
+    411371247,
+    "教育程度及年齡與結婚人數的關係",
+    "https://vimeo.com/1042702245/a78fca4fca",
+    "分析不同教育程度的人群及不同年齡的族群之結婚傾向，並定位自己屬於的族群，為人生做好規劃。",
+    "https://github.com/hkiggyykb/113-1-R-final-project"
+  ],
+  [
+    "2024-12-29T08:48:28.443Z",
+    "s411373113@gm.ntpu.edu.tw",
+    "(113) 陳薛宛宜",
+    411373113,
+    "台北市兒童及少年寄養家庭戶數分析",
+    "https://youtu.be/XosOuHXtNPI",
+    "",
+    "https://github.com/411373113/113-1-R-final-project"
+  ],
+  [
+    "2024-12-29T15:27:04.455Z",
+    "s411083003@gm.ntpu.edu.tw",
+    "(003) 鄭郁蓉",
+    411083003,
+    "台北市河川水質觀察與變數關係",
+    "https://youtu.be/Dny74WyQWhg?si=c5WKF4_JKXAlAa17",
+    "根據台北市河川監測數據，分級河川污染級別，並做趨勢圖比較。另根據資料，做簡單回歸分析，得到不合線性回歸假設的結果。",
+    "https://github.com/Bkc0901/113-1-R-final-project"
+  ],
+  [
+    "2024-12-29T15:38:41.276Z",
+    "s411373095@gm.ntpu.edu.tw",
+    "(095) 曹淳雅",
+    411373095,
+    "分析112年臺中市梧棲漁港各類魚種的平均價格",
+    "https://youtu.be/HgG6RbSdKes\\",
+    "我的分析主題是112年台中市梧棲漁港各類魚種的平均價格。我發現魚類的價格範圍從60元到1000元不等，因此我利用chat gpt撰寫R語言的程式代碼，對數據進行分析，計算平均數、中位數，找出最大、最小值等統計數據。",
+    "https://github.com/s411373095/113-1-R-final-project"
+  ]
+]
