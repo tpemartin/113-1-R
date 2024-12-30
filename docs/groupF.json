@@ -1,0 +1,132 @@
+[
+  [
+    "Timestamp",
+    "Email Address",
+    "Name",
+    "School Id",
+    "Title",
+    "Video link",
+    "Summary",
+    "Github final project link"
+  ],
+  [
+    "2024-12-17T08:03:59.469Z",
+    "mtlin@gm.ntpu.edu.tw",
+    "Martin",
+    "007",
+    "如何設定能commit/push的project",
+    "https://vimeo.com/1035823134/e9712cda54",
+    "如果你無法正常commit or/and push, 請依照這影片步驟重新建立一個Project，並完成commit/push設定。如果還沒fork final project, 請點本卡片左下角的貓咪在跳出來的頁面參照該頁底下的fork 說明完成fork。",
+    "https://github.com/tpemartin/113-1-R-Final-Project"
+  ],
+  [
+    "2024-12-27T16:46:01.622Z",
+    "yuyu66668@gmail.com",
+    "(144) 尤良嘉",
+    411373144,
+    "臺北市校數",
+    "https://youtu.be/KgHXPBfNd6A",
+    "# A tibble: 12 × 6\n# Groups:   district [12]\n   district  國中  國小 幼兒園 特教學校 高級中等學校\n   <chr>    <dbl> <dbl>  <dbl>    <dbl>        <dbl>\n 1 中山區       5    11     44        0            5\n 2 中正區       5     8     35        0            6\n 3 信義區       4     8     32        0            5\n 4 內湖區       6    13     74        0            7\n 5 北投區       6    16     52        0            6\n 6 南港區       2     7     30        0            3\n 7 士林區       6    19     61        2            7\n 8 大同區       5     9     18        1            5\n 9 大安區       7    14     98        0           10\n10 文山區       6    22     54        1           11\n11 松山區       4     8     55        0            3\n12 萬華區       3    12     28        0            2",
+    "https://github.com/Jiajia-jpg/113-1-R-final-project"
+  ],
+  [
+    "2024-12-28T05:06:40.079Z",
+    "s411373099@gm.ntpu.edu.tw",
+    "(099) 林詩恩",
+    411373099,
+    "林詩恩113-1-R-final-project - 金融檢查執行情形",
+    "https://vimeo.com/1042566058?share=copy",
+    "根據金融執行情形的檔案，以不同金融產業在各年份檢查次數的變化為主題，進行分析並製作圖表",
+    "https://github.com/lins111-hub/113-1-R-final-project"
+  ],
+  [
+    "2024-12-28T14:40:03.370Z",
+    "s411373090@gm.ntpu.edu.tw",
+    "(090) 樊建先",
+    411373090,
+    "國道停車位分析",
+    "https://youtu.be/lf1MgrmmuEk?si=gVPDqWkOKj3eFMSf",
+    "",
+    "https://github.com/jianxianfan/113-1-R-final-project"
+  ],
+  [
+    "2024-12-28T16:48:01.620Z",
+    "s411373052@gm.ntpu.edu.tw",
+    "(052) 陳宥綸",
+    411373052,
+    "分析ETF與個股的資訊",
+    "https://youtu.be/GIB9fijTW3o",
+    "CSV檔裡面原本給每一檔股票以及ETF的交易數量，利用這些資訊來分析這需股票根ETF的相關性以及討論這兩種不同的類型交易戶數的比較，觀察他們倆個的關係",
+    "https://github.com/KamiLage/113-1-R-final-project"
+  ],
+  [
+    "2024-12-28T17:53:04.637Z",
+    "s411273135@gm.ntpu.edu.tw",
+    "(135) 陳若蜜",
+    411273135,
+    "台灣109年度A1類的交通事故統計",
+    "https://youtu.be/n3euX7hvVEs",
+    "我想要通過AI與程式之間的合作來分析資料",
+    "https://github.com/ruomi44/113-1-R-final-project"
+  ],
+  [
+    "2024-12-28T18:45:14.100Z",
+    "fred432cf@gmail.com",
+    "(037) 呂竑毅",
+    411373037,
+    "民國112年台中市交通事故分析",
+    "https://vimeo.com/1042644680/bd5f1f5659",
+    "由於台中市每年的交通事故數量在台灣各縣市中名列前茅，因此為解決該問題所做之資料分析",
+    "https://github.com/fred432cf/113-1-R-final-project"
+  ],
+  [
+    "2024-12-29T04:53:23.970Z",
+    "ykjudge99@gmail.com",
+    "(088) 曾品翔",
+    411373088,
+    "空氣品質指標",
+    "https://youtu.be/FwtWkwk5Pgo",
+    "利用分佈圖和折線圖分析北部（新北市）和南部（高雄市）的空氣品質指標 最後利用柱狀圖分析全台縣市各種空氣污染物平均濃度",
+    "https://github.com/albert0983/113-1-R-final-project"
+  ],
+  [
+    "2024-12-29T10:54:13.466Z",
+    "eddiehong1125@gmail.com",
+    "(021) 洪偉倫",
+    311351021,
+    "台北植物園荷花分析",
+    "https://vimeo.com/1042722925",
+    "",
+    "https://github.com/a311351021/113-1-R-final-project"
+  ],
+  [
+    "2024-12-29T11:04:02.294Z",
+    "xueyuyang576@gmail.com",
+    "(069) 薛宇揚",
+    411373069,
+    "資料科學期末報告",
+    "https://youtu.be/qpWWja9SEW4",
+    "112年車禍",
+    "https://github.com/DAFANSP/113-1-R-final-project"
+  ],
+  [
+    "2024-12-29T12:17:08.717Z",
+    "ayeayethu2001@gmail.com",
+    "(134) 楊錦錦",
+    411373134,
+    "新北市成立災害應變中心一覽表",
+    "https://youtu.be/TJ9dKPdZ9D0",
+    "Upload and import ,還民國年到西元，rename data ",
+    "https://github.com/Yangjinjin011/113-1-R-final-project"
+  ],
+  [
+    "2024-12-29T14:39:17.862Z",
+    "s411385039@gm.ntpu.edu.tw",
+    "(039) 高慈敏",
+    411385039,
+    "113 1 R final project 大腸癌篩檢率資料探討",
+    "https://youtu.be/sLWPEaAMCK4",
+    "借助chatgpt和posit cloud分析，2013至2023年度，台灣男性與女性的大腸癌篩檢率資料。",
+    "https://github.com/Emily-kao124/113-1-R-final-project"
+  ]
+]
