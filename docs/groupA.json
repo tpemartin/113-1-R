@@ -1,0 +1,142 @@
+[
+  [
+    "Timestamp",
+    "Email Address",
+    "Name",
+    "School Id",
+    "Title",
+    "Video link",
+    "Summary",
+    "Github final project link"
+  ],
+  [
+    "2024-12-17T07:12:35.936Z",
+    "mtlin@gm.ntpu.edu.tw",
+    "(007) Martin",
+    "007",
+    "如何設定能commit/push的project",
+    "https://vimeo.com/1035823134/e9712cda54",
+    "如果你無法正常commit or/and push, 請依照這影片步驟重新建立一個Project，並完成commit/push設定。如果還沒fork final project, 請點本卡片左下角的貓咪在跳出來的頁面參照該頁底下的fork 說明完成fork。",
+    "https://github.com/tpemartin/113-1-R-Final-Project"
+  ],
+  [
+    "2024-12-19T06:47:10.617Z",
+    "s411382040@gm.ntpu.edu.tw",
+    "(040) 許靖瑜",
+    "s411382040",
+    "Marriage and Divorce Data Analysis: Trends and Insights (2013-2023)",
+    "https://youtu.be/Mq0hPzQi_-I?si=ka9Ku_sYOyZ5_x3X",
+    "這段程式碼分析2013-2023年外籍婚姻與離婚趨勢，利用數據清理、計算總數與比率，並繪製圖表揭示婚姻穩定性變化，提供政策與研究參考依據。",
+    "https://github.com/Juby826/113-1-R-final-project"
+  ],
+  [
+    "2024-12-21T01:34:55.431Z",
+    "derekctsao@gmail.com",
+    "(002) 曹靖得",
+    "011300002",
+    "台北市勞動就業數據-資料視覺化",
+    "https://youtu.be/vieU0OJ4p38?si=GHDHbg2w6xQtL0gb",
+    "資料視覺化-台北市勞動就業數據逐年變化\n\n",
+    "https://github.com/dd1scool/113-1-R-final-project"
+  ],
+  [
+    "2024-12-23T19:00:42.032Z",
+    "s311351004@gm.ntpu.edu.tw",
+    "(004) 楊承乾",
+    311351004,
+    "從電信信令資料評估疫情前後人口變化之狀況",
+    "https://youtu.be/vQAmMLAxg2M",
+    "根據電信信令資料，是可以看出109及112疫情前後動態的平日日夜間人口之差異，然因部分限制其成因僅得以推估方式淺談，主觀上影響較多的因素與重大交通建設之便利性、生活圈機能、數位經濟與遠程經濟的發展等較有直接關聯，然內政部將2年度數據數據比較後，明顯發現雙北人口下降，並外溢至周邊衛星市鎮(桃園、新店等)，或許有必要關注其人口減少區域，就業機會的創造和產業結構的調整，且應重新審視資源分配的合理性。",
+    "https://github.com/CHean-Zoc/113-1-R-final-project"
+  ],
+  [
+    "2024-12-24T03:05:50.980Z",
+    "yvonne.chinchin@gmail.com",
+    "(013) 黃毓晴",
+    311051013,
+    "15歲以上大專人口數 1997-2017教育程度上的變化",
+    "https://youtu.be/Yk4p4f7KLwQ",
+    "本報告分析了1997至2017年間，15歲以上大專人口數在教育程度上的變化。首先，總體趨勢顯示大專人口數逐年增長，顯示出教育普及程度的提升。性別差異方面，女性的大專進修比例逐步提升，縮小了與男性的差距。地區差異分析則顯示，都市地區的大專人口數增長較快，而不是主要地區的增長較為緩慢。最後，教育層次分佈分析揭示，大學及研究所學歷的比例逐年提高，表明社會對高等教育的需求和重視程度逐漸增加。",
+    "https://github.com/LaurenHuang0/113-1-R-final-project"
+  ],
+  [
+    "2024-12-26T08:05:01.403Z",
+    "s411373062@gm.ntpu.edu.tw",
+    "(062) 廖宸鋐",
+    411373062,
+    "新北市102年歲入分析",
+    "https://youtu.be/z5YcmY9aUEg?si=2q1-XI3IqsinaGLw",
+    "1 背景介紹跟製作過程\n2 分析結果及想法\n3 代碼介紹\n4 chatgpt 的幫助\n5 github展示",
+    "https://github.com/hopeliao0429/113-1-R-final-project"
+  ],
+  [
+    "2024-12-28T01:48:54.144Z",
+    "tamama1234tamama@gmail.com",
+    "(040) 徐晨祐",
+    311251040,
+    "涉案嫌疑與社會背景",
+    "https://youtu.be/ra4YJlwFWEY",
+    "以台中市嫌疑犯資料與年齡、教育程度、職業類別進行分析",
+    "https://github.com/EddieHsu96/113-1-R-final-project"
+  ],
+  [
+    "2024-12-28T10:46:19.758Z",
+    "jspss94043@gmail.com",
+    "(032) 林睿彬",
+    311351032,
+    "衍生性金融商品名目本金餘額分析",
+    "https://youtu.be/xL3qaIsEUoc",
+    "金融商品交易量前十圖表分析",
+    "https://github.com/jspss94043/113-1-R-final-project"
+  ],
+  [
+    "2024-12-29T11:05:52.459Z",
+    "s411373048@gm.ntpu.edu.tw",
+    "(048) 李崇慎",
+    411373048,
+    "新北市自行車架捷運站週邊分析",
+    "https://youtu.be/2m7EOJ2Bq0w?si=g1z9_iO1av_oD0tx",
+    "用圖表分析捷運站自行車架數量的關係",
+    "https://github.com/louis411/113-1-R-final-project"
+  ],
+  [
+    "2024-12-29T12:26:23.035Z",
+    "s411373049@gm.ntpu.edu.tw",
+    "(049) 林沁嫻",
+    411373049,
+    "102新北市年度預算稅入來源分析",
+    "https://youtu.be/yEbgKLka_H8",
+    "在這段視頻中介紹了102新北市年度預算稅入來源的資料分析。從新北市政府下載了CSV數據，並使用R語言進行了數據分析和可視化。分析了本年度與上年度的預算數據，並繪製了長條圖以便更直觀地比較各項稅收。",
+    "https://github.com/s411373095/113-1-R-final-project"
+  ],
+  [
+    "2024-12-29T15:02:11.084Z",
+    "s411373016@gm.ntpu.edu.tw",
+    "(016) 湯恩琦",
+    411373016,
+    "台灣近10年生育率出生率統計",
+    "https://youtu.be/G1XL0Xj16gU",
+    "分析台灣近十年的出生率與生育率，並用視覺化圖表展示這些數據的變化",
+    "https://github.com/Tang0724/113-1-R-final-project"
+  ],
+  [
+    "2024-12-29T14:33:56.636Z",
+    "s411373043@gm.ntpu.edu.tw",
+    "(043) 吳芷庭",
+    411373043,
+    "臺北市各區遷徙、出生及死亡人口數",
+    "https://youtu.be/3GPfFSQta5M?feature=shared",
+    "透過posit跟chat gpt 分析 109 至 111 年台北市人口數據，包括出生、死亡、遷入與遷出等指標，旨在了解城市人口結構的動態變化。透過月度與年度的趨勢觀察，發現季節性規律及異常現象，如特定月份的人口流動高峰。數據來源為官方公開資料，經處理後以視覺化方式呈現，幫助快速掌握關鍵資訊。",
+    "https://github.com/katie043/113-1-R-final-project"
+  ],
+  [
+    "2024-12-29T15:35:07.166Z",
+    "s411273056@gm.ntpu.edu.tw",
+    "(056) 陳韋玲",
+    411273056,
+    "107與113年中壢區土地公告地價變化",
+    "https://youtu.be/cgZdK-5JswI?si=A_--S4YvuKcfWR92",
+    "本報告分析桃園市中壢區107年度與113年度的土地公告地價變化，特別針對高鐵特區周邊地區進行比較。通過政府資料開放平台的數據，結合資料處理與視覺化工具，發現113年度的地價普遍高於107年度，顯示地價逐年上升，尤其在高鐵特區周邊段小段，地價提升幅度顯著。部分區域地價變動較為平穩，反映區域發展不均。本研究提供中壢區地價變化的清晰圖像，為未來規劃與投資提供參考。",
+    "https://github.com/weiiling0830/113-1-R-final-project"
+  ]
+]
