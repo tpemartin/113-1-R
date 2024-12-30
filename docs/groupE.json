@@ -1,0 +1,162 @@
+[
+  [
+    "Timestamp",
+    "Email Address",
+    "Name",
+    "School Id",
+    "Title",
+    "Video link",
+    "Summary",
+    "Github final project link"
+  ],
+  [
+    "2024-12-17T08:03:00.943Z",
+    "mtlin@gm.ntpu.edu.tw",
+    "Martin",
+    "007",
+    "如何設定能commit/push的project",
+    "https://vimeo.com/1035823134/e9712cda54",
+    "如果你無法正常commit or/and push, 請依照這影片步驟重新建立一個Project，並完成commit/push設定。如果還沒fork final project, 請點本卡片左下角的貓咪在跳出來的頁面參照該頁底下的fork 說明完成fork。",
+    "https://github.com/tpemartin/113-1-R-Final-Project"
+  ],
+  [
+    "2024-12-19T06:47:42.637Z",
+    "s411373120@gm.ntpu.edu.tw",
+    "(120) 袁承羲",
+    411373120,
+    "數據裡的教育財務全景",
+    "https://youtu.be/atYoOMsUq78?si=6akNb1nBVECqJ7Va",
+    "本報告以 R 語言為工具，對學校貸款數據進行全面解析，揭示公立與私立學校在貸款金額與比例上的歷年變化趨勢。我們透過數據整理與視覺化，展示了各類型學校貸款在不同年度的發展情況，並運用年增率計算，發掘貸款數據的增長規律。這份報告旨在以數據為基礎，講述一個關於教育財務分配與變化的故事，幫助讀者更好地理解貸款分配背後的意義與影響。",
+    "https://github.com/harryyuan123456/113-1-R-final-project"
+  ],
+  [
+    "2024-12-25T10:12:05.037Z",
+    "qwertyuiop880917@gmail.com",
+    "(013) 范瑜恬",
+    311351013,
+    "台灣歷年升學率",
+    "https://youtu.be/MqSaYYC3FGQ",
+    "本報告內容包含歷年來的升學率和職業類別的分析",
+    "https://github.com/Fannn0/113-1-R-final-project"
+  ],
+  [
+    "2024-12-27T02:52:44.400Z",
+    "s411373004@gm.ntpu.edu.tw",
+    "(004) 翁予婕",
+    411373004,
+    "女性持卡人於六都消費樣態",
+    "https://youtu.be/mNFtokC9Wt4",
+    "先從全體女性持卡人在哪個產業消費金額最多，由數據顯示是「食」和「文教娛樂」為主。隨後，再分析各教育程度消費金額比例，數據顯示以「大學」學歷的女性持卡人消費金額比例最高",
+    "https://github.com/Cweline/113-1-R-final-project"
+  ],
+  [
+    "2024-12-27T14:08:27.070Z",
+    "s311351011@gm.ntpu.edu.tw",
+    "(011) 蕭偉倫",
+    311351011,
+    "113-1旅客出入境攜帶大額現鈔資料分析",
+    "https://vimeo.com/1042452946",
+    "本報告基於政府公開資料，分析依洗錢防制法第14條規定申報的跨境攜帶大額現鈔數據，包含日圓、人民幣、新台幣及無記名有價證券等幣別的出入境金額統計。透過數據整理與圖表生成，報告呈現出幣別總金額分布、年度趨勢及總金額排名，揭示跨境資金流動的特性與變化趨勢。分析結果顯示，日圓資金流動最為活躍，且人民幣在 COVID-19 疫情期間出境金額大幅下降，反映政策與歷史事件對資金流向的影響。本報告旨在透過數據視角挖掘背後的故事，並為未來研究提供實證參考。",
+    "https://github.com/lun-04210/113-1-R-final-project"
+  ],
+  [
+    "2024-12-28T13:11:45.046Z",
+    "hsu000209@gmail.com",
+    "(013) 徐暐掄",
+    411273013,
+    "臺北市市議員按年齡與性別時間數列統計資料",
+    "https://youtu.be/q63hYQc6W48",
+    "對台北市兩屆男女議員做統計分析",
+    "https://github.com/zyfish520/113-1-R-final-project"
+  ],
+  [
+    "2024-12-28T13:20:12.129Z",
+    "407micky.dog@gmail.com",
+    "(118) 黃雨嫣",
+    411373118,
+    "2000年~2016年刑事案件嫌疑犯人數性別與教育程度之分析",
+    "https://youtu.be/jkH23DYb4ys",
+    "探討的議題為：\n1.男、女刑事嫌疑犯在2000年~2016年中，年度總嫌疑犯人數變化趨勢為何？\n2.男、女刑事嫌疑犯在2000年~2016年中，受教育程度占比最高的前三名分別為何？\n3.對比男、女刑事嫌疑犯在2000年~2016年中，受教育程度占比最高的前三名\n4.在2000年~2016年中的刑事嫌疑犯，男、女何者較多？多幾倍？\n5.以2000年~2016年的刑事案件嫌疑犯人數之教育程度，推斷教育是否會使刑事嫌疑犯減少？",
+    "https://github.com/YuyanHuang118/113-1-R-final-project"
+  ],
+  [
+    "2024-12-28T14:16:42.566Z",
+    "s411282016@gm.ntpu.edu.tw",
+    "(016) 葉芳瑜",
+    411282016,
+    "探討不同年月分台北市觀光遊憩變化以及疫情帶來的影響",
+    "https://vimeo.com/1042612705/96d0b6f47c",
+    "\n本分析探討台北觀光遊憩人數變化，年度總人數於2019年達巔峰，2020至2022年因疫情大減。季節性比較顯示冬季為旺季，市立動物園為四季最多人參訪景點。疫情對景點影響不一，自來水園區疫情期間人數增長，但疫情後減少；市立動物園受影響最大。本研究凸顯季節性趨勢及疫情對旅遊行為的深遠影響，為觀光規劃提供參考。",
+    "https://github.com/yeh1229/113-1-R-final-project"
+  ],
+  [
+    "2024-12-28T16:15:59.461Z",
+    "s411373002@gm.ntpu.edu.tw",
+    "(002) 陳家興",
+    411373002,
+    "老年人口率資料視覺化處理",
+    "https://youtu.be/_6OxRNShByw",
+    "隨著人口老化，台灣正面臨許多的挑戰。當人口紅利已成為過去式，在不久的未來，台灣是否會跟著日本的腳步?\n或許這是注定發生的事情，台灣的老年人口率正在上升。 \n本作業希望透過Chat GPT分析資料並視覺化，在不同國家的了年人口率中，提出日本與台灣，比較台灣與日本之間的實際值與估計值，並透過圖表的方式，使人更容易閱讀其中資訊。",
+    "https://github.com/rhythm-5555/113-1-R-final-project"
+  ],
+  [
+    "2024-12-28T21:14:17.805Z",
+    "s411173002@gm.ntpu.edu.tw",
+    "(002) 陳品伃",
+    411173002,
+    "R語言期末報告 411173002陳品伃",
+    "https://youtu.be/uGXq88ug-as",
+    "關於汽車耗油量",
+    "https://github.com/ping-yu/113-1-R-final-project"
+  ],
+  [
+    "2024-12-29T03:29:51.380Z",
+    "s411273134@gm.ntpu.edu.tw",
+    "(134) 張之芸",
+    411273134,
+    "求職、求才及推介就業人數-按職業別分(112年12月份)",
+    "https://youtu.be/tmQahFfGvls",
+    "",
+    "https://github.com/sylvia131004/113-1-R-final-project"
+  ],
+  [
+    "2024-12-29T14:24:44.878Z",
+    "s411373076@gm.ntpu.edu.tw",
+    "(076) 潘語晨",
+    411373076,
+    "111年8月臺南市主要觀光遊憩據點遊客人次統計",
+    "https://youtu.be/amJDVELGK7I",
+    "本次分析以臺南市主要觀光遊憩據點的數據為基礎，針對「觀光遊憩區別」、「門票收入」、「遊客人次」等關鍵變量進行了深入探索與可視化呈現，利用R語言去作呈現。",
+    "https://github.com/Christine-19-7/113-1-R-final-project"
+  ],
+  [
+    "2024-12-29T09:34:23.910Z",
+    "s411373001@gm.ntpu.edu.tw",
+    "(001) 林鈺馨",
+    411373001,
+    "113年台南市主要觀光遊憩據點遊客人數",
+    "https://youtu.be/GHd_gHhO9Ug?si=ulP8MEXTyvKWjRGk",
+    "我從「政府資料開放平臺上」找尋我想要用來分析的資料，我使用的資料是「113年台南市主要觀光遊憩據點遊客人數」，我利用AI畫了一個柱狀圖，去分析旅遊地區與旅遊人數。此圖表展示了每個觀光遊憩區的去年同期訪客數與門票收入之間的關係。通過雙軸設計，我們能同時觀察不同區域的訪客熱度及收入表現。例如，某些區域可能訪客數眾多但收入偏低，暗示其免費遊客比例較高；而收入較高但訪客數相對少的區域，可能依賴高單價門票的收益。此分析有助於找出潛在的商業機會及資源分配策略，並為旅遊部門提供決策參考。",
+    "https://github.com/YUHSIN1012/113-1-R-final-project"
+  ],
+  [
+    "2024-12-29T09:43:03.464Z",
+    "s411385061@gm.ntpu.edu.tw",
+    "(061) 施禧平",
+    411385061,
+    "Final project",
+    "https://youtu.be/qGy9u30-CDQ",
+    "The R script cleans and processes a dataset by initially checking and reading the file while addressing encoding issues (UTF-8 and Big5). It updates the column names and translates them from Mandarin to English. Certain values, like gender and roles, are also converted using dictionaries to maintain clarity in the data. Missing values are managed by substituting `NA` in the gender column with `\"Unknown\"`, and non-printable characters in the `position` column are eliminated using regular expressions. The script provides a summary of missing data, checks the uniqueness and sequence of the index, pivots roles into columns for analysis, and creates various visualizations, such as bar plots for gender and role distributions, along with a heatmap for the pivoted data. Finally, the cleaned and pivoted datasets are exported for additional use.",
+    "https://github.com/061ShiXiPing/113-1-R-final-project"
+  ],
+  [
+    "2024-12-29T14:40:44.534Z",
+    "penganyi6644@gmail.com",
+    "(138) 彭安益",
+    411373138,
+    "民國104~112年歷年家暴案例統計表",
+    "https://youtu.be/znlz5dUJNNg",
+    "upload, import, rename, chinese year to western year",
+    "https://github.com/penganyi/113-1-R-final-project"
+  ]
+]
