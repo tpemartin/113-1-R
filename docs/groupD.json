@@ -7,7 +7,9 @@
     "Title",
     "Video link",
     "Summary",
-    "Github final project link"
+    "Github final project link",
+    "Project number",
+    "assess link"
   ],
   [
     "2024-12-17T08:02:02.411Z",
@@ -17,7 +19,9 @@
     "如何設定能commit/push的project",
     "https://vimeo.com/1035823134/e9712cda54",
     "如果你無法正常commit or/and push, 請依照這影片步驟重新建立一個Project，並完成commit/push設定。如果還沒fork final project, 請點本卡片左下角的貓咪在跳出來的頁面參照該頁底下的fork 說明完成fork。",
-    "https://github.com/tpemartin/113-1-R-Final-Project"
+    "https://github.com/tpemartin/113-1-R-Final-Project",
+    1,
+    "https://docs.google.com/forms/d/e/1FAIpQLSfqt9aud_MUKv7gcxKKw1CERwmVh3JPswjHne94SbI_I9ELmA/viewform?usp=sf_link"
   ],
   [
     "2024-12-21T12:06:27.798Z",
@@ -27,7 +31,9 @@
     "對台北市仲介公司分析",
     "https://youtu.be/Yo79wHCNCP0",
     "使用上課教導的課程，對資料進行分析及結果",
-    "https://github.com/Yue0211-wu/113-1-R-final-project"
+    "https://github.com/Yue0211-wu/113-1-R-final-project",
+    2,
+    "https://docs.google.com/forms/d/e/1FAIpQLSfqt9aud_MUKv7gcxKKw1CERwmVh3JPswjHne94SbI_I9ELmA/viewform?usp=sf_link"
   ],
   [
     "2024-12-21T15:17:25.350Z",
@@ -37,7 +43,9 @@
     "台灣經濟數據分析",
     "https://vimeo.com/1041381851?share=copy",
     "",
-    "https://github.com/jason941210/113-1-R-final-project"
+    "https://github.com/jason941210/113-1-R-final-project",
+    3,
+    "https://docs.google.com/forms/d/e/1FAIpQLSfqt9aud_MUKv7gcxKKw1CERwmVh3JPswjHne94SbI_I9ELmA/viewform?usp=sf_link"
   ],
   [
     "2024-12-27T14:16:34.671Z",
@@ -47,7 +55,9 @@
     "海關進出口總額比較分析",
     "https://vimeo.com/1042456456?share=copy",
     "本報告基於海關進出口貿易統計資料，分析台灣各年度的進出口總金額及貿易餘額，並通過數據比較探討台灣進出口貿易的規模與趨勢。結果顯示台灣長期保持貿易順差，出口金額穩定增長，進口需求則集中於能源與原材料領域。本報告為了解台灣的國際貿易動態及其對經濟發展的影響提供了參考依據。",
-    "https://github.com/uwei93/113-1-R-final-project"
+    "https://github.com/uwei93/113-1-R-final-project",
+    4,
+    "https://docs.google.com/forms/d/e/1FAIpQLSfqt9aud_MUKv7gcxKKw1CERwmVh3JPswjHne94SbI_I9ELmA/viewform?usp=sf_link"
   ],
   [
     "2024-12-29T13:56:11.127Z",
@@ -57,7 +67,9 @@
     "台南市各行各業7~12月犯罪人數",
     "https://vimeo.com/1042465528?share=copy",
     "利用圖表計算出台南市7~12月各行各業所犯罪刑",
-    "https://github.com/Xiemuying/113-1-R-final-project"
+    "https://github.com/Xiemuying/113-1-R-final-project",
+    5,
+    "https://docs.google.com/forms/d/e/1FAIpQLSfqt9aud_MUKv7gcxKKw1CERwmVh3JPswjHne94SbI_I9ELmA/viewform?usp=sf_link"
   ],
   [
     "2024-12-28T06:36:34.017Z",
@@ -67,7 +79,9 @@
     "新北市預算視覺化",
     "https://youtu.be/FkJPOfjY5_0",
     "製作長條圖的過程",
-    "https://github.com/xiaoen-217/113-1-R-final-project"
+    "https://github.com/xiaoen-217/113-1-R-final-project",
+    6,
+    "https://docs.google.com/forms/d/e/1FAIpQLSfqt9aud_MUKv7gcxKKw1CERwmVh3JPswjHne94SbI_I9ELmA/viewform?usp=sf_link"
   ],
   [
     "2024-12-28T15:31:16.941Z",
@@ -77,7 +91,9 @@
     "臺北市聯營公車行車效率分析",
     "https://youtu.be/E9egNec8LEs",
     "利用所選資料分析資料中各個行列之間的關係，並製成圖表增加易讀性，並解決製作圖表時遇到的問題",
-    "https://github.com/Justin-411373035/113-1-R-final-project"
+    "https://github.com/Justin-411373035/113-1-R-final-project",
+    7,
+    "https://docs.google.com/forms/d/e/1FAIpQLSfqt9aud_MUKv7gcxKKw1CERwmVh3JPswjHne94SbI_I9ELmA/viewform?usp=sf_link"
   ],
   [
     "2024-12-28T16:57:59.615Z",
@@ -87,7 +103,9 @@
     "國道客運的歷年收益增長",
     "https://youtu.be/Tw_SoLOfJd8?feature=shared",
     "我分析了第一個是歷年來客運平均每一旅客的搭乘距離繪製成折線圖 第二個是國道客運歷年的收入變化做成折線圖 第三個是國道客運班次的變化 第四個是行車次數跟收入的相關性",
-    "https://github.com/411373042/113-1-R-final-project"
+    "https://github.com/411373042/113-1-R-final-project",
+    8,
+    "https://docs.google.com/forms/d/e/1FAIpQLSfqt9aud_MUKv7gcxKKw1CERwmVh3JPswjHne94SbI_I9ELmA/viewform?usp=sf_link"
   ],
   [
     "2024-12-28T19:24:18.670Z",
@@ -97,7 +115,9 @@
     "合法特定寵物業名單",
     "https://youtu.be/u5nD9dfuGVQ",
     "本專案旨在分析《List of Licensed Pet Businesses.csv》檔案中的資料，分別提取縣市欄位並進行排序，繪製各縣市店家比例的柱狀圖以直觀呈現分佈情況。此外，專案統計了各縣市中不同動物類型（animaltype）的店家數量和比率，進一步了解動物類型在不同區域的分佈情形。過程中應用了 R 語言的 tidyverse 套件進行數據清理、處理及視覺化分析，結果存回原檔案，提供清晰的分析依據。",
-    "https://github.com/zyfish520/113-1-R-final-project"
+    "https://github.com/laiyingju/113-1-R-final-project/",
+    9,
+    "https://docs.google.com/forms/d/e/1FAIpQLSfqt9aud_MUKv7gcxKKw1CERwmVh3JPswjHne94SbI_I9ELmA/viewform?usp=sf_link"
   ],
   [
     "2024-12-29T04:08:28.419Z",
@@ -107,7 +127,9 @@
     "台灣出口總值比較及出口商品比較",
     "https://youtu.be/1sUBhLlfG6M",
     "分析2023年度，台灣出口總值的比較，可以看出台灣的主要出口國有中國、美國、香港。這三個國家的出口總額皆超過一兆新台幣。而美國的主要出口貨物中又以機械及電機設備為最大宗，證明現在的台灣是工業立國，主要生產晶片。",
-    "https://github.com/cccconnieeee/113-1-R-final-project"
+    "https://github.com/cccconnieeee/113-1-R-final-project",
+    10,
+    "https://docs.google.com/forms/d/e/1FAIpQLSfqt9aud_MUKv7gcxKKw1CERwmVh3JPswjHne94SbI_I9ELmA/viewform?usp=sf_link"
   ],
   [
     "2024-12-29T08:05:59.893Z",
@@ -117,7 +139,9 @@
     "111年4月臺南式工廠登記清冊分析",
     "https://youtu.be/L_7eZrxXfQM",
     "利用R語言製作圖表並分析111年4月臺南式工廠登記清冊",
-    "https://github.com/EricWu1016/113-1-R-final-project"
+    "https://github.com/EricWu1016/113-1-R-final-project",
+    11,
+    "https://docs.google.com/forms/d/e/1FAIpQLSfqt9aud_MUKv7gcxKKw1CERwmVh3JPswjHne94SbI_I9ELmA/viewform?usp=sf_link"
   ],
   [
     "2024-12-29T09:14:12.844Z",
@@ -127,6 +151,8 @@
     "台北市市議員性別與年齡分析",
     "https://youtu.be/K3C0gjX4YNA",
     "透過台北市市議員當選者的資料，分別從性別及年齡這兩個面向來觀察其人數分布。",
-    "https://github.com/TingQi5477/113-1-R-final-project"
+    "https://github.com/TingQi5477/113-1-R-final-project",
+    12,
+    "https://docs.google.com/forms/d/e/1FAIpQLSfqt9aud_MUKv7gcxKKw1CERwmVh3JPswjHne94SbI_I9ELmA/viewform?usp=sf_link"
   ]
 ]
