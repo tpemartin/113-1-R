@@ -7,7 +7,9 @@
     "Title",
     "Video link",
     "Summary",
-    "Github final project link"
+    "Github final project link",
+    "Project number",
+    "assess link"
   ],
   [
     "2024-12-17T08:01:11.791Z",
@@ -17,7 +19,9 @@
     "如何設定能commit/push的project",
     "https://vimeo.com/1035823134/e9712cda54",
     "如果你無法正常commit or/and push, 請依照這影片步驟重新建立一個Project，並完成commit/push設定。如果還沒fork final project, 請點本卡片左下角的貓咪在跳出來的頁面參照該頁底下的fork 說明完成fork。",
-    "https://github.com/tpemartin/113-1-R-Final-Project"
+    "https://github.com/tpemartin/113-1-R-Final-Project",
+    1,
+    "https://docs.google.com/forms/d/e/1FAIpQLSfwRqtWheiaeB1xItEIG-dZfhGQda3k2d1WLWkNnqQPN24Wlw/viewform?usp=sf_link"
   ],
   [
     "2024-12-23T14:59:01.293Z",
@@ -27,7 +31,9 @@
     "113年11月台灣農藥殘留不合格抽驗結果",
     "https://youtu.be/tUwNlcOQGz8",
     "首先使用南投縣作為初次抽樣目標，確定具備製做長條圖能力後，開始分析別的縣市的樣本，並且製作不同功能的圖表。之後不再用縣市做為規範，而是分析不同的農藥成分。最後分析各縣市的情形。我的策略是先逐步分析小目標，確定分析結果是正確的，再逐步擴大分析，並且運用chat gpt學習並解決遇到的困難。",
-    "https://github.com/h94j3urp4/113-1-R-final-project"
+    "https://github.com/h94j3urp4/113-1-R-final-project",
+    2,
+    "https://docs.google.com/forms/d/e/1FAIpQLSfwRqtWheiaeB1xItEIG-dZfhGQda3k2d1WLWkNnqQPN24Wlw/viewform?usp=sf_link"
   ],
   [
     "2024-12-25T06:44:35.868Z",
@@ -37,7 +43,9 @@
     "臺北市企業營運總部分布圖",
     "https://vimeo.com/1042091116/e4a2b70113",
     "先讀取資料，然後將台灣日期改成西方日期（如1130909改成20240909），獲取“區”的地方，然後將這些“區”的企業製作成表，最後得到 薹北企業營運最多在內湖區，有36間企業,最少是中正區，只有一間。",
-    "https://github.com/khaijing/113-1-R-final-project"
+    "https://github.com/khaijing/113-1-R-final-project",
+    3,
+    "https://docs.google.com/forms/d/e/1FAIpQLSfwRqtWheiaeB1xItEIG-dZfhGQda3k2d1WLWkNnqQPN24Wlw/viewform?usp=sf_link"
   ],
   [
     "2024-12-28T13:32:37.743Z",
@@ -47,7 +55,9 @@
     "GooglePlay商店數據相關性分析",
     "https://youtu.be/g825mQI_Kec?si=YvyNNTXkNTLbSQ_k",
     "針對Google商店中user reviews 和 rating進行分析比較相關性，使用了sentiment analysis做為分析主軸。",
-    "https://github.com/PPDuck52/113-1-R-final-project"
+    "https://github.com/PPDuck52/113-1-R-final-project",
+    4,
+    "https://docs.google.com/forms/d/e/1FAIpQLSfwRqtWheiaeB1xItEIG-dZfhGQda3k2d1WLWkNnqQPN24Wlw/viewform?usp=sf_link"
   ],
   [
     "2024-12-28T20:48:44.828Z",
@@ -57,7 +67,9 @@
     "112學年度臺北大學東協10國學生人數統計",
     "https://youtu.be/NWnmoGzeFx8",
     "上大學之後很常在學校裡面看到來自東南亞國家的同學，想知道從東南亞國家來台灣就讀大學的人數，以及在台北大學就讀的人數有多少、哪個國家比例最高。",
-    "https://github.com/Huangwanyun/113-1-R-final-project"
+    "https://github.com/Huangwanyun/113-1-R-final-project",
+    5,
+    "https://docs.google.com/forms/d/e/1FAIpQLSfwRqtWheiaeB1xItEIG-dZfhGQda3k2d1WLWkNnqQPN24Wlw/viewform?usp=sf_link"
   ],
   [
     "2024-12-29T04:23:34.940Z",
@@ -67,7 +79,9 @@
     "311058047期末專題 特徵值與目標值分析",
     "https://youtu.be/zwDBIhHtGZo",
     "特徵值與目標值分析",
-    "https://github.com/cijjnb2129/113-1-R-final-project"
+    "https://github.com/cijjnb2129/113-1-R-final-project",
+    6,
+    "https://docs.google.com/forms/d/e/1FAIpQLSfwRqtWheiaeB1xItEIG-dZfhGQda3k2d1WLWkNnqQPN24Wlw/viewform?usp=sf_link"
   ],
   [
     "2024-12-29T07:27:48.669Z",
@@ -77,7 +91,9 @@
     "112年臺南市藝文活動展演活動統計",
     "https://youtu.be/ywU9zUcV-Ys",
     "分析每個區域內舉辦的文藝活動總數，反映該地區的活動密集程度，並進一步分析各區活動的參加人數，以千人次為單位，顯示活動的參與情況與規模，探索不同區域的活動數量與參與人數分佈，最後分析活動總數與參加人數之間的關係",
-    "https://github.com/Melody0523/113-1-R-final-project"
+    "https://github.com/Melody0523/113-1-R-final-project",
+    7,
+    "https://docs.google.com/forms/d/e/1FAIpQLSfwRqtWheiaeB1xItEIG-dZfhGQda3k2d1WLWkNnqQPN24Wlw/viewform?usp=sf_link"
   ],
   [
     "2024-12-29T08:05:56.356Z",
@@ -87,7 +103,9 @@
     "計程車客運業數量",
     "https://youtu.be/Mecr6rgHDV4",
     "分析各種計程車業者的數量及擁有車輛數，並用折現圖及長條圖表示。老師不好意思，我的commit and push有點問題不知道有沒有傳上去，不好意思。",
-    "https://github.com/yixun0920/113-1-R-final-project"
+    "https://github.com/yixun0920/113-1-R-final-project",
+    8,
+    "https://docs.google.com/forms/d/e/1FAIpQLSfwRqtWheiaeB1xItEIG-dZfhGQda3k2d1WLWkNnqQPN24Wlw/viewform?usp=sf_link"
   ],
   [
     "2024-12-29T09:22:13.738Z",
@@ -97,7 +115,9 @@
     "台中市同一地點下監測之噪音汙染值不同年度比較",
     "https://youtu.be/3uOI6HAssdU",
     "台中市同一地點下監測之噪音汙染值不同年度的比較，且藉由ChatGPT做出折線圖以呈現出最後成果。",
-    "https://github.com/LSweety/113-1-R-final-project"
+    "https://github.com/LSweety/113-1-R-final-project",
+    9,
+    "https://docs.google.com/forms/d/e/1FAIpQLSfwRqtWheiaeB1xItEIG-dZfhGQda3k2d1WLWkNnqQPN24Wlw/viewform?usp=sf_link"
   ],
   [
     "2024-12-29T11:20:37.355Z",
@@ -107,7 +127,9 @@
     "近三年台南出生數與生母年齡分析",
     "https://youtu.be/R0S_GLpqltE",
     "分析近三年資料並預測未來三年的可能狀況",
-    "NA"
+    "https://github.com/fish0930/113-1-R-final-project",
+    10,
+    "https://docs.google.com/forms/d/e/1FAIpQLSfwRqtWheiaeB1xItEIG-dZfhGQda3k2d1WLWkNnqQPN24Wlw/viewform?usp=sf_link"
   ],
   [
     "2024-12-29T11:57:40.780Z",
@@ -117,6 +139,8 @@
     "新北市義勇消防總隊接受捐贈資訊",
     "https://youtu.be/2XLxDGZThv4",
     "to upload and import data, rename the data  and also convert Chinese year and month into American year.",
-    "https://github.com/kalpana577/113-1-R-final-project"
+    "https://github.com/kalpana577/113-1-R-final-project",
+    11,
+    "https://docs.google.com/forms/d/e/1FAIpQLSfwRqtWheiaeB1xItEIG-dZfhGQda3k2d1WLWkNnqQPN24Wlw/viewform?usp=sf_link"
   ]
 ]
